@@ -9,3 +9,8 @@ If your commit doesnt show up remotely:
 git checkout anthony
 git merge main
 git branch -u origin/main anthony
+
+git push origin HEAD
+git push origin HEAD:main
+
+git pull from main branch
