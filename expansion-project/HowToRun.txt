@@ -1,8 +1,11 @@
 Create .env file
 npx hardhat node
 npx hardhat compile
-npx hardhat run scripts/deploy.js --network localhost
+After you compile & deploy Greeter.sol - paste the contract address in App.js
+npx hardhat run scripts/deploy-greeter.js --network localhost
+If Error = ABI is missing.. re-compile, re-deploy and paste that contract address in App.js
 Switch to the localhost network inside of metamask for the hardhat account
+Make sure you are signed into this account: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
 Make sure localhost chainID is 31337 or you won't be able to change blockchain states
 
 If your commit does not show up remotely:
