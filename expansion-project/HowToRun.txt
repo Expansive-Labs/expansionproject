@@ -3,3 +3,9 @@ npx hardhat node
 npx hardhat compile
 npx hardhat run scripts/deploy.js --network localhost
 Switch to the localhost network inside of metamask for the hardhat account
+
+If your commit doesnt show up remotely:
+
+git checkout anthony
+git merge main
+git branch -u origin/main anthony
