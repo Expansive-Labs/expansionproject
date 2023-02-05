@@ -12,7 +12,7 @@ const greeterAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"
 
 function App() {
 
-  const [greeting, setGreetingValue] = useState()
+  const [greeting, setGreetingValue] = useState('')
 
   async function requestAccount() {
     // Requests the account information from their metamask wallet

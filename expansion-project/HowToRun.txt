@@ -1,16 +1,14 @@
-Create a .env file
+Create .env file
 npx hardhat node
 npx hardhat compile
 npx hardhat run scripts/deploy.js --network localhost
 Switch to the localhost network inside of metamask for the hardhat account
+Make sure localhost chainID is 31337 or you won't be able to change blockchain states
 
-If your commit doesnt show up remotely:
-
+If your commit does not show up remotely:
 git checkout anthony
 git merge main
 git branch -u origin/main anthony
-
 git push origin HEAD
 git push origin HEAD:main
-
 git pull from main branch
