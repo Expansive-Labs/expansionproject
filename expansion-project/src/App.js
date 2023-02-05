@@ -8,7 +8,7 @@ import { type } from '@testing-library/user-event/dist/type';
 // If Error = ABI is missing.. re-compile, re-deploy and paste that contract address below
 // npx hardhat run --network localhost scripts/deploy.js
 // Switch to the hardhat network inside of metamask to unteract with the smart contracts
-const greeterAddress = "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9"
+const greeterAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"
 
 function App() {
 
