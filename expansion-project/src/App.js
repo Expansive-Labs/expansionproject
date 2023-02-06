@@ -39,7 +39,8 @@ function App() {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(expansionProjectAddress, ExpansionProject.abi, signer);
-      const transaction = await contract.transfer(userAccount, amount);
+      const weiToEthConverter = ethers.utils.parseEther(amount.toString());
+      const transaction = await contract.transfer(userAccount, weiToEthConverter);
       await transaction.wait();
       console.log(`${amount} Tokens have successfully been sent to: ${userAccount}`);
     }

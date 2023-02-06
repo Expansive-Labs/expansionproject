@@ -4,9 +4,14 @@ npx hardhat node
 After you compile & deploy Greeter.sol - paste the contract address in App.js
 npx hardhat run scripts/deploy.js --network localhost
 If Error = ABI is missing.. re-compile, re-deploy and paste that contract address in App.js
-Switch to the localhost network inside of metamask for the hardhat account
+npm start to start the program
+Switch to the localhost network inside of metamask (hardhat account)
 Make sure you are signed into this account: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
-Make sure localhost chainID is 31337 or you won't be able to change blockchain states
+Make sure localhost chainID is 31337 or you won't be able to change the blockchain state
+
+0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+0x1E14EDAEcD90FA055178dD0008465D4E83F5afd2
+View how many tokens for each account - toggle MetaMask accounts and click "Get Balance" on UI
 
 If your commit does not show up remotely:
 git checkout anthony
