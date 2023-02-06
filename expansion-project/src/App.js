@@ -3,37 +3,70 @@ import logo from './logo.svg';
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json';
-import { type } from '@testing-library/user-event/dist/type';
+import ExpansionProject from './artifacts/contracts/ExpansionProject.sol/ExpansionProject.json';
+// import { type } from '@testing-library/user-event/dist/type';
+
 // After you compile & deploy Greeter.sol - paste the contract address below
 // If Error = ABI is missing.. re-compile, re-deploy and paste that contract address below
 // npx hardhat run --network localhost scripts/deploy.js
 // Switch to the hardhat network inside of metamask to unteract with the smart contracts
-const greeterAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"
+const greeterAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3";
+const expansionProjectAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 
 function App() {
 
-  const [greeting, setGreetingValue] = useState('')
+  const [greeting, setGreetingValue] = useState('');
+  const [userAccount, setUserAccount] = useState(''); // Who we want to send EXP to
+  const [amount, setAmount] = useState(0); // Amount of EXP we want to send, default is zero
 
-  async function requestAccount() {
-    // Requests the account information from their metamask wallet
-    await window.ethereum.request({ method: 'eth_requestAccounts' });
+  // Expansion Project Functions \\
+
+  // Reads how many EXP tokens the signed-in user has in their wallet
+  async function getBalance() {
+    if (typeof window.ethereum !== 'undefined') {
+      const [account] = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const contract = new ethers.Contract(expansionProjectAddress, ExpansionProject.abi, provider);
+      const balance = await contract.balanceOf(account);
+      console.log("Balance: ", balance.toString());
+    }
   }
+
+  // Allows a user to send their EXP tokens to another account
+  async function sendTokens() {
+    if (typeof window.ethereum !== 'undefined') {
+      await requestAccount();
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(expansionProjectAddress, ExpansionProject.abi, signer);
+      const transaction = await contract.transfer(userAccount, amount);
+      await transaction.wait();
+      console.log(`${amount} Tokens have successfully been sent to: ${userAccount}`);
+    }
+  }
+
+  // Greeter Contract Functions \\
 
   async function fetchGreeting() {
     // If the user has MetaMask, 'window.ethereum' will detect if they are connected
     if (typeof window.ethereum !== 'undefined') {
 
-      const provider = new ethers.providers.Web3Provider(window.ethereum)
-      const contract = new ethers.Contract(greeterAddress, Greeter.abi, provider)
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const contract = new ethers.Contract(greeterAddress, Greeter.abi, provider);
 
       try {
-        const data = await contract.greet()
-        console.log('data: ', data)
+        const data = await contract.greet();
+        console.log('data: ', data);
 
       } catch (error) {
-        console.log("Error: ", error)
+        console.log("Error: ", error);
       }
     }
+  }
+
+  async function requestAccount() {
+    // Requests the account information from their metamask wallet
+    await window.ethereum.request({ method: 'eth_requestAccounts' });
   }
 
   async function setGreeting() {
@@ -45,18 +78,19 @@ function App() {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       // New instance of that contract 
-      const contract = new ethers.Contract(greeterAddress, Greeter.abi, signer)
+      const contract = new ethers.Contract(greeterAddress, Greeter.abi, signer);
       // This is whatever the user types into the input box as the greeting
-      const transaction = await contract.setGreeting(greeting)
-      setGreetingValue('')
+      const transaction = await contract.setGreeting(greeting);
+      setGreetingValue('');
       // Waits for the tx to be confirmed onto the blockchain
-      await transaction.wait()
+      await transaction.wait();
       // Log the new greeting value from the blockchain
-      fetchGreeting()
+      fetchGreeting();
     }
   }
 
-  
+  // User Interface \\
+
   const [theme, setTheme] = useState('light');
   const toggleTheme = () => {
     if (theme === 'light') {
@@ -80,6 +114,14 @@ function App() {
           placeholder="Set greeting" // Will look greyed out in the input field
           value={greeting}
         />
+
+        <br />
+        <button onClick={getBalance}>Get Balance</button>
+        <button onClick={sendTokens}>Send Tokens</button>
+        <input onChange={error => setUserAccount(error.target.value)} placeholder= "Account ID" />
+        <input onChange={error => setAmount(error.target.value)} placeholder= "Amount" 
+        />
+
         <div className={`App ${theme}`}>
           <button onClick={toggleTheme}>☾☼</button>
           <h1>Expansion Project</h1>

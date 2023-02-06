@@ -15,3 +15,15 @@ git branch -u origin/main anthony
 git push origin HEAD
 git push origin HEAD:main
 git pull from main branch
+
+When sending tokens to another account:
+Be logged in to the account that deployed the token contracts
+Click 'Get Balance' on the UI to make sure 1M tokens show up
+Switch to another account within MetaMask and copy that address
+Paste that other address into the 'Account ID' field
+Select the amount of tokens you want to send to them
+Click 'Send Tokens'
+
+Notes: 
+still need to have ethers.js send the token decimal amount in ETH and not in GWEI
+getBalance needs to return the correct amount of tokens when checking another account
