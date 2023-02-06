@@ -1,15 +1,12 @@
 import './App.css';
-import logo from './logo.svg';
+import React from "react";
+import ReactDOM from "react-dom";
+import "98.css";
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json';
 import ExpansionProject from './artifacts/contracts/ExpansionProject.sol/ExpansionProject.json';
-// import { type } from '@testing-library/user-event/dist/type';
 
-// After you compile & deploy Greeter.sol - paste the contract address below
-// If Error = ABI is missing.. re-compile, re-deploy and paste that contract address below
-// npx hardhat run --network localhost scripts/deploy.js
-// Switch to the hardhat network inside of metamask to unteract with the smart contracts
 const greeterAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3";
 const expansionProjectAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 
@@ -18,7 +15,8 @@ function App() {
   const [greeting, setGreetingValue] = useState('');
   const [userAccount, setUserAccount] = useState(''); // Who we want to send EXP to
   const [amount, setAmount] = useState(0); // Amount of EXP we want to send, default is zero
-
+  const [count, setCount] = React.useState(0);
+  
   // Expansion Project Functions \\
 
   // Reads how many EXP tokens the signed-in user has in their wallet
@@ -93,6 +91,7 @@ function App() {
   // User Interface \\
 
   const [theme, setTheme] = useState('light');
+  // const rootElement = document.getElementById("root");
   const toggleTheme = () => {
     if (theme === 'light') {
       setTheme('dark');
@@ -106,6 +105,7 @@ function App() {
     }, [theme]);
 
   return (
+    
     <div className="App">
       <header className='App Header'>
         <button onClick={fetchGreeting}>Fetch Greeting</button>
@@ -116,6 +116,31 @@ function App() {
           value={greeting}
         />
 
+      <div className={`App ${theme}`}>
+        <button onClick={toggleTheme}> ☾☼ </button>
+        <h1>EXPANSION PROJECT</h1>
+      </div>
+
+      <div style={{ width: 300 }} className="window">
+      <div className="title-bar">
+        <div className="title-bar-text">Counter</div>
+        <div className="title-bar-controls">
+          <button aria-label="Minimize" />
+          <button aria-label="Maximize" />
+          <button aria-label="Close" />
+        </div>
+      </div>
+
+        <div className="window-body">
+          <p style={{ textAlign: "center" }}>Current count: {count}</p>
+          <div className="field-row" style={{ justifyContent: "center" }}>
+            <button onClick={() => setCount(count + 1)}>+</button>
+            <button onClick={() => setCount(count - 1)}>-</button>
+            <button onClick={() => setCount(0)}>0</button>
+          </div>
+        </div>
+      </div>
+
         <br />
         <button onClick={getBalance}>Get Balance</button>
         <button onClick={sendTokens}>Send Tokens</button>
@@ -123,10 +148,6 @@ function App() {
         <input onChange={error => setAmount(error.target.value)} placeholder= "Amount" 
         />
 
-        <div className={`App ${theme}`}>
-          <button onClick={toggleTheme}>☾☼</button>
-          <h1>Expansion Project</h1>
-        </div>
       </header>
     </div>
   );

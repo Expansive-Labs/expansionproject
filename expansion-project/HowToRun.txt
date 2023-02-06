@@ -1,10 +1,10 @@
 Create .env file
 npx hardhat compile
 npx hardhat node
-After you compile & deploy Greeter.sol - paste the contract address in App.js
 npx hardhat run scripts/deploy.js --network localhost
+After you compile & deploy Greeter.sol - paste the contract address in App.js
 If Error = ABI is missing.. re-compile, re-deploy and paste that contract address in App.js
-npm start to start the program
+npm start - starts the program
 Switch to the localhost network inside of metamask (hardhat account)
 Make sure you are signed into this account: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
 Make sure localhost chainID is 31337 or you won't be able to change the blockchain state
@@ -29,6 +29,4 @@ Paste that other address into the 'Account ID' field
 Select the amount of tokens you want to send to them
 Click 'Send Tokens'
 
-Notes: 
-still need to have ethers.js send the token decimal amount in ETH and not in GWEI
-getBalance needs to return the correct amount of tokens when checking another account
+Notes:
