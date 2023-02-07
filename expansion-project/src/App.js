@@ -103,6 +103,15 @@ function App() {
   useEffect(() => {
     document.body.className = theme;
     }, [theme]);
+  
+  const [visitorCount, setVisitorCount] = useState(0);
+
+    useEffect(() => {
+      setVisitorCount(visitorCount + 1);
+    }, []);
+
+
+
 
   return (
     
@@ -121,8 +130,8 @@ function App() {
         <h1>EXPANSION PROJECT</h1>
       </div>
 
-      <div style={{ width: 300 }} className="window">
-      <div className="title-bar">
+      <div style={{ width: 300, margin: "0 auto", marginBottom: 50 }} className="window">
+        <div className="title-bar">
         <div className="title-bar-text">Counter</div>
         <div className="title-bar-controls">
           <button aria-label="Minimize" />
@@ -132,7 +141,8 @@ function App() {
       </div>
 
         <div className="window-body">
-          <p style={{ textAlign: "center" }}>Current count: {count}</p>
+          <p style={{ textAlign: "center", color: "black" }}>Current Count: {count}</p>
+          <p style={{ textAlign: "center", color: "black" }}>Visitor Count: {visitorCount}</p>
           <div className="field-row" style={{ justifyContent: "center" }}>
             <button onClick={() => setCount(count + 1)}>+</button>
             <button onClick={() => setCount(count - 1)}>-</button>
