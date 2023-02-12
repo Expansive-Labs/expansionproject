@@ -45,7 +45,6 @@ function App() {
   }
 
   // Greeter Contract Functions \\
-
   async function fetchGreeting() {
     // If the user has MetaMask, 'window.ethereum' will detect if they are connected
     if (typeof window.ethereum !== 'undefined') {
@@ -89,7 +88,6 @@ function App() {
   }
 
   // User Interface \\
-
   const [theme, setTheme] = useState('light');
   // const rootElement = document.getElementById("root");
   const toggleTheme = () => {
@@ -124,6 +122,7 @@ function App() {
         />
 
     <div className={`App ${theme}`}>
+      
         <button 
           onClick={toggleTheme}> ☾☼ 
         </button>
