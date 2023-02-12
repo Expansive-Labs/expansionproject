@@ -109,9 +109,7 @@ function App() {
     useEffect(() => {
       setVisitorCount(visitorCount + 1);
     }, []);
-
-
-
+    
 
   return (
     
@@ -126,13 +124,24 @@ function App() {
         />
 
     <div className={`App ${theme}`}>
-        <button onClick={toggleTheme}> ☾☼ </button>
-        <h1 style={{ 
-            fontFamily: "Courier New, monospace", 
-            color: "silver", 
-            textShadow: "1px 5px #444",
-            transform: "skew(-16deg,0deg)"
-        }}>EXPANSION PROJECT</h1>
+        <button 
+          onClick={toggleTheme}> ☾☼ 
+        </button>
+    </div>
+
+    <div>
+      <button>
+        <a href="https://linktr.ee/expansionproject" target="_blank">MUSIC</a>
+      </button>
+    </div>
+
+    <div>
+      <h1 style={{  
+        fontFamily: 'Press Start 2P', 
+        color: "silver", 
+        textShadow: "1px 7px #555",
+        transform: "skew(-16deg,0deg)"
+      }}>EXPANSION PROJECT</h1>
     </div>
 
       <div style={{ width: 300, margin: "0 auto", marginBottom: 50 }} className="window">
