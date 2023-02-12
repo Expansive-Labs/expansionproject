@@ -125,10 +125,15 @@ function App() {
           value={greeting}
         />
 
-      <div className={`App ${theme}`}>
+    <div className={`App ${theme}`}>
         <button onClick={toggleTheme}> ☾☼ </button>
-        <h1>EXPANSION PROJECT</h1>
-      </div>
+        <h1 style={{ 
+            fontFamily: "Courier New, monospace", 
+            color: "silver", 
+            textShadow: "1px 5px #444",
+            transform: "skew(-16deg,0deg)"
+        }}>EXPANSION PROJECT</h1>
+    </div>
 
       <div style={{ width: 300, margin: "0 auto", marginBottom: 50 }} className="window">
         <div className="title-bar">
