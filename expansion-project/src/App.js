@@ -89,6 +89,7 @@ function App() {
 
   // User Interface \\
   const [theme, setTheme] = useState('light');
+  const [isMetaMaskConnected, setIsMetaMaskConnected] = useState(false);
   // const rootElement = document.getElementById("root");
   const toggleTheme = () => {
     if (theme === 'light') {
@@ -97,6 +98,22 @@ function App() {
       setTheme('light');
     }
   };
+
+  // MetaMask Connection
+  const handleMetaMaskConnection = async () => {
+    if (typeof window.ethereum !== "undefined") {
+      try {
+        const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+        setIsMetaMaskConnected(true);
+      } catch (error) {
+        console.error("Error connecting to MetaMask:", error);
+      }
+    } else {
+      console.error("MetaMask is not available in your browser");
+    }
+  };
+
+
 
   useEffect(() => {
     document.body.className = theme;
@@ -107,22 +124,35 @@ function App() {
     useEffect(() => {
       setVisitorCount(visitorCount + 1);
     }, []);
-    
+
 
   return (
     
     <div className="App">
       <header className='App Header'>
-        <button onClick={fetchGreeting}>Fetch Greeting</button>
+        {/* <button onClick={fetchGreeting}>Fetch Greeting</button>
         <button onClick={setGreeting}>Set Greeting</button>
         <input 
           onChange={error => setGreetingValue(error.target.value)}
           placeholder="Set greeting" // Will look greyed out in the input field
           value={greeting}
-        />
+        /> */}
+
+    <div style={{ 
+      padding: "10px 32px",
+      fontSize: "21px",
+      height: "34px",
+      width: "733px", 
+      display: "flex", 
+      justifyContent: "flex-end", 
+      marginLeft: "256px" }}
+      >
+      <button 
+        onClick={handleMetaMaskConnection}>Connect Wallet
+      </button>
+    </div>
 
     <div className={`App ${theme}`}>
-      
         <button 
           onClick={toggleTheme}> ☾☼ 
         </button>
@@ -143,33 +173,35 @@ function App() {
       }}>EXPANSION PROJECT</h1>
     </div>
 
-      <div style={{ width: 300, margin: "0 auto", marginBottom: 50 }} className="window">
-        <div className="title-bar">
-        <div className="title-bar-text">Counter</div>
-        <div className="title-bar-controls">
-          <button aria-label="Minimize" />
-          <button aria-label="Maximize" />
-          <button aria-label="Close" />
-        </div>
-      </div>
+  <div style={{ width: 355, height: 155, margin: "0 auto", marginBottom: 0 }} className="window">
+    <div className="title-bar">
+    <div className="title-bar-text" style={{ }}>Music Player</div>
+    <div className="title-bar-controls">
+      <button aria-label="Minimize" />
+      <button aria-label="Maximize" />
+      <button aria-label="Close" />
+    </div>
+  </div>
 
-        <div className="window-body">
-          <p style={{ textAlign: "center", color: "black" }}>Current Count: {count}</p>
-          <p style={{ textAlign: "center", color: "black" }}>Visitor Count: {visitorCount}</p>
+      <div className="window-body">
+        <p style={{ textAlign: "center", color: "black", fontWeight: "bold", paddingTop: "5px" }}>Play Count: {count}</p>
+
           <div className="field-row" style={{ justifyContent: "center" }}>
-            <button onClick={() => setCount(count + 1)}>+</button>
-            <button onClick={() => setCount(count - 1)}>-</button>
-            <button onClick={() => setCount(0)}>0</button>
+            <button onClick={() => setCount(count + 1)}>▶️</button>
+            <button onClick={() => setCount(count)}>⏩</button>
+            <button onClick={() => setCount(0)}>⏹️</button>
           </div>
+
+        <p style={{ textAlign: "center", color: "black", paddingTop: "42px" }}>Visitor Count: {visitorCount}</p>
         </div>
       </div>
 
-        <br />
+        {/* <br />
         <button onClick={getBalance}>Get Balance</button>
         <button onClick={sendTokens}>Send Tokens</button>
         <input onChange={error => setUserAccount(error.target.value)} placeholder= "Account ID" />
         <input onChange={error => setAmount(error.target.value)} placeholder= "Amount" 
-        />
+        /> */}
 
       </header>
     </div>
