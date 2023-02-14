@@ -87,9 +87,9 @@ function App() {
     }
   }
 
-  // User Interface \\
+  // Dark and Light Mode
   const [theme, setTheme] = useState('light');
-  const [isMetaMaskConnected, setIsMetaMaskConnected] = useState(false);
+
   // const rootElement = document.getElementById("root");
   const toggleTheme = () => {
     if (theme === 'light') {
@@ -99,7 +99,9 @@ function App() {
     }
   };
 
-  // MetaMask Connection
+    // MetaMask Connection
+  const [isMetaMaskConnected, setIsMetaMaskConnected] = useState(false);
+
   const handleMetaMaskConnection = async () => {
     if (typeof window.ethereum !== "undefined") {
       try {
@@ -113,19 +115,19 @@ function App() {
     }
   };
 
-
+  // Visitor Counter
+  const [visitorCount, setVisitorCount] = useState(0);
 
   useEffect(() => {
     document.body.className = theme;
     }, [theme]);
-  
-  const [visitorCount, setVisitorCount] = useState(0);
 
-    useEffect(() => {
-      setVisitorCount(visitorCount + 1);
-    }, []);
+  useEffect(() => {
+    setVisitorCount(visitorCount + 1);
+  }, []);
 
 
+  // UX \\
   return (
     
     <div className="App">
@@ -180,6 +182,7 @@ function App() {
       <button aria-label="Minimize" />
       <button aria-label="Maximize" />
       <button aria-label="Close" />
+
     </div>
   </div>
 
@@ -189,10 +192,17 @@ function App() {
           <div className="field-row" style={{ justifyContent: "center" }}>
             <button onClick={() => setCount(count + 1)}>▶️</button>
             <button onClick={() => setCount(count)}>⏩</button>
-            <button onClick={() => setCount(0)}>⏹️</button>
+            <button onClick={() => setCount(0)}>⏹️</button>  
           </div>
 
-        <p style={{ textAlign: "center", color: "black", paddingTop: "42px" }}>Visitor Count: {visitorCount}</p>
+          <div class="field-row" style={{ paddingTop: "8px" }}>
+            <label for="range25">Volume:</label>
+            <label for="range26">Low</label>
+            <input id="range26" type="range" min="1" max="11" value="5" />
+            <label for="range27">High</label>
+          </div>
+          
+        <p style={{ textAlign: "center", color: "black", paddingTop: "3px" }}>Visitor Count: {visitorCount}</p>
         </div>
       </div>
 
