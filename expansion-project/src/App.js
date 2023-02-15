@@ -127,7 +127,7 @@ function App() {
   }, []);
 
 
-  // UX \\
+  // CSS | UX \\
   return (
     
     <div className="App">
@@ -140,25 +140,43 @@ function App() {
           value={greeting}
         /> */}
 
-    <div style={{ 
-      padding: "10px 32px",
-      fontSize: "21px",
-      height: "34px",
-      width: "733px", 
-      display: "flex", 
-      justifyContent: "flex-end", 
-      marginLeft: "256px" }}
-      >
+    <div style={{
+      // Button vs backround
+      position: "absolute",
+      top: "0",
+      right: "0",
+      fontSize: "20px",
+      padding: "16px 24px",
+      width: "200px",
+      height: "50px",
+    }}>
       <button 
-        onClick={handleMetaMaskConnection}>Connect Wallet
-      </button>
+        onClick={handleMetaMaskConnection}
+        style={{
+          // Button specifics
+          fontSize: "21px",
+          padding: "12px 24px",
+          width: "200px",
+          height: "51px",
+          borderRadius: "6px"
+
+        }}>Connect Wallet</button>
     </div>
 
-    <div className={`App ${theme}`}>
-        <button 
-          onClick={toggleTheme}> ☾☼ 
-        </button>
-    </div>
+      <div className={`App ${theme}`} style={{
+        position: "absolute",
+        top: 116,
+        right: 42
+    }}>
+      <button 
+        onClick={toggleTheme} style={{
+          fontSize: "1.2rem", // you can adjust this value to increase the font size of the button text
+          padding: "8px 16px", // you can adjust this value to increase the padding of the button
+          borderRadius: "50px", // you can adjust this value to increase the roundness of the button
+      }}> ☾☼ 
+    </button>
+  </div>
+
 
     <div>
       <button>
@@ -166,12 +184,34 @@ function App() {
       </button>
     </div>
 
+    <div style={{
+
+        position: "absolute",
+        top: 70,
+        right: 8,
+
+      }}>
+
+      <h1 style={{  
+
+        fontFamily: 'Press Start 2P', 
+        color: "silver", 
+        textShadow: "1px 7px #555",
+        transform: "skew(-16deg,0deg)",
+        fontSize: "12px" // you can adjust the value as needed
+
+      }}>^ Collect EXP!
+      </h1>
+    </div>
+
+
     <div>
       <h1 style={{  
         fontFamily: 'Press Start 2P', 
         color: "silver", 
         textShadow: "1px 7px #555",
         transform: "skew(-16deg,0deg)"
+
       }}>EXPANSION PROJECT</h1>
     </div>
 
