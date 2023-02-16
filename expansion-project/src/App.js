@@ -88,15 +88,17 @@ function App() {
   }
 
   // Dark and Light Mode
-  const [theme, setTheme] = useState('light');
 
   // const rootElement = document.getElementById("root");
+
+  const [theme, setTheme] = useState('light');
+
   const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
   };
 
     // MetaMask Connection
@@ -120,7 +122,7 @@ function App() {
 
   useEffect(() => {
     document.body.className = theme;
-    }, [theme]);
+  }, [theme]);
 
   useEffect(() => {
     setVisitorCount(visitorCount + 1);
