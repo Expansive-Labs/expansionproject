@@ -87,7 +87,6 @@ function App() {
     }
   }
 
-
     // MetaMask Connection
   const [isMetaMaskConnected, setIsMetaMaskConnected] = useState(false);
 
@@ -131,7 +130,7 @@ function App() {
   }, []);
 
 
-  // CSS | UX \\
+  // CSS | UX \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
   return (
     
     <div className="App">
@@ -144,50 +143,48 @@ function App() {
           value={greeting}
         /> */}
 
-{/* MetaMask Connection */}
-<div style={{
-  // Button vs background
-  position: "absolute",
-  top: "0",
-  right: "0",
-  fontSize: "20px",
-  padding: "16px 24px",
-  width: "200px",
-  height: "50px",
-  display: "flex",
-  alignItems: "center"
-}}>
-  <div style={{
-    // Green light
-    width: "10px",
-    height: "10px",
-    backgroundColor: isMetaMaskConnected ? "green" : "gray",
-    borderRadius: "50%",
-    marginRight: "10px",
-    marginLeft: "10px",
-    border: isMetaMaskConnected ? "2px solid green" : "4px solid gray"
-  }} />
-  <button 
-    onClick={handleMetaMaskConnection}
-    style={{
-      // Button specifics
-      fontSize: "16px",
-      padding: "12px 24px",
+    {/* MetaMask Connection */}
+    <div style={{
+      // Button vs background
+      position: "absolute",
+      top: "0",
+      right: "0",
+      fontSize: "20px",
+      padding: "16px 24px",
       width: "200px",
-      height: "51px",
-      borderRadius: "8px",
-      letterSpacing: "1px",
-      cursor: "pointer"
+      height: "50px",
+      display: "flex",
+      alignItems: "center"
     }}>
-    {isMetaMaskConnected ? "Wallet Connected" : "Connect Wallet"}
-  </button>
-</div>
-
-
-
+      <div style={{
+        // Green light
+        width: "16px",
+        height: "12px",
+        backgroundColor: isMetaMaskConnected ? "green" : "gray",
+        borderRadius: "50%",
+        marginRight: "16px",
+        marginLeft: "-8px",
+        border: isMetaMaskConnected ? "2px solid green" : "2px solid gray"
+      }} />
+      <button 
+        onClick={handleMetaMaskConnection}
+        style={{
+          // Button specifics
+          fontSize: "16px",
+          fontSize: "large",
+          padding: "8px 24px",
+          width: "200px",
+          height: "55px",
+          borderRadius: "8px",
+          letterSpacing: "2px",
+          cursor: "pointer"
+        }}>
+        {isMetaMaskConnected ? "Wallet Connected" : "Connect Wallet"}
+      </button>
+    </div>
 
       {/* Dark Mode */}
-      <div className={`App ${theme}`}>
+    <div className={`App ${theme}`}>
 
       <main style={{ marginTop: "10px"}}>
         <button 
@@ -213,8 +210,6 @@ function App() {
 
       </main>
       </div>
-
-
 
     {/* Music Links */}
     <div style={{ 
@@ -269,7 +264,7 @@ function App() {
   {/* Music Player */}
   <div style={{ width: 355, height: 155, margin: "0 auto", marginBottom: 0 }} className="window">
       <div className="title-bar">
-        <div className="title-bar-text" style={{ }}>Music Player</div>
+        <div className="title-bar-text" style={{ letterSpacing: "1px", }}>Music Player - Now playing... Royal</div>
         <div className="title-bar-controls">
           <button aria-label="Minimize" />
           <button aria-label="Maximize" />
@@ -278,7 +273,7 @@ function App() {
       </div>
 
       <div className="window-body">
-        <p style={{ textAlign: "center", color: "black", paddingTop: "5px" }}>Play Count: {count}</p>
+        <p style={{ textAlign: "center", color: "black", paddingTop: "2px", letterSpacing: "1px", }}>Play Count: {count}</p>
 
         <div className="field-row" style={{ justifyContent: "center" }}>
           <button onClick={() => setCount(count + 1)}>▶️</button>
@@ -295,8 +290,8 @@ function App() {
           }}>
           <div style={{ marginBottom: "1px", fontWeight: "bold" }}>Volume:</div>
           <div style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
-            <label for="range26" style={{ paddingLeft: "13px" }}>Low</label>
-            <label for="range27" style={{ paddingRight: "13px" }}>High</label>
+            <label for="range26" style={{ paddingLeft: "13px", letterSpacing: "1px", }}>Low</label>
+            <label for="range27" style={{ paddingRight: "13px", letterSpacing: "1px", }}>High</label>
           </div>
             <input
               id="range26"
@@ -309,7 +304,7 @@ function App() {
             />
           </div>
 
-        <p style={{ textAlign: "center", color: "black", paddingTop: "3px" }}>Visitor Count: {visitorCount}</p>
+        <p style={{ textAlign: "center", color: "black", paddingTop: "3px", letterSpacing: "1px", }}>Visitor Count: {visitorCount}</p>
       </div>
     </div>
 
