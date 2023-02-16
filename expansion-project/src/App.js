@@ -119,6 +119,9 @@ function App() {
     }
   };
 
+  // const [count, setCount] = useState(0);
+  const [volume, setVolume] = useState(5);
+
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
@@ -170,7 +173,6 @@ function App() {
     <div className={`App ${theme}`}>
 
         <main style={{ marginTop: "16px"}}>
-
           <button 
             onClick={toggleTheme} 
             style={{
@@ -233,37 +235,52 @@ function App() {
       }}>EXPANSION PROJECT</h1>
     </div>
 
+  {/* Music Player */}
   <div style={{ width: 355, height: 155, margin: "0 auto", marginBottom: 0 }} className="window">
-    <div className="title-bar">
-    <div className="title-bar-text" style={{ }}>Music Player</div>
-    <div className="title-bar-controls">
-
-      <button aria-label="Minimize" />
-      <button aria-label="Maximize" />
-      <button aria-label="Close" />
-
-    </div>
-  </div>
-
-      <div className="window-body">
-        <p style={{ textAlign: "center", color: "black", fontWeight: "bold", paddingTop: "5px" }}>Play Count: {count}</p>
-
-          <div className="field-row" style={{ justifyContent: "center" }}>
-            <button onClick={() => setCount(count + 1)}>▶️</button>
-            <button onClick={() => setCount(count)}>⏩</button>
-            <button onClick={() => setCount(0)}>⏹️</button>  
-          </div>
-
-          <div class="field-row" style={{ paddingTop: "8px" }}>
-            <label for="range25">Volume:</label>
-            <label for="range26">Low</label>
-            <input id="range26" type="range" min="1" max="11" value="5" />
-            <label for="range27">High</label>
-          </div>
-          
-        <p style={{ textAlign: "center", color: "black", paddingTop: "3px" }}>Visitor Count: {visitorCount}</p>
+      <div className="title-bar">
+        <div className="title-bar-text" style={{ }}>Music Player</div>
+        <div className="title-bar-controls">
+          <button aria-label="Minimize" />
+          <button aria-label="Maximize" />
+          <button aria-label="Close" />
         </div>
       </div>
+
+      <div className="window-body">
+        <p style={{ textAlign: "center", color: "black", paddingTop: "5px" }}>Play Count: {count}</p>
+
+        <div className="field-row" style={{ justifyContent: "center" }}>
+          <button onClick={() => setCount(count + 1)}>▶️</button>
+          <button onClick={() => setCount(count)}>⏩</button>
+          <button onClick={() => setCount(0)}>⏹️</button>  
+        </div>
+
+        <div class="field-row" style={{ 
+          paddingTop: "4px", 
+          display: "flex", 
+          flexDirection: "column", 
+          alignItems: "center" ,
+          textAlign: "center"
+          }}>
+          <div style={{ marginBottom: "1px", fontWeight: "bold" }}>Volume:</div>
+          <div style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
+            <label for="range26" style={{ paddingLeft: "13px" }}>Low</label>
+            <label for="range27" style={{ paddingRight: "13px" }}>High</label>
+          </div>
+            <input
+              id="range26"
+              type="range"
+              min="1"
+              max="11"
+              value={volume}
+              onChange={(e) => setVolume(e.target.value)}
+              style={{ width: "100%" }}
+            />
+          </div>
+
+        <p style={{ textAlign: "center", color: "black", paddingTop: "3px" }}>Visitor Count: {visitorCount}</p>
+      </div>
+    </div>
 
         {/* <br />
         <button onClick={getBalance}>Get Balance</button>

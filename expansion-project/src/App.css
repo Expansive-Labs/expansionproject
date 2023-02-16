@@ -32,13 +32,13 @@ h1 {
 }
 
 .light {
-  background-color: #e7e7e7;
-  color: #333;
+  background-color: #ececec;
+  color: #333333;
 }
 
 .dark {
   background-color: #05072d;
-  color: #fff;
+  color: #333333;
 }
 
 .App-link {
