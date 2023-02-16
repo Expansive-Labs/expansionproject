@@ -87,19 +87,6 @@ function App() {
     }
   }
 
-  // Dark and Light Mode
-
-  // const rootElement = document.getElementById("root");
-
-  const [theme, setTheme] = useState('light');
-
-  const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
-  };
 
     // MetaMask Connection
   const [isMetaMaskConnected, setIsMetaMaskConnected] = useState(false);
@@ -119,6 +106,18 @@ function App() {
 
   // Visitor Counter
   const [visitorCount, setVisitorCount] = useState(0);
+
+  // Dark and Light Mode
+  // const rootElement = document.getElementById("root");
+  const [theme, setTheme] = useState('dark');
+
+  const toggleTheme = () => {
+    if (theme === 'dark') {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+  };
 
   useEffect(() => {
     document.body.className = theme;
@@ -142,6 +141,7 @@ function App() {
           value={greeting}
         /> */}
 
+    {/* MetaMask Connection */}
     <div style={{
       // Button vs backround
       position: "absolute",
@@ -156,56 +156,72 @@ function App() {
         onClick={handleMetaMaskConnection}
         style={{
           // Button specifics
-          fontSize: "21px",
+          fontSize: "20px",
           padding: "12px 24px",
           width: "200px",
           height: "51px",
-          borderRadius: "6px"
+          borderRadius: "8px",
+          letterSpacing: "1px"
 
         }}>Connect Wallet</button>
     </div>
 
-      <div className={`App ${theme}`} style={{
-        position: "absolute",
-        top: 116,
-        right: 42
-    }}>
-      <button 
-        onClick={toggleTheme} style={{
-          fontSize: "1.2rem", // you can adjust this value to increase the font size of the button text
-          padding: "8px 16px", // you can adjust this value to increase the padding of the button
-          borderRadius: "50px", // you can adjust this value to increase the roundness of the button
-      }}> ☾☼ 
-    </button>
-  </div>
+    {/* Dark Mode */}
+    <div className={`App ${theme}`}>
 
+        <main style={{ marginTop: "16px"}}>
 
-    <div>
-      <button>
-        <a href="https://linktr.ee/expansionproject" target="_blank">MUSIC</a>
+          <button 
+            onClick={toggleTheme} 
+            style={{
+              fontSize: "1.2rem",
+              padding: "9px 16px",
+              borderRadius: "50px",
+            }}>
+            {theme === 'light' ? '☼' : '☾'}
+          </button>
+
+        </main>
+      </div>
+
+    {/* Music Links */}
+    <div style={{ 
+      marginTop: "32px", 
+      position: "relative" 
+      }}>
+      <button style={{ 
+        borderRadius: "8px", 
+        padding: "13px 24px", 
+        position: "absolute", 
+        top: "-70px", 
+        left: "32px",
+        letterSpacing: "1px"
+      }}>
+      <a href="https://linktr.ee/expansionproject" target="_blank" style={{ 
+        fontSize: "large", 
+        color: "black", 
+        textDecoration: "none" 
+        
+      }}>Links</a>
       </button>
     </div>
 
+    {/* Claim EXP */}
     <div style={{
-
         position: "absolute",
         top: 70,
         right: 8,
-
       }}>
-
       <h1 style={{  
-
         fontFamily: 'Press Start 2P', 
         color: "silver", 
         textShadow: "1px 7px #555",
         transform: "skew(-16deg,0deg)",
-        fontSize: "12px" // you can adjust the value as needed
+        fontSize: "10px" // you can adjust the value as needed
 
-      }}>^ Collect EXP!
+      }}>^ Claim EXP tokens!
       </h1>
     </div>
-
 
     <div>
       <h1 style={{  
@@ -221,6 +237,7 @@ function App() {
     <div className="title-bar">
     <div className="title-bar-text" style={{ }}>Music Player</div>
     <div className="title-bar-controls">
+
       <button aria-label="Minimize" />
       <button aria-label="Maximize" />
       <button aria-label="Close" />
