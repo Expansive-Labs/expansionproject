@@ -144,30 +144,47 @@ function App() {
           value={greeting}
         /> */}
 
-    {/* MetaMask Connection */}
-    <div style={{
-      // Button vs backround
-      position: "absolute",
-      top: "0",
-      right: "0",
-      fontSize: "20px",
-      padding: "16px 24px",
+{/* MetaMask Connection */}
+<div style={{
+  // Button vs background
+  position: "absolute",
+  top: "0",
+  right: "0",
+  fontSize: "20px",
+  padding: "16px 24px",
+  width: "200px",
+  height: "50px",
+  display: "flex",
+  alignItems: "center"
+}}>
+  <div style={{
+    // Green light
+    width: "10px",
+    height: "10px",
+    backgroundColor: isMetaMaskConnected ? "green" : "gray",
+    borderRadius: "50%",
+    marginRight: "10px",
+    marginLeft: "10px",
+    border: isMetaMaskConnected ? "2px solid green" : "4px solid gray"
+  }} />
+  <button 
+    onClick={handleMetaMaskConnection}
+    style={{
+      // Button specifics
+      fontSize: "16px",
+      padding: "12px 24px",
       width: "200px",
-      height: "50px",
+      height: "51px",
+      borderRadius: "8px",
+      letterSpacing: "1px",
+      cursor: "pointer"
     }}>
-      <button 
-        onClick={handleMetaMaskConnection}
-        style={{
-          // Button specifics
-          fontSize: "20px",
-          padding: "12px 24px",
-          width: "200px",
-          height: "51px",
-          borderRadius: "8px",
-          letterSpacing: "1px"
+    {isMetaMaskConnected ? "Wallet Connected" : "Connect Wallet"}
+  </button>
+</div>
 
-        }}>Connect Wallet</button>
-    </div>
+
+
 
       {/* Dark Mode */}
       <div className={`App ${theme}`}>
@@ -183,6 +200,7 @@ function App() {
             transformOrigin: "center center",
             justifyContent: "center",
             alignItems: "center",
+            cursor: "pointer"
           }}>
         <span style={{
           fontSize: "2rem",
@@ -209,12 +227,13 @@ function App() {
         position: "absolute", 
         top: "-96px", 
         left: "32px",
-        letterSpacing: "1px"
+        letterSpacing: "1px",
+        cursor: "pointer"
       }}>
       <a href="https://linktr.ee/expansionproject" target="_blank" style={{ 
         fontSize: "large", 
         color: "black", 
-        textDecoration: "none" 
+        textDecoration: "none",
         
       }}>Links</a>
       </button>
