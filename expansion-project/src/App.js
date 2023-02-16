@@ -169,22 +169,34 @@ function App() {
         }}>Connect Wallet</button>
     </div>
 
-    {/* Dark Mode */}
-    <div className={`App ${theme}`}>
+      {/* Dark Mode */}
+      <div className={`App ${theme}`}>
 
-        <main style={{ marginTop: "16px"}}>
-          <button 
-            onClick={toggleTheme} 
-            style={{
-              fontSize: "1.2rem",
-              padding: "9px 16px",
-              borderRadius: "50px",
-            }}>
-            {theme === 'light' ? '☼' : '☾'}
-          </button>
+      <main style={{ marginTop: "10px"}}>
+        <button 
+          onClick={toggleTheme} 
+          style={{
+            fontSize: "1.2rem",
+            padding: "25px",
+            borderRadius: "50px",
+            transform: "scale(0.8)",
+            transformOrigin: "center center",
+            justifyContent: "center",
+            alignItems: "center",
+          }}>
+        <span style={{
+          fontSize: "2rem",
+          lineHeight: "0",
+          position: "relative",
+          top: "4px",
+          left: "1px"
+        }}>{theme === 'light' ? '☼' : '☾'}</span>
+        </button>
 
-        </main>
+      </main>
       </div>
+
+
 
     {/* Music Links */}
     <div style={{ 
@@ -195,7 +207,7 @@ function App() {
         borderRadius: "8px", 
         padding: "13px 24px", 
         position: "absolute", 
-        top: "-70px", 
+        top: "-96px", 
         left: "32px",
         letterSpacing: "1px"
       }}>
