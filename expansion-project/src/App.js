@@ -164,7 +164,7 @@ function App() {
         borderRadius: "50%",
         marginRight: "16px",
         marginLeft: "-8px",
-        border: isMetaMaskConnected ? "2px solid green" : "2px solid gray"
+        border: isMetaMaskConnected ? "2px solid gray" : "2px solid silver"
       }} />
       <button 
         onClick={handleMetaMaskConnection}
@@ -197,7 +197,11 @@ function App() {
             transformOrigin: "center center",
             justifyContent: "center",
             alignItems: "center",
-            cursor: "pointer"
+            cursor: "pointer",
+            color: theme === 'light' ? 'black' : 'gold',
+            backgroundColor: theme === 'light' ? 'silver' : '#05072d',
+            border: `1px solid ${theme === 'light' ? 'black' : 'gold'}`
+
           }}>
         <span style={{
           fontSize: "2rem",
@@ -252,19 +256,29 @@ function App() {
     </div>
 
     <div>
-      <h1 style={{  
-        fontFamily: 'Press Start 2P', 
-        color: "silver", 
-        textShadow: "1px 7px #555",
-        transform: "skew(-16deg,0deg)"
-
-      }}>EXPANSION PROJECT</h1>
-    </div>
+  <h1 style={{  
+    fontFamily: 'Press Start 2P',
+    color: "silver",
+    textShadow: "1px 7px #555",
+    transform: "skew(-16deg,0deg)",
+    WebkitTextStroke: theme === 'light' ? "1.5px black" : "none",
+    textStroke: theme === 'light' ? "2px black" : "none",
+    WebkitTextFillColor: theme === 'light' ? "#09846d" : "silver",
+    // textFillColor: theme === 'light' ? "transparent" : "silver"
+  }}>EXPANSION PROJECT</h1>
+</div>
 
   {/* Music Player */}
-  <div style={{ width: 355, height: 155, margin: "0 auto", marginBottom: 0 }} className="window">
+  <div style={{ 
+    width: 355, 
+    height: 155, 
+    margin: "0 auto", 
+    marginBottom: 0 }} 
+    
+    className="window">
       <div className="title-bar">
-        <div className="title-bar-text" style={{ letterSpacing: "1px", }}>Music Player - Now playing... Royal</div>
+        <div className="title-bar-text" style={{ letterSpacing: "1px", 
+          }}>Music Player - Now playing... Royal</div>
         <div className="title-bar-controls">
           <button aria-label="Minimize" />
           <button aria-label="Maximize" />
@@ -273,7 +287,12 @@ function App() {
       </div>
 
       <div className="window-body">
-        <p style={{ textAlign: "center", color: "black", paddingTop: "2px", letterSpacing: "1px", }}>Play Count: {count}</p>
+        <p style={{ 
+          textAlign: "center", 
+          color: "black", 
+          paddingTop: "2px", 
+          letterSpacing: "1px", 
+          }}>Play Count: {count}</p>
 
         <div className="field-row" style={{ justifyContent: "center" }}>
           <button onClick={() => setCount(count + 1)}>▶️</button>
@@ -287,11 +306,29 @@ function App() {
           flexDirection: "column", 
           alignItems: "center" ,
           textAlign: "center"
+
           }}>
-          <div style={{ marginBottom: "1px", fontWeight: "bold" }}>Volume:</div>
-          <div style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
-            <label for="range26" style={{ paddingLeft: "13px", letterSpacing: "1px", }}>Low</label>
-            <label for="range27" style={{ paddingRight: "13px", letterSpacing: "1px", }}>High</label>
+          <div style={{ 
+            marginBottom: "1px", 
+            fontWeight: "bold"
+            }}>Volume:</div>
+
+          <div style={{ 
+            display: "flex", 
+            justifyContent: "space-between", 
+            width: "100%" 
+
+            }}>
+            <label for="range26" style={{ 
+              paddingLeft: "13px", 
+              letterSpacing: "1px", 
+              }}>Low</label>
+
+            <label for="range27" style={{ 
+              paddingRight: "13px", 
+              letterSpacing: "1px",
+              }}>High</label>
+              
           </div>
             <input
               id="range26"
@@ -304,7 +341,13 @@ function App() {
             />
           </div>
 
-        <p style={{ textAlign: "center", color: "black", paddingTop: "3px", letterSpacing: "1px", }}>Visitor Count: {visitorCount}</p>
+        <p style={{ 
+          textAlign: "center", 
+          color: "black", 
+          paddingTop: "3px", 
+          letterSpacing: "1px", 
+          
+          }}>Visitor Count: {visitorCount}</p>
       </div>
     </div>
 
