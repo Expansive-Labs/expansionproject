@@ -224,7 +224,7 @@ function App() {
         borderRadius: "8px", 
         padding: "13px 24px", 
         position: "absolute", 
-        top: "-96px", 
+        top: "-100px", 
         left: "32px",
         letterSpacing: "1px",
         cursor: "pointer"
@@ -234,7 +234,53 @@ function App() {
         color: "black", 
         textDecoration: "none",
         
-      }}>Links</a>
+      }}>Socials</a>
+      </button>
+    </div>
+
+      {/* Photos Tab */}
+      <div style={{ 
+        marginTop: "32px", 
+        position: "relative" 
+      }}>
+      <button style={{ 
+        borderRadius: "8px", 
+        padding: "13px 24px", 
+        position: "absolute", 
+        top: "-46px", 
+        left: "32px",
+        letterSpacing: "1px",
+        cursor: "pointer"
+      }}>
+      <a href="https://linktr.ee/expansionproject" target="_blank" style={{ 
+        fontSize: "large", 
+        color: "black", 
+        textDecoration: "none",
+        
+      }}>Photos</a>
+      </button>
+    </div>
+
+      {/* Videos Tab */}
+      <div style={{ 
+        marginTop: "32px", 
+        position: "relative" 
+      }}>
+      <button style={{ 
+        borderRadius: "8px", 
+        padding: "13px 24px", 
+        position: "absolute", 
+        top: "8px", 
+        left: "32px",
+        letterSpacing: "1px",
+        cursor: "pointer"
+      }}>
+      <a href="https://linktr.ee/expansionproject" target="_blank" style={{ 
+        fontSize: "large", 
+        color: "black", 
+        textDecoration: "none",
+        
+      }}>Videos</a>
       </button>
     </div>
 
@@ -278,7 +324,7 @@ function App() {
     className="window">
       <div className="title-bar">
         <div className="title-bar-text" style={{ letterSpacing: "1px", 
-          }}>Music Player - Now playing... Royal</div>
+          }}>Music Player - Now playing.. Royal</div>
         <div className="title-bar-controls">
           <button aria-label="Minimize" />
           <button aria-label="Maximize" />
@@ -361,7 +407,7 @@ function App() {
     className="window">
       <div className="title-bar">
         <div className="title-bar-text" style={{ letterSpacing: "1px", 
-          }}>Video Media Player - Emagination</div>
+          }}>Video Media Player - Now watching.. Emagination</div>
         <div className="title-bar-controls">
           <button aria-label="Minimize" />
           <button aria-label="Maximize" />
