@@ -160,7 +160,7 @@ function App() {
         // Green light
         width: "16px",
         height: "12px",
-        backgroundColor: isMetaMaskConnected ? "green" : "gray",
+        backgroundColor: isMetaMaskConnected ? "green" : "#7e0808",
         borderRadius: "50%",
         marginRight: "16px",
         marginLeft: "-8px",
@@ -238,51 +238,39 @@ function App() {
       </button>
     </div>
 
-      {/* Photos Tab */}
-      <div style={{ 
-        marginTop: "32px", 
-        position: "relative" 
-      }}>
-      <button style={{ 
-        borderRadius: "8px", 
-        padding: "13px 24px", 
-        position: "absolute", 
-        top: "-46px", 
-        left: "32px",
-        letterSpacing: "1px",
-        cursor: "pointer"
-      }}>
-      <a href="https://linktr.ee/expansionproject" target="_blank" style={{ 
-        fontSize: "large", 
-        color: "black", 
-        textDecoration: "none",
-        
-      }}>Photos</a>
-      </button>
-    </div>
-
       {/* Videos Tab */}
       <div style={{ 
-        marginTop: "32px", 
-        position: "relative" 
-      }}>
-      <button style={{ 
-        borderRadius: "8px", 
-        padding: "13px 24px", 
-        position: "absolute", 
-        top: "8px", 
-        left: "32px",
-        letterSpacing: "1px",
-        cursor: "pointer"
-      }}>
-      <a href="https://linktr.ee/expansionproject" target="_blank" style={{ 
-        fontSize: "large", 
-        color: "black", 
-        textDecoration: "none",
-        
-      }}>Videos</a>
-      </button>
-    </div>
+  marginTop: "32px", 
+  position: "relative" 
+}}>
+  <button style={{ 
+    borderRadius: "8px",
+    padding: "40px 24px 13px",  // Added 40px padding-top
+    padding: "13px 24px", 
+    position: "absolute", 
+    top: "-46px", 
+    left: "32px",
+    letterSpacing: "1px",
+    cursor: "pointer"
+  }}>
+    <img style={{
+      display: "block",
+      "-webkit-user-select": "none",
+      margin: "auto",
+      backgroundColor: "hsl(0, 0%, 90%)",
+      transition: "background-color 300ms",
+      width: "40px",
+      height: "40px",
+      marginRight: "16px"
+    }} src="https://win98icons.alexmeub.com/icons/png/cassette_tape-1.png" />
+    <a href="https://linktr.ee/expansionproject" target="_blank" style={{ 
+      fontSize: "large", 
+      color: "black", 
+      textDecoration: "none",
+    }}>VIDEOS!</a>
+  </button>
+</div>
+
 
     {/* Claim EXP */}
     <div style={{
@@ -301,18 +289,22 @@ function App() {
       </h1>
     </div>
 
-    <div>
-  <h1 style={{  
+<div style={{ marginTop: "100px" }}>
+  <h1 style={{
     fontFamily: 'Press Start 2P',
     color: "silver",
     textShadow: "1px 7px #555",
     transform: "skew(-16deg,0deg)",
     WebkitTextStroke: theme === 'light' ? "1.5px black" : "none",
     textStroke: theme === 'light' ? "2px black" : "none",
-    WebkitTextFillColor: theme === 'light' ? "#09846d" : "silver",
-    // textFillColor: theme === 'light' ? "transparent" : "silver"
-  }}>EXPANSION PROJECT</h1>
+    WebkitTextFillColor: theme === 'light' ? "#09846d" : "#05997a",
+    fontSize: "64px",
+    marginBottom: "20px" // Move the text down by adding margin to the bottom
+  }}>
+    EXPANSION PROJECT
+  </h1>
 </div>
+
 
   {/* Music Player */}
   <div style={{ 
@@ -471,6 +463,18 @@ function App() {
           </div>
       </div>
     </div>
+
+    <object type="application/x-shockwave-flash" data="your-flash-game-file.swf" width="width-in-pixels" height="height-in-pixels">
+  <param name="movie" value="your-flash-game-file.swf" />
+</object>
+
+
+<div style={{ position: "relative", top: "-10px", margin: "10px 0" }}>
+  <h1 style={{ paddingTop: "25px", fontFamily: "Press Start 2P", fontSize: "8px", color: "#09846d" }}>
+    This webpage is powered by <a href="https://github.com/Expansive-Labs" target="_blank" rel="noopener noreferrer" style={{color: "#09846d", textDecoration: "none"}}>///EXPANSIVE LABS///</a>
+  </h1>
+</div>
+
 
         {/* <br />
         <button onClick={getBalance}>Get Balance</button>

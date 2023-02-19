@@ -37,10 +37,9 @@ h1 {
 }
 
 .dark {
-  background-color: #05072d;
+  background-color: #05072d; /* dark blue color with 80% opacity */
   color: #333333;
 }
-
 
 
 .App-link {
