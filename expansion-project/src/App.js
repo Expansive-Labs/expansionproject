@@ -238,14 +238,14 @@ function App() {
       </button>
     </div>
 
-      {/* Videos Tab */}
-      <div style={{ 
+  {/* Videos Tab */}
+  <div style={{ 
   marginTop: "32px", 
   position: "relative" 
 }}>
   <button style={{ 
     borderRadius: "8px",
-    padding: "40px 24px 13px",  // Added 40px padding-top
+    padding: "40px 24px 13px",
     padding: "13px 24px", 
     position: "absolute", 
     top: "-46px", 
@@ -262,7 +262,7 @@ function App() {
       width: "40px",
       height: "40px",
       marginRight: "16px"
-    }} src="https://win98icons.alexmeub.com/icons/png/cassette_tape-1.png" />
+    }} src="https://gateway.pinata.cloud/ipfs/QmNnQfmieBumfPgXB5o1Gf5qNANYhNS9yptWAniyHgjr8f?_gl=1*1gaswm7*_ga*MTgyMjQ0MzU4Ny4xNjc2OTE4NTE2*_ga_5RMPXG14TE*MTY3NjkxODUxNi4xLjEuMTY3NjkxODUyMy41My4wLjA." />
     <a href="https://linktr.ee/expansionproject" target="_blank" style={{ 
       fontSize: "large", 
       color: "black", 
@@ -468,13 +468,11 @@ function App() {
   <param name="movie" value="your-flash-game-file.swf" />
 </object>
 
-
 <div style={{ position: "relative", top: "-10px", margin: "10px 0" }}>
   <h1 style={{ paddingTop: "25px", fontFamily: "Press Start 2P", fontSize: "8px", color: "#09846d" }}>
     This webpage is powered by <a href="https://github.com/Expansive-Labs" target="_blank" rel="noopener noreferrer" style={{color: "#09846d", textDecoration: "none"}}>///EXPANSIVE LABS///</a>
   </h1>
 </div>
-
 
         {/* <br />
         <button onClick={getBalance}>Get Balance</button>
