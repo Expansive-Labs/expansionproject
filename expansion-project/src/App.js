@@ -160,11 +160,11 @@ function App() {
         // Green light
         width: "16px",
         height: "12px",
-        backgroundColor: isMetaMaskConnected ? "green" : "#7e0808",
+        backgroundColor: isMetaMaskConnected ? "#07FFA3" : "#CF1000",
         borderRadius: "50%",
         marginRight: "16px",
         marginLeft: "-8px",
-        border: isMetaMaskConnected ? "2px solid gray" : "2px solid silver"
+        border: isMetaMaskConnected ? "2px solid gray" : "2px solid gray"
       }} />
       <button 
         onClick={handleMetaMaskConnection}
@@ -215,28 +215,40 @@ function App() {
       </main>
       </div>
 
-    {/* Music Links */}
-    <div style={{ 
-      marginTop: "32px", 
-      position: "relative" 
-      }}>
-      <button style={{ 
-        borderRadius: "8px", 
-        padding: "13px 24px", 
-        position: "absolute", 
-        top: "-100px", 
-        left: "32px",
-        letterSpacing: "1px",
-        cursor: "pointer"
-      }}>
-      <a href="https://linktr.ee/expansionproject" target="_blank" style={{ 
+    {/* Social Links */}
+<div style={{ 
+  marginTop: "32px", 
+  position: "relative" 
+}}>
+  <button style={{ 
+    borderRadius: "8px", 
+    padding: "13px 24px", 
+    position: "absolute", 
+    top: "-100px", 
+    left: "32px",
+    letterSpacing: "1px",
+    cursor: "pointer"
+  }}>
+    <a href="https://linktr.ee/expansionproject" target="_blank" style={{textDecoration: "none"}}>
+      <img style={{
+        display: "block",
+        "-webkit-user-select": "none",
+        margin: "auto",
+        backgroundColor: "hsl(0, 0%, 90%)",
+        transition: "background-color 300ms",
+        width: "40px",
+        height: "40px",
+        marginRight: "16px"
+      }} src="https://gateway.pinata.cloud/ipfs/QmV113mue8m3mnPqCUPFE9R6hGPs5DD8MwaePfiku41ADd?_gl=1*1mex13o*_ga*MTgyMjQ0MzU4Ny4xNjc2OTE4NTE2*_ga_5RMPXG14TE*MTY3Njk5NjUwMi4yLjAuMTY3Njk5NjUwNy41NS4wLjA." />
+      <span style={{
         fontSize: "large", 
-        color: "black", 
-        textDecoration: "none",
-        
-      }}>Socials</a>
-      </button>
-    </div>
+        color: "black"
+      }}>Socials!</span>
+    </a>
+  </button>
+</div>
+
+
 
   {/* Videos Tab */}
   <div style={{ 
@@ -248,31 +260,32 @@ function App() {
     padding: "40px 24px 13px",
     padding: "13px 24px", 
     position: "absolute", 
-    top: "-46px", 
+    top: "-8px", 
     left: "32px",
     letterSpacing: "1px",
     cursor: "pointer"
   }}>
-    <img style={{
-      display: "block",
-      "-webkit-user-select": "none",
-      margin: "auto",
-      backgroundColor: "hsl(0, 0%, 90%)",
-      transition: "background-color 300ms",
-      width: "40px",
-      height: "40px",
-      marginRight: "16px"
-    }} src="https://gateway.pinata.cloud/ipfs/QmNnQfmieBumfPgXB5o1Gf5qNANYhNS9yptWAniyHgjr8f?_gl=1*1gaswm7*_ga*MTgyMjQ0MzU4Ny4xNjc2OTE4NTE2*_ga_5RMPXG14TE*MTY3NjkxODUxNi4xLjEuMTY3NjkxODUyMy41My4wLjA." />
-    <a href="https://linktr.ee/expansionproject" target="_blank" style={{ 
-      fontSize: "large", 
-      color: "black", 
-      textDecoration: "none",
-    }}>VIDEOS!</a>
+    <a href="https://linktr.ee/expansionproject" target="_blank" style={{ textDecoration: "none" }}>
+      <img style={{
+        display: "block",
+        "-webkit-user-select": "none",
+        margin: "auto",
+        backgroundColor: "hsl(0, 0%, 90%)",
+        transition: "background-color 300ms",
+        width: "40px",
+        height: "40px",
+        marginRight: "16px"
+      }} src="https://gateway.pinata.cloud/ipfs/QmNnQfmieBumfPgXB5o1Gf5qNANYhNS9yptWAniyHgjr8f?_gl=1*1gaswm7*_ga*MTgyMjQ0MzU4Ny4xNjc2OTE4NTE2*_ga_5RMPXG14TE*MTY3NjkxODUxNi4xLjEuMTY3NjkxODUyMy41My4wLjA." />
+      <span style={{
+        fontSize: "large", 
+        color: "black", 
+        textDecoration: "none"
+      }}>Videos!</span>
+    </a>
   </button>
 </div>
 
-
-    {/* Claim EXP */}
+    {/* Claim EXP faucet */}
     <div style={{
         position: "absolute",
         top: 70,
@@ -297,9 +310,9 @@ function App() {
     transform: "skew(-16deg,0deg)",
     WebkitTextStroke: theme === 'light' ? "1.5px black" : "none",
     textStroke: theme === 'light' ? "2px black" : "none",
-    WebkitTextFillColor: theme === 'light' ? "#09846d" : "#05997a",
+    WebkitTextFillColor: theme === 'light' ? "#09996d" : "#07FFA3",
     fontSize: "64px",
-    marginBottom: "20px" // Move the text down by adding margin to the bottom
+    marginBottom: "20px"
   }}>
     EXPANSION PROJECT
   </h1>
@@ -464,15 +477,18 @@ function App() {
       </div>
     </div>
 
-    <object type="application/x-shockwave-flash" data="your-flash-game-file.swf" width="width-in-pixels" height="height-in-pixels">
+    {/* Flash Player */}
+    {/* <object type="application/x-shockwave-flash" data="your-flash-game-file.swf" width="width-in-pixels" height="height-in-pixels">
   <param name="movie" value="your-flash-game-file.swf" />
-</object>
+</object> */}
 
 <div style={{ position: "relative", top: "-10px", margin: "10px 0" }}>
-  <h1 style={{ paddingTop: "25px", fontFamily: "Press Start 2P", fontSize: "8px", color: "#09846d" }}>
-    This webpage is powered by <a href="https://github.com/Expansive-Labs" target="_blank" rel="noopener noreferrer" style={{color: "#09846d", textDecoration: "none"}}>///EXPANSIVE LABS///</a>
+  <h1 style={{ fontFamily: "Press Start 2P", paddingTop: "25px", fontSize: "8px", color: "#717171" }}>
+    This webpage is powered by 
+    <a href="https://github.com/Expansive-Labs" target="_blank" rel="noopener noreferrer" style={{color: "#09846d", textDecoration: "none", letterSpacing: "2px" }}> ///EXPANSIVE LABS///</a>
   </h1>
 </div>
+
 
         {/* <br />
         <button onClick={getBalance}>Get Balance</button>
