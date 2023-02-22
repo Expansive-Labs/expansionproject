@@ -62,11 +62,6 @@ function App() {
     }
   }
 
-  async function requestAccount() {
-    // Requests the account information from their metamask wallet
-    await window.ethereum.request({ method: 'eth_requestAccounts' });
-  }
-
   async function setGreeting() {
     if (!greeting) return // Checks if they actaully typed in a greeting on the frontend
     if (typeof window.ethereum !== 'undefined') {
@@ -87,6 +82,11 @@ function App() {
     }
   }
 
+  async function requestAccount() {
+    // Requests the account information from their metamask wallet
+    await window.ethereum.request({ method: 'eth_requestAccounts' });
+  }
+
   // MetaMask Function
   const [isMetaMaskConnected, setIsMetaMaskConnected] = useState(false);
 
@@ -102,6 +102,8 @@ function App() {
       console.error("MetaMask is not available in your browser");
     }
   };
+
+  // STATE VARIABLES /////////////////////////////////////////////////////////////////////////
 
   // Visitor Counter
   const [visitorCount, setVisitorCount] = useState(0);
@@ -119,7 +121,8 @@ function App() {
   };
 
   // const [count, setCount] = useState(0);
-  const [volume, setVolume] = useState(5);
+  const [audioVolume, setAudioVolume] = useState(5);
+  const [videoVolume, setVideoVolume] = useState(5);
 
   useEffect(() => {
     document.body.className = theme;
@@ -334,22 +337,21 @@ function App() {
       </h1>
     </div>
 
-<div style={{ marginTop: "50px" }}>
-  <h1 style={{
-    fontFamily: 'Press Start 2P',
-    color: "silver",
-    textShadow: "1px 7px #555",
-    transform: "skew(-16deg,0deg)",
-    WebkitTextStroke: theme === 'light' ? "1.5px black" : "none",
-    textStroke: theme === 'light' ? "2px black" : "none",
-    WebkitTextFillColor: theme === 'light' ? "#09996d" : "#07FFA3",
-    fontSize: "51px",
-    marginBottom: "20px"
-  }}>
-    EXPANSION PROJECT
-  </h1>
-</div>
-
+  <div style={{ marginTop: "50px" }}>
+    <h1 style={{
+      fontFamily: 'Press Start 2P',
+      color: "silver",
+      textShadow: "1px 7px #555",
+      transform: "skew(-16deg,0deg)",
+      WebkitTextStroke: theme === 'light' ? "1.5px black" : "none",
+      textStroke: theme === 'light' ? "2px black" : "none",
+      WebkitTextFillColor: theme === 'light' ? "#09996d" : "#07FFA3",
+      fontSize: "51px",
+      marginBottom: "20px"
+    }}>
+      EXPANSION PROJECT
+    </h1>
+  </div>
 
   {/* Audio Player */}
   <div style={{ 
@@ -418,8 +420,8 @@ function App() {
               type="range"
               min="1"
               max="11"
-              value={volume}
-              onChange={(e) => setVolume(e.target.value)}
+              value={audioVolume}
+              onChange={(e) => setAudioVolume(e.target.value)}
               style={{ width: "100%" }}
             />
           </div>
@@ -434,7 +436,7 @@ function App() {
       </div>
     </div>
 
-  {/* Video Player */}
+  {/* Video Media Player */}
   <div style={{ 
     width: 480, 
     height: 480, 
@@ -469,8 +471,9 @@ function App() {
         <iframe style={{
           paddingTop: "16px"
         }}
-          width="440"             height="300" 
-          src="https://www.youtube.com/watch?v=Mflab1MxKaI"
+          width="440"             
+          height="300" 
+          src="https://www.youtube.com/embed/Mflab1MxKaI"
           frameborder="0" 
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen 
@@ -504,33 +507,29 @@ function App() {
               paddingRight: "13px", 
               letterSpacing: "1px",
               }}>High</label>
-              
+          
+          {/* Volume Slider */}
           </div>
             <input
               id="range26"
               type="range"
               min="1"
               max="11"
-              value={volume}
-              onChange={(e) => setVolume(e.target.value)}
+              value={videoVolume}
+              onChange={(e) => setVideoVolume(e.target.value)}
               style={{ width: "100%" }}
             />
           </div>
       </div>
     </div>
 
-
-    {/* Flash Player */}
-    {/* <object type="application/x-shockwave-flash" data="your-flash-game-file.swf" width="width-in-pixels" height="height-in-pixels">
-  <param name="movie" value="your-flash-game-file.swf" />
-</object> */}
-
-<div style={{ position: "relative", top: "-10px", margin: "10px 0" }}>
-  <h1 style={{ fontFamily: "Press Start 2P", paddingTop: "25px", fontSize: "8px", color: "#717171" }}>
-    This webpage is powered by 
-    <a href="https://github.com/Expansive-Labs" target="_blank" rel="noopener noreferrer" style={{color: "#09846d", textDecoration: "none", letterSpacing: "2px" }}> ///EXPANSIVE LABS///</a>
-  </h1>
-</div>
+  {/* EXPANSIVE LABS */}
+  <div style={{ position: "relative", top: "-10px", margin: "10px 0" }}>
+    <h1 style={{ fontFamily: "Press Start 2P", paddingTop: "25px", fontSize: "8px", color: "#717171" }}>
+      This webpage is powered by 
+      <a href="https://github.com/Expansive-Labs" target="_blank" rel="noopener noreferrer" style={{color: "#09846d", textDecoration: "none", letterSpacing: "2px" }}> ///EXPANSIVE LABS///</a>
+    </h1>
+  </div>
 
         {/* <br />
         <button onClick={getBalance}>Get Balance</button>
