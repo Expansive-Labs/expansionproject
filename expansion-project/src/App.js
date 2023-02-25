@@ -2,17 +2,26 @@ import './App.css';
 import React from "react";
 import "98.css";
 import { useState, useEffect } from 'react';
-import { ethers } from 'ethers';
+// import { ethers } from 'ethers';
 import ExpansionProject from './artifacts/contracts/ExpansionProject.sol/ExpansionProject.json';
 
-const expansionProjectAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+// const expansionProjectAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 
 function App() {
 
-  const [count, setCount] = React.useState(0);
-
-  // MetaMask Function
+  // MetaMask Connection
   const [isMetaMaskConnected, setIsMetaMaskConnected] = useState(false);
+
+  // Audio Play Counter and Volume Slider
+  const [audioCount, setAudioCount] = React.useState(0);
+  const [audioVolume, setAudioVolume] = useState(5);
+
+  // Video Play Counter and Volume Slider
+  const [videoCount, setVideoCount] = React.useState(0);
+  const [videoVolume, setVideoVolume] = useState(5);
+
+  // Webaite Visitor Counter
+  const [visitorCount, setVisitorCount] = useState(0);
 
   const handleMetaMaskConnection = async () => {
     if (typeof window.ethereum !== "undefined") {
@@ -27,9 +36,6 @@ function App() {
     }
   };
 
-  // Visitor Counter
-  const [visitorCount, setVisitorCount] = useState(0);
-
   // Dark and Light Mode
   const [theme, setTheme] = useState('dark');
 
@@ -41,10 +47,6 @@ function App() {
     }
   };
 
-  // const [count, setCount] = useState(0);
-  const [audioVolume, setAudioVolume] = useState(5);
-  const [videoVolume, setVideoVolume] = useState(5);
-
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
@@ -53,7 +55,6 @@ function App() {
     setVisitorCount(visitorCount + 1);
   }, []);
 
-   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // CSS | UX \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
   return (
@@ -201,10 +202,10 @@ function App() {
     </button>
   </div>
 
-      {/* Photos Tab */}
-      <div style={{ 
-    marginTop: "110px", 
-    position: "fixed"
+    {/* Photos Tab */}
+    <div style={{ 
+      marginTop: "110px", 
+      position: "fixed"
   }}>
     <button style={{ 
       borderRadius: "8px",
@@ -238,10 +239,10 @@ function App() {
 
     {/* Claim EXP faucet */}
     <div style={{
-        position: "fixed",
-        top: 70,
-        right: 8,
-      }}>
+      position: "fixed",
+      top: 70,
+      right: 8,
+    }}>
       <h1 style={{  
         fontFamily: 'Press Start 2P', 
         color: "silver", 
@@ -293,12 +294,12 @@ function App() {
           color: "black", 
           paddingTop: "2px", 
           letterSpacing: "1px", 
-          }}>Play Count: {count}</p>
+          }}>Play Count: {audioCount}</p>
 
         <div className="field-row" style={{ justifyContent: "center" }}>
-          <button onClick={() => setCount(count + 1)}>▶️</button>
-          <button onClick={() => setCount(count)}>⏩</button>
-          <button onClick={() => setCount(0)}>⏹️</button>  
+          <button onClick={() => setAudioCount(audioCount + 1)}>▶️</button>
+          <button onClick={() => setAudioCount(audioCount)}>⏩</button>
+          <button onClick={() => setAudioCount(0)}>⏹️</button>  
         </div>
 
         <div class="field-row" style={{ 
@@ -343,10 +344,10 @@ function App() {
           </div>
 
         <p style={{ 
-          textAlign: "center", 
-          color: "black", 
-          paddingTop: "3px", 
-          letterSpacing: "1px", 
+            textAlign: "center", 
+            color: "black", 
+            paddingTop: "3px", 
+            letterSpacing: "1px", 
           
           }}>Visitor Count: {visitorCount}</p>
       </div>
@@ -371,16 +372,16 @@ function App() {
 
       <div className="window-body">
         <p style={{ 
-          textAlign: "center", 
-          color: "black", 
-          paddingTop: "2px", 
-          letterSpacing: "1px", 
-          }}>View Count: {count}</p>
+            textAlign: "center", 
+            color: "black", 
+            paddingTop: "2px", 
+            letterSpacing: "1px", 
+          }}>View Count: {videoCount}</p>
 
         <div className="field-row" style={{ justifyContent: "center" }}>
-          <button onClick={() => setCount(count + 1)}>▶️</button>
-          <button onClick={() => setCount(count)}>⏩</button>
-          <button onClick={() => setCount(0)}>⏹️</button>  
+          <button onClick={() => setVideoCount(videoCount + 1)}>▶️</button>
+          <button onClick={() => setVideoCount(videoCount)}>⏩</button>
+          <button onClick={() => setVideoCount(0)}>⏹️</button>  
         </div>
 
         {/* YouTube embedded video */}
