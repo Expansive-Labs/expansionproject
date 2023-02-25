@@ -65,7 +65,7 @@ function App() {
     {/* MetaMask Connection */}
     <div style={{
       // Button vs background
-      position: "absolute",
+      position: "fixed",
       top: "0",
       right: "0",
       fontSize: "20px",
@@ -103,11 +103,7 @@ function App() {
     </div>
 
     {/* Dark Mode */}
-    <div className={`App ${theme}`} style={{
-      position: "absolute",
-      top: 0,
-      left: 16
-    }}>
+    <div className={`App ${theme}`}>
 
       <main style={{ marginTop: "10px" }}>
         <button 
@@ -136,69 +132,44 @@ function App() {
         </button>
 
       </main>
-    </div>
+      </div>
 
-    <div style={{ marginTop: "128px" }}>
-    <h1 style={{
-      fontFamily: 'Press Start 2P',
-      color: "silver",
-      textShadow: "1px 7px #555",
-      transform: "skew(-16deg,0deg)",
-      WebkitTextStroke: theme === 'light' ? "1.5px black" : "none",
-      textStroke: theme === 'light' ? "2px black" : "none",
-      WebkitTextFillColor: theme === 'light' ? "#09996d" : "#07FFA3",
-      fontSize: "37px",
-      marginBottom: "20px"
-    }}>
-      EXPANSION PROJECT
-    </h1>
-  </div>
-
-  {/* Socials */}
+  {/* Social Links */}
   <div style={{ 
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
+    marginTop: "24px", 
+    position: "fixed" 
   }}>
-    <div style={{ 
-      position: "absolute",
-      top: "32%", /* adjust this value to move the button up or down */
-      left: "10%",
-      transform: "translateY(-50%)",
+    <button style={{ 
+      borderRadius: "8px", 
+      padding: "13px 24px", 
+      position: "absolute", 
+      top: "-100px", 
+      left: "32px",
+      letterSpacing: "1px",
+      cursor: "pointer"
     }}>
-      <button style={{ 
-        borderRadius: "8px", 
-        padding: "13px 24px", 
-        letterSpacing: "1px",
-        cursor: "pointer",
-      }}>
-        <a href="https://linktr.ee/expansionproject" target="_blank" style={{textDecoration: "none"}}>
-          <img style={{
-            display: "block",
-            "-webkit-user-select": "none",
-            margin: "auto",
-            backgroundColor: "hsl(0, 0%, 90%)",
-            transition: "background-color 300ms",
-            width: "40px",
-            height: "40px",
-            marginRight: "16px"
-          }} src="https://gateway.pinata.cloud/ipfs/QmV113mue8m3mnPqCUPFE9R6hGPs5DD8MwaePfiku41ADd?_gl=1*1mex13o*_ga*MTgyMjQ0MzU4Ny4xNjc2OTE4NTE2*_ga_5RMPXG14TE*MTY3Njk5NjUwMi4yLjAuMTY3Njk5NjUwNy41NS4wLjA." />
-          <span style={{
-            fontSize: "large", 
-            color: "black"
-          }}>Socials!</span>
-        </a>
-      </button>
-    </div>
+      <a href="https://linktr.ee/expansionproject" target="_blank" style={{textDecoration: "none"}}>
+        <img style={{
+          display: "block",
+          "-webkit-user-select": "none",
+          margin: "auto",
+          backgroundColor: "hsl(0, 0%, 90%)",
+          transition: "background-color 300ms",
+          width: "40px",
+          height: "40px",
+          marginRight: "16px"
+        }} src="https://gateway.pinata.cloud/ipfs/QmV113mue8m3mnPqCUPFE9R6hGPs5DD8MwaePfiku41ADd?_gl=1*1mex13o*_ga*MTgyMjQ0MzU4Ny4xNjc2OTE4NTE2*_ga_5RMPXG14TE*MTY3Njk5NjUwMi4yLjAuMTY3Njk5NjUwNy41NS4wLjA." />
+        <span style={{
+          fontSize: "large", 
+          color: "black"
+        }}>Socials!</span>
+      </a>
+    </button>
   </div>
-
-
 
     {/* Videos Tab */}
     <div style={{ 
-    marginTop: "16px",
-    marginLeft: "540px",
+    marginTop: "21px", 
     position: "fixed" 
   }}>
     <button style={{ 
@@ -233,9 +204,8 @@ function App() {
 
     {/* Photos Tab */}
     <div style={{ 
-    marginTop: "16px",
-    marginLeft: "659px",
-    position: "fixed" 
+      marginTop: "110px", 
+      position: "fixed"
   }}>
     <button style={{ 
       borderRadius: "8px",
@@ -269,7 +239,7 @@ function App() {
 
     {/* Claim EXP faucet */}
     <div style={{
-      position: "absolute",
+      position: "fixed",
       top: 70,
       right: 8,
     }}>
@@ -284,12 +254,27 @@ function App() {
       </h1>
     </div>
 
+  <div style={{ marginTop: "50px" }}>
+    <h1 style={{
+      fontFamily: 'Press Start 2P',
+      color: "silver",
+      textShadow: "1px 7px #555",
+      transform: "skew(-16deg,0deg)",
+      WebkitTextStroke: theme === 'light' ? "1.5px black" : "none",
+      textStroke: theme === 'light' ? "2px black" : "none",
+      WebkitTextFillColor: theme === 'light' ? "#09996d" : "#07FFA3",
+      fontSize: "51px",
+      marginBottom: "20px"
+    }}>
+      EXPANSION PROJECT
+    </h1>
+  </div>
+
   {/* Audio Player */}
   <div style={{ 
     width: 355, 
-    height: 164, 
-    margin: "0 auto",
-    marginTop: "128px", 
+    height: 155, 
+    margin: "0 auto", 
     marginBottom: 0 }} 
     
     className="window">
@@ -361,7 +346,7 @@ function App() {
         <p style={{ 
             textAlign: "center", 
             color: "black", 
-            paddingTop: "2px", 
+            paddingTop: "3px", 
             letterSpacing: "1px", 
           
           }}>Visitor Count: {visitorCount}</p>
@@ -370,12 +355,10 @@ function App() {
 
   {/* Video Media Player */}
   <div style={{ 
-    width: 360, 
-    height: 360, 
-    margin: "0 auto",
-    marginTop: "32px",
-    marginBottom: 0 }}
-
+    width: 480, 
+    height: 480, 
+    margin: "0 auto", 
+    marginBottom: 0 }} 
     className="window">
       <div className="title-bar">
         <div className="title-bar-text" style={{ letterSpacing: "1px", 
@@ -405,8 +388,8 @@ function App() {
         <iframe style={{
           paddingTop: "16px"
         }}
-          width="345"             
-          height="190" 
+          width="440"             
+          height="300" 
           src="https://www.youtube.com/embed/Mflab1MxKaI"
           frameborder="0" 
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
