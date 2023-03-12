@@ -65,7 +65,7 @@ function App() {
     {/* MetaMask Connection */}
     <div style={{
       // Button vs background
-      position: "fixed",
+      position: "absolute",
       top: "0",
       right: "0",
       fontSize: "20px",
@@ -239,7 +239,7 @@ function App() {
 
     {/* Claim EXP faucet */}
     <div style={{
-      position: "fixed",
+      position: "absolute",
       top: 70,
       right: 8,
     }}>
@@ -254,7 +254,12 @@ function App() {
       </h1>
     </div>
 
-  <div style={{ marginTop: "50px" }}>
+      <div style={{
+    marginTop: "50px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  }}>
     <h1 style={{
       fontFamily: 'Press Start 2P',
       color: "silver",
@@ -266,9 +271,23 @@ function App() {
       fontSize: "51px",
       marginBottom: "20px"
     }}>
-      EXPANSION PROJECT
+      EXPANSION
+    </h1>
+    <h1 style={{
+      fontFamily: 'Press Start 2P',
+      color: "silver",
+      textShadow: "1px 7px #555",
+      transform: "skew(-16deg,0deg)",
+      WebkitTextStroke: theme === 'light' ? "1.5px black" : "none",
+      textStroke: theme === 'light' ? "2px black" : "none",
+      WebkitTextFillColor: theme === 'light' ? "#09996d" : "#07FFA3",
+      fontSize: "51px",
+      marginTop: "-20px"
+    }}>
+      PROJECT
     </h1>
   </div>
+
 
   {/* Audio Player */}
   <div style={{ 
