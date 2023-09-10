@@ -89,17 +89,12 @@ const ProjectsSection = () => {
         <ProjectTag
           onClick={handleTagChange}
           name="Studio"
-          isSelected={tag === "Mobile"}
+          isSelected={tag === "Studio"}
         />
         <ProjectTag
           onClick={handleTagChange}
           name="Live"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Recap"
-          isSelected={tag === "Mobile"}
+          isSelected={tag === "Live"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
@@ -117,6 +112,7 @@ const ProjectsSection = () => {
               description={project.description}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
+              previewUrl={project.previewUrl}
             />
           </motion.li>
         ))}
