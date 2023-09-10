@@ -16,6 +16,16 @@
   }
 }
 
+.light {
+  background-color: #bababa;
+  color: #333333;
+}
+
+.dark {
+  background-color: #05072d; /* dark blue color with 80% opacity */
+  color: #333333;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
