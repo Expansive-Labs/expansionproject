@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XmarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
@@ -17,7 +17,7 @@ const navLinks = [
   },
   {
     title: "Shows",
-    path: "#music",
+    path: "#about",
   },
   {
     title: "Contact",
@@ -36,9 +36,9 @@ const Navbar = () => {
           className="text-2xl md:text-5xl text-white font-semibold"
         >
           <Image
-            src="/images/moon_Logo.png"
+            src="/images/infiniteLogo.png"
             alt="/images/"
-            width={64}
+            width={76}
             height={60}
           />
         </Link>
