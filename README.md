@@ -4,7 +4,7 @@ This is the official Expansion Project website
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependancies and run the development server:
 
 ```bash
 npm install
