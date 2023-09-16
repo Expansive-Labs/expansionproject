@@ -1,14 +1,14 @@
 # expansion-project
 
-This is the official Expansion Project web3 platform
+This is the official Expansion Project website
 
-Try running some of the following tasks:
+## Getting Started
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat compile
-npx hardhat run scripts/deploy.js --network localhost
+First, run the development server:
+
+```bash
+npm install
+npm run dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
