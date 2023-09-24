@@ -74,7 +74,8 @@ const AboutSection = () => {
             translate into a truly unique experience!
           </p>
           <div className="flex flex-row justify-start mt-8">
-            <TabButton
+            
+            <TabButton 
               selectTab={() => handleTabChange("festivals")}
               active={tab === "festivals"}
             >
