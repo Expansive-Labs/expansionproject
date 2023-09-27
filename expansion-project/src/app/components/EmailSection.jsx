@@ -84,7 +84,7 @@ const EmailSection = () => {
             <textarea
               name="message"
               id="message"
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-[#50fd9a] text-lg rounded-lg block w-full p-4"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-[#50fd9a] text-xl rounded-lg block w-full p-4"
               placeholder="Let's talk about..."
             />
           </div>

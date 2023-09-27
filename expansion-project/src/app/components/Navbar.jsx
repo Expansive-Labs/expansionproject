@@ -42,6 +42,7 @@ const Navbar = () => {
             height={60}
           />
         </Link>
+        {/* Hamburger Menu */}
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button
