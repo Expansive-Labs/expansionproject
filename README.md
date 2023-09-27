@@ -1,12 +1,9 @@
-# expansion-project
 
-This is the official Expansion Project website
+## Expansion Project's website
 
-## Getting Started
+First, run the development server:
 
-First, install the dependancies and run the development server:
-
-```bash
+```terminal
 npm install
 npm run dev
 ```
