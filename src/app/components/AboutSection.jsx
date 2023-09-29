@@ -3,7 +3,6 @@ import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import { Parallax } from "react-scroll-parallax";
-
 // MAKE GLOBAL VARS FOR FONT COLOR AND SIZE
 
 const TAB_DATA = [
