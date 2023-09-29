@@ -11,8 +11,6 @@ import AchievementsSection from "./components/AchievementsSection";
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "next-themes";
 import { ParallaxProvider } from "react-scroll-parallax";
-// GITHUB
-// VERCEL PUSH
 
 export default function Home() {
   return (
