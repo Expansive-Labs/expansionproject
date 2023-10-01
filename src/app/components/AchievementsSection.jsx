@@ -23,10 +23,12 @@ const achievementsList = [
   {
     metric: "Social Media Followers",
     value: "5000",
+    postfix: "+",
   },
   {
     metric: "Years Together",
     value: "5",
+    postfix: "+",
   },
 ];
 
