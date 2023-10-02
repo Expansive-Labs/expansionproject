@@ -15,7 +15,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
+          <h1 className="text-white mb-4 text-2xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r to-gray-400 from-gray-300">
               Hello, we are{" "}
             </span>
@@ -41,9 +41,8 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Philly band Philly grooves... Power fusion trio from Philadelphia,
-            PA.
+          <p className="text-[#4b4d4f] text-base sm:text-lg mb-6 lg:text-xl">
+            Power fusion trio | Philadelphia, PA.
           </p>
           <div>
             <Link
