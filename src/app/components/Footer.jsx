@@ -26,7 +26,7 @@ const Footer = () => {
               }}
             >
               {" "}
-              ///EXPANSIVE LABS///
+              EXPANSIVE LABS
             </a>
           </h1>
         </div>
