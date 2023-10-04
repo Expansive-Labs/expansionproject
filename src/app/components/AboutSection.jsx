@@ -72,10 +72,10 @@ const AboutSection = () => {
             The chemistry in and out of the studio was as if they knew each
             other for years, resulting in a power-trio that has been creating
             music together ever since. Expansion Project&apos;s evolving sound
-            can be described as a highly energetic fusion-funk-groove that will
-            keep people dancing all night long. They take the most pride in
-            their live performances when creativity and raw passion for music
-            translate into a truly unique experience!
+            can be described as high energy groove music that keeps people
+            dancing all night long. They take the most pride in their live
+            performances, when creativity and raw passion translate into a truly
+            unique experience.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
