@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
         />
         <meta property="og:site_name" content="Expansion Project Music" />
         <meta name="twitter:card" content={metadata.image} />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={inter.className}>{children}</body>
     </html>
