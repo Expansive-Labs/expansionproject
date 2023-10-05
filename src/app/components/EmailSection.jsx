@@ -51,7 +51,7 @@ const EmailSection = () => {
           {" "}
           Let&apos;s Connect.
         </h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
+        <p className="text-[#ADB7BE] text-sm mb-4 max-w-md">
           {" "}
           Greetings! we are always looking for new and exciting opportunities.
           Whether you have a question or just want to say hi, our inbox is open.
@@ -87,8 +87,8 @@ const EmailSection = () => {
               type="email"
               id="email"
               required
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-600 text-sm rounded-lg block w-full p-2.5"
-              placeholder="youremail@gmail.com"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#82878d] text-gray-600 text-sm rounded-lg block w-full p-2.5"
+              placeholder="youremail@example.com"
             />
           </div>
           <div className="mb-6">
@@ -103,8 +103,8 @@ const EmailSection = () => {
               type="text"
               id="subject"
               required
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-600 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Just saying hi"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#82878d] text-gray-600 text-sm rounded-lg block w-full p-2.5"
+              placeholder="Just saying hello"
             />
           </div>
           <div className="mb-6">

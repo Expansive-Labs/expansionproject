@@ -11,6 +11,7 @@ import AchievementsSection from "./components/AchievementsSection";
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "next-themes";
 import { ParallaxProvider } from "react-scroll-parallax";
+import BackToTopButton from "./components/BackToTopButton";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         </ParallaxProvider>
       </div>
       <Footer />
+      <BackToTopButton />
     </main>
   );
 }
