@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
+// email update var - can delete after confirmation
+const sending = new {}
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
 
