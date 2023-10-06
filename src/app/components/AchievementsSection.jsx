@@ -17,16 +17,16 @@ const achievementsList = [
   },
   {
     prefix: "~",
-    metric: "Monthly Listeners",
+    metric: "Listeners Per Month",
     value: "750",
   },
   {
-    metric: "Social Media Followers",
+    metric: "On Social Media",
     value: "5000",
     postfix: "+",
   },
   {
-    metric: "Years Together",
+    metric: "Band Years",
     value: "7",
     postfix: "+",
   },
