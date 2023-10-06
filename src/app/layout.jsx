@@ -1,39 +1,24 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const description = "Philly band Philly grooves";
+
 export const metadata = {
   title: "Expansion Project",
-  description: "Philly band Philly grooves",
-
-  icons: {
-    icon: "/favicon.ico",
-    // apple: "/apple-icon.png",
+  description: description,
+  openGraph: {
+    description: description,
   },
 
-  // twitter: {
-  //   card: "summary_large_image",
-  //   title: "Expansion Project",
-  //   description: "Philly band, Philly grooves",
-  //   siteId: "9082374819237498120374??????",
-  //   creator: "@nextjs",
-  //   creatorId: "2930847290837409128374983???",
-  //   images: ["https//nextjs.org/og.png"],
-  // },
-  // robots: {
-  //   index: false,
-  //   follow: true,
-  //   nocache: true,
-  //   googleBot: {
-  //     index: true,
-  //     follow: false,
-  //     noimageindex: true,
-  //     "max-video-preview": -1,
-  //     "max-image-preview": "large",
-  //     "max-snippet": -1,
-  //   },
-  // },
+  icons: {
+    icon: ["/favicon.ico?v=1"],
+    apple: ["/apple-touch-icon.png"],
+    // shortcut: ["/favicon.ico"],
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }) {

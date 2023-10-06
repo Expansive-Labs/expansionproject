@@ -3,14 +3,14 @@
 const Footer = () => {
   return (
     <footer className="footer border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-white">
-      <div className="container p-12 justify-center">
+      <div className="text-center p-12 justify-center">
         {/* EXPANSIVE LABS */}
         <div style={{ position: "relative", top: "-10px", margin: "10px 0" }}>
           <h1
             style={{
               fontFamily: "Press Start 2P",
               // paddingTop: "16px",
-              fontSize: "9px",
+              fontSize: "10px",
               color: "#717171",
             }}
           >
@@ -26,7 +26,7 @@ const Footer = () => {
               }}
             >
               {" "}
-              EXPANSIVE LABS
+              <p className="">EXPANSIVE LABS</p>
             </a>
           </h1>
         </div>

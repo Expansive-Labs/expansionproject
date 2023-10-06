@@ -53,7 +53,7 @@ const EmailSection = () => {
         </h5>
         <p className="text-[#ADB7BE] text-sm mb-4 max-w-md">
           {" "}
-          Greetings! we are always looking for new and exciting opportunities.
+          Greetings! We are always looking for new and exciting opportunities.
           Whether you have a question or just want to say hi, our inbox is open.
           Feel free to reach out to us about working together or we can just
           have an interesting conversation!

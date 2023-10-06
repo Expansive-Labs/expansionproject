@@ -64,20 +64,21 @@ const AboutSection = () => {
           />
         </Parallax>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl text-center font-bold text-white mb-4">About Us</h2>
+          <h2 className="text-4xl text-center font-bold text-white mb-4">
+            About Us
+          </h2>
           <p className="text-base text-center lg:text-lg">
             Expansion Project grew out of the passion longtime friends Anthony
-            Tilotta and Matthew Silva had for creating and playing music to a
-            live audience. Zamere Williams was introduced to the band in 2016.
-            The chemistry in and out of the studio was as if they knew each
-            other for years, resulting in a power-trio that has been creating
-            music together ever since. Expansion Project&apos;s evolving sound
-            can be described as high energy groove music that keeps people
-            dancing all night long. They take the most pride in their live
-            performances, when creativity and raw passion translate into a truly
-            unique experience.
+            Tilotta and Matthew Silva have for creating music. Zamere Williams
+            joined the band in 2016. The chemistry in and out of the studio was
+            as if the trio had been playing together for years. Expansion
+            Project&apos;s evolving sound could be described as fusion-funk.
+            They take the most pride in their live performances, when creativity
+            and raw passion translate into a truly unique experience.
           </p>
-          <p className="text-center text-4xl font-bold text-white mt-12 mb-0 md:mb-2">Events</p>
+          <p className="text-center text-4xl font-bold text-white mt-12 mb-0 md:mb-2">
+            Shows
+          </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("festivals")}
