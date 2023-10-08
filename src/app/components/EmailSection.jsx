@@ -104,7 +104,7 @@ const EmailSection = () => {
               id="subject"
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#82878d] text-gray-600 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Just saying hello"
+              placeholder="Just saying hello!"
             />
           </div>
           <div className="mb-6">

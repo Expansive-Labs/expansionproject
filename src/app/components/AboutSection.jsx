@@ -1,9 +1,9 @@
-"use client";
+// "use client";
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import { Parallax } from "react-scroll-parallax";
-// MAKE GLOBAL VARS FOR FONT COLOR AND SIZE
+import Link from "next/link";
 
 const TAB_DATA = [
   {
@@ -62,8 +62,8 @@ const AboutSection = () => {
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 xl:gap-16 sm:py-16 xl:px-16">
         <Parallax speed={10} opacity={[-2, 1, "easeOutBack"]}>
           <Image
-            src="/images/wissPicLive.png"
-            alt="/images/mainCPG.png"
+            src="/images/wissPicLive.webp"
+            alt="/images/mainCPG.webp"
             width={500}
             height={500}
             style={{ borderRadius: "3%" }}

@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
@@ -9,7 +9,7 @@ const projectsData = [
     id: 1,
     title: "Wissahickon Brewery | Live Recap",
     description: "Wissahickon Brewery live show recap",
-    image: "/images/projects/wissThumbnail.png",
+    image: "/images/projects/wissThumbnail.webp",
     tag: ["All", "Live", "Recap"],
     gitUrl: "https://youtu.be/RuI-TDbnUX0?si=l0x_RFemRgP5ZBXh",
   },
@@ -17,7 +17,7 @@ const projectsData = [
     id: 2,
     title: "Pub Webb | Live Recap",
     description: "Pub Webb live show recap",
-    image: "/images/projects/liveRecap.png",
+    image: "/images/projects/liveRecap.webp",
     tag: ["All", "Live", "Recap"],
     gitUrl: "https://youtu.be/Um_VF3GP_mQ",
   },
@@ -25,7 +25,7 @@ const projectsData = [
     id: 3,
     title: "Live at Wissahickon Brewery",
     description: "Golden >>> Ghostbusters Theme Song",
-    image: "/images/projects/wissahiconBrew.png",
+    image: "/images/projects/wissahiconBrew.webp",
     tag: ["All", "Live"],
     gitUrl: "https://youtu.be/n-8jbdDxo4o",
   },
@@ -33,7 +33,7 @@ const projectsData = [
     id: 4,
     title: "The Psychedelic Shindig",
     description: "Come explore the rabbit hole of funk",
-    image: "/images/projects/psyshindig.png",
+    image: "/images/projects/psyshindig.webp",
     tag: ["All", "Live"],
     gitUrl: "https://youtu.be/OX4BN2sJ9mo",
   },
@@ -42,7 +42,7 @@ const projectsData = [
     title: "Emagination (Official Music Video)",
     description:
       "Inspired by the film 'Willy Wonka & the Chocolate Factory (1971)'",
-    image: "/images/projects/emaginationThumbnail.png",
+    image: "/images/projects/emaginationThumbnail.webp",
     tag: ["All", "Studio"],
     gitUrl: "https://youtu.be/Mflab1MxKaI",
   },
@@ -50,7 +50,7 @@ const projectsData = [
     id: 6,
     title: "Royal Chords",
     description: "'Royal' Live from our 2018 album: Conscious Tortoise",
-    image: "/images/projects/royalChordsThumbnail.png",
+    image: "/images/projects/royalChordsThumbnail.webp",
     tag: ["All", "Live"],
     gitUrl: "https://youtu.be/dWAWSzwb4rA",
   },
@@ -59,7 +59,7 @@ const projectsData = [
     title: "Lincoln Boulevard (Official Music Video)",
     description:
       "Official music video for Lincoln Boulevard by: Expansion Project ",
-    image: "/images/projects/linkBThumbnail.png",
+    image: "/images/projects/linkBThumbnail.webp",
     tag: ["All", "Studio"],
     gitUrl: "https://youtu.be/CADFoemU5Jo",
   },

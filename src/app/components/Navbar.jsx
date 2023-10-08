@@ -37,8 +37,8 @@ const Navbar = () => {
           className="text-2xl md:text-5xl text-white font-semibold"
         >
           <Image
-            src="/images/infiniteLogo.png"
-            alt="/images/"
+            src="/images/infiniteLogo.webp"
+            alt="/images/infiniteLogo.webp"
             width={76}
             height={60}
           />
