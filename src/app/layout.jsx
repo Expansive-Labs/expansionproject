@@ -7,6 +7,7 @@ export const metadata = {
   title: "Expansion Project | Fusion Funk band from Philadelphia",
   description:
     "Philly Band Philly Grooves. Expansion Project is a Fusion Funk band from Philadelphia Pennsylvania",
+  image: "/images/infiniteLogo.webp",
   keywords: [
     "Expansion Project",
     "Music",
@@ -50,13 +51,6 @@ export const metadata = {
       },
     ],
   },
-
-  icons: {
-    // icon: ["/favicon.ico?v=1"],
-    // apple: ["/apple-touch-icon.png"],
-    // shortcut: ["/favicon.ico"],
-  },
-  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }) {
