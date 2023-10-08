@@ -11,9 +11,15 @@ const TAB_DATA = [
     id: "festivals",
     content: (
       <ul className="list-disc pl-2">
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>Night Lights</li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>Funk Fest</li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>Art Jam</li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>
+          Night Lights Music Festival
+        </li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>
+          Art Jam Music Festival
+        </li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>
+          Philadelphia Funk Fest
+        </li>
       </ul>
     ),
   },
@@ -22,9 +28,9 @@ const TAB_DATA = [
     id: "upcoming",
     content: (
       <ul className="list-disc pl-2">
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>The Butter Lounge</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>Cosmic Art Studio</li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>Butter Lounge</li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>Grape Room</li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>The Grape Room</li>
       </ul>
     ),
   },
@@ -53,7 +59,7 @@ const AboutSection = () => {
 
   return (
     <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 xl:gap-16 sm:py-16 xl:px-16">
         <Parallax speed={10} opacity={[-2, 1, "easeOutBack"]}>
           <Image
             src="/images/wissPicLive.png"
@@ -70,11 +76,13 @@ const AboutSection = () => {
           <p className="text-base text-center lg:text-lg">
             Expansion Project grew out of the passion longtime friends Anthony
             Tilotta and Matthew Silva have for creating music. Zamere Williams
-            joined the band in 2016. The chemistry in and out of the studio was
-            as if the trio had been playing together for years. Expansion
-            Project&apos;s evolving sound could be described as fusion-funk.
-            They take the most pride in their live performances, when creativity
-            and raw passion translate into a truly unique experience.
+            joined the band in 2016. The chemistry in and out of their
+            Philadelphia studio was as if the power trio had been playing
+            together for years. Expansion Project&apos;s evolving sound could be
+            described as Fusion Funk. Their influences range from Jazz Fusion
+            icons to modern Progressive Rock Jambands. They take the most pride
+            in their live show performances, when creativity and raw passion for
+            music translate into a truly unique experience.
           </p>
           <p className="text-center text-4xl font-bold text-white mt-12 mb-0 md:mb-2">
             Shows

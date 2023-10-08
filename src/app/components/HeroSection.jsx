@@ -42,7 +42,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#65686b] text-base sm:text-lg mb-6 lg:text-xl">
-            Power fusion trio | Philly Band Philly Grooves
+            Power Fusion Trio | Philly Band Philly Grooves
           </p>
           <div>
             <Link

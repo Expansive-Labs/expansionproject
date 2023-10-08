@@ -7,7 +7,7 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "Wissahickon | Live Recap",
+    title: "Wissahickon Brewery | Live Recap",
     description: "Wissahickon Brewery live show recap",
     image: "/images/projects/wissThumbnail.png",
     tag: ["All", "Live", "Recap"],

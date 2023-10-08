@@ -51,14 +51,14 @@ const EmailSection = () => {
           {" "}
           Let&apos;s Connect.
         </h5>
-        <p className="text-[#ADB7BE] text-sm mb-4 max-w-md">
+        <p className="text-[#ADB7BE] text-sm mb-8 max-w-md">
           {" "}
           Greetings! We are always looking for new and exciting opportunities.
-          Whether you have a question or just want to say hi, our inbox is open.
-          Feel free to reach out to us about working together or we can just
-          have an interesting conversation!
+          Whether you have a question or just want to say hi, our inbox is
+          always open. Feel free to reach out to us about booking us, working
+          together or we can just have some interesting conversation!
         </p>
-        <div className="socials flex flex-row gap-2">
+        <div className="socials flex flex-row gap-4">
           <Link
             href="https://www.facebook.com/expansionproject?mibextid=MKOS29"
             target="_blank"
@@ -78,7 +78,7 @@ const EmailSection = () => {
           <div className="mb-6">
             <label
               htmlFor="email"
-              className="text-white block mb-2 text-sm font-medium"
+              className="text-white block mt-8 mb-2 text-sm font-medium"
             >
               Your email
             </label>
