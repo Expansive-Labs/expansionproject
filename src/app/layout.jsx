@@ -4,9 +4,9 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Expansion Project | Fusion Funk band from Philadelphia",
+  title: "Expansion Project | Philly Band Philly Grooves",
   description:
-    "Philly Band Philly Grooves. Expansion Project is a Fusion Funk band from Philadelphia Pennsylvania",
+    "Music, videos and information about the Philadelphia Fusion Funk sensation also known as Expansion Project",
   image: "/images/infiniteLogo.webp",
   keywords: [
     "Expansion Project",
@@ -40,12 +40,13 @@ export const metadata = {
     "George Duke",
   ],
   openGraph: {
-    title: "Expansion Project",
-    description: "Philly Band Philly Grooves.",
+    title: "Expansion Project | Philly Band Philly Grooves",
+    description:
+      "Music, videos and information about the Philadelphia Fusion Funk sensation also known as Expansion Project",
     url: "https://www.expansionprojectmusic.com/",
     images: [
       {
-        url: "/images/moon_Logo.webp",
+        url: "/images/moon_Logo.webp", // update with AI swirls for social media share cards
         width: 1260,
         height: 800,
       },
