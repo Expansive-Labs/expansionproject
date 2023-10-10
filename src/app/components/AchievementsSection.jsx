@@ -17,18 +17,18 @@ const achievementsList = [
   },
   {
     prefix: "~",
-    metric: "Listeners Per Month",
-    value: "750",
+    metric: "Tap or Scan | Stream New Album", // framer motion QR code
+    value: null,
   },
+  // {
+  //   metric: "Social Media Fans",
+  //   value: "5000",
+  //   postfix: "+",
+  // },
   {
-    metric: "Social Media Fans",
-    value: "5000",
-    postfix: "+",
-  },
-  {
-    metric: "Years Making Music",
+    metric: "Earth Years",
     value: "7",
-    postfix: "+",
+    postfix: "",
   },
 ];
 
