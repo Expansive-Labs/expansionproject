@@ -1,6 +1,6 @@
-"use client";
 import React from "react";
 import dynamic from "next/dynamic";
+import QRCode from "qrcode.react"; // Import the QR code component
 
 const AnimatedNumbers = dynamic(
   () => {
@@ -16,15 +16,10 @@ const achievementsList = [
     postfix: "+",
   },
   {
-    prefix: "~",
-    metric: "Tap or Scan | Stream New Album", // framer motion QR code
-    value: null,
+    // prefix: "~",
+    metric: "Tap or Scan. Stream New Song",
+    // value: null,
   },
-  // {
-  //   metric: "Social Media Fans",
-  //   value: "5000",
-  //   postfix: "+",
-  // },
   {
     metric: "Earth Years",
     value: "7",
@@ -32,7 +27,12 @@ const achievementsList = [
   },
 ];
 
+// ... (previous imports)
+
 const AchievementsSection = () => {
+  const qrCodeSize = 128; // Adjust the size as needed
+  const albumQRLink = "https://expansionproject.bandcamp.com/track/emaginaiton"; // Replace with your actual link
+
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
       <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
@@ -44,19 +44,29 @@ const AchievementsSection = () => {
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
                 {achievement.prefix}
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={parseInt(achievement.value)}
-                  locale="en-US"
-                  className="text-white text-4xl font-bold"
-                  configs={(_, index) => {
-                    return {
-                      mass: 1,
-                      friction: 100,
-                      tensions: 140 * (index + 1),
-                    };
-                  }}
-                />
+                {achievement.metric === "Tap or Scan. Stream New Song" ? (
+                  <a
+                    href={albumQRLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <QRCode value={albumQRLink} size={qrCodeSize} />
+                  </a>
+                ) : (
+                  <AnimatedNumbers
+                    includeComma
+                    animateToNumber={parseInt(achievement.value)}
+                    locale="en-US"
+                    className="text-white text-4xl font-bold"
+                    configs={(_, index) => {
+                      return {
+                        mass: 1,
+                        friction: 100,
+                        tensions: 140 * (index + 1),
+                      };
+                    }}
+                  />
+                )}
                 {achievement.postfix}
               </h2>
               <p className="text-[#ADB7BE] text-base text-center">
