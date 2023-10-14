@@ -44,6 +44,7 @@ export const metadata = {
     description:
       "Music, videos and information about the Philadelphia Fusion Funk sensation also known as Expansion Project",
     url: "https://www.expansionprojectmusic.com/",
+    image: "/images/infiniteLogo.webp",
     images: [
       {
         url: "/images/moon_Logo.webp", // update with AI swirls for social media share cards

@@ -1,14 +1,14 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import AboutSection from "./components/AboutSection";
-import ProjectCard from "./components/ProjectCard";
+// import ProjectCard from "./components/ProjectCard";
 import ProjectsSection from "./components/ProjectsSection";
 import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 import AchievementsSection from "./components/AchievementsSection";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 // import { ThemeProvider } from "next-themes";
 import { ParallaxProvider } from "react-scroll-parallax";
 import BackToTopButton from "./components/BackToTopButton";

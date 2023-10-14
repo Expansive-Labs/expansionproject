@@ -49,7 +49,7 @@ const projectsData = [
   {
     id: 6,
     title: "Royal Chords",
-    description: "'Royal' Live from our 2018 album: Conscious Tortoise",
+    description: "Royal | Live recording",
     image: "/images/projects/royalChordsThumbnail.webp",
     tag: ["All", "Live"],
     gitUrl: "https://youtu.be/dWAWSzwb4rA",
@@ -57,8 +57,7 @@ const projectsData = [
   {
     id: 7,
     title: "Lincoln Boulevard (Official Music Video)",
-    description:
-      "Official music video for Lincoln Boulevard by: Expansion Project ",
+    description: "Music video for Lincoln Boulevard",
     image: "/images/projects/linkBThumbnail.webp",
     tag: ["All", "Studio"],
     gitUrl: "https://youtu.be/CADFoemU5Jo",
@@ -125,6 +124,14 @@ const ProjectsSection = () => {
           </motion.li>
         ))}
       </ul>
+      {/* SEO METADATA */}
+      <p style={{ opacity: 0.1 }}>
+        Expansion Project, Band, Music, Philadelphia, Philly Band, Philly Music
+        Scene, Jazz Fusion, Funk, Rock, Progressive Rock, Jam, Jambands, Power
+        Trio, Lotus, Octave Cat, Dopapod, Tauk, Papadosio, Sunsquabi, Umphreys
+        Mcgee, Disco Biscuts, Pigeons Playing Ping Pong, Cory Wong, Cory Henry
+        Funk Apostles, Bad Bad Not Good, Snarky Puppy, Jaco, Herbie, George Duke
+      </p>
     </section>
   );
 };
