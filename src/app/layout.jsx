@@ -7,7 +7,17 @@ export const metadata = {
   title: "Expansion Project | Philly Band Philly Grooves",
   description:
     "Music, videos and information about the Philadelphia Fusion Funk sensation also known as Expansion Project",
-  image: "/images/infiniteLogo.webp",
+  images: [
+    {
+      url: "/images/infiniteLogo.webp", // update with AI swirls for social media share cards
+      icon: "/images/moon_Logo.webp",
+      width: 1260,
+      height: 800,
+      // description:
+      //   "Music, videos and information about the Philadelphia Fusion Funk sensation also known as Expansion Project",
+    },
+  ],
+  icon: "/images/infiniteLogo.webp",
   keywords: [
     "Expansion Project",
     "Music",
@@ -45,11 +55,15 @@ export const metadata = {
       "Music, videos and information about the Philadelphia Fusion Funk sensation also known as Expansion Project",
     url: "https://www.expansionprojectmusic.com/",
     image: "/images/infiniteLogo.webp",
+    icon: "/images/infiniteLogo.webp",
     images: [
       {
         url: "/images/moon_Logo.webp", // update with AI swirls for social media share cards
+        icon: "/images/infiniteLogo.webp",
         width: 1260,
         height: 800,
+        // description:
+        //   "Music, videos and information about the Philadelphia Fusion Funk sensation also known as Expansion Project",
       },
     ],
   },

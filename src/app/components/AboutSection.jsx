@@ -63,7 +63,7 @@ const AboutSection = () => {
         <Parallax speed={10} opacity={[-2, 1, "easeOutBack"]}>
           <Image
             src="/images/wissPicLive.webp"
-            alt="/images/mainCPG.webp"
+            alt="Expansion Project"
             width={500}
             height={500}
             style={{ borderRadius: "3%" }}

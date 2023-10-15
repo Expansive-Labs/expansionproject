@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "Wissahickon Brewery | Live Recap",
-    description: "Wissahickon Brewery live show recap",
+    description: "Wissahickon Brewery live show recap | Philadelphia PA",
     image: "/images/projects/wissThumbnail.webp",
     tag: ["All", "Live", "Recap"],
     gitUrl: "https://youtu.be/RuI-TDbnUX0?si=l0x_RFemRgP5ZBXh",
@@ -16,7 +16,7 @@ const projectsData = [
   {
     id: 2,
     title: "Pub Webb | Live Recap",
-    description: "Pub Webb live show recap",
+    description: "Pub Webb live show recap | Philadelphia PA",
     image: "/images/projects/liveRecap.webp",
     tag: ["All", "Live", "Recap"],
     gitUrl: "https://youtu.be/Um_VF3GP_mQ",
@@ -24,7 +24,8 @@ const projectsData = [
   {
     id: 3,
     title: "Live at Wissahickon Brewery",
-    description: "Golden >>> Ghostbusters Theme Song",
+    description:
+      "Expansion Project | Golden > Ghostbusters recorded Live in Philadelphia",
     image: "/images/projects/wissahiconBrew.webp",
     tag: ["All", "Live"],
     gitUrl: "https://youtu.be/n-8jbdDxo4o",
@@ -32,14 +33,15 @@ const projectsData = [
   {
     id: 4,
     title: "The Psychedelic Shindig",
-    description: "Come explore the rabbit hole of funk",
+    description:
+      "Expansion Project | Lincoln Boulevard recorded Live at Cosmic Art Studio",
     image: "/images/projects/psyshindig.webp",
     tag: ["All", "Live"],
     gitUrl: "https://youtu.be/OX4BN2sJ9mo",
   },
   {
     id: 5,
-    title: "Emagination (Official Music Video)",
+    title: "Expansion Project | Emagination (Official Music Video)",
     description:
       "Inspired by the film 'Willy Wonka & the Chocolate Factory (1971)'",
     image: "/images/projects/emaginationThumbnail.webp",
@@ -49,18 +51,34 @@ const projectsData = [
   {
     id: 6,
     title: "Royal Chords",
-    description: "Royal | Live recording",
+    description: "Expansion Project | Royal recorded Live in Philadelphia",
     image: "/images/projects/royalChordsThumbnail.webp",
     tag: ["All", "Live"],
     gitUrl: "https://youtu.be/dWAWSzwb4rA",
   },
   {
     id: 7,
-    title: "Lincoln Boulevard (Official Music Video)",
+    title: "Expansion Project | Lincoln Boulevard (Official Music Video)",
     description: "Music video for Lincoln Boulevard",
     image: "/images/projects/linkBThumbnail.webp",
     tag: ["All", "Studio"],
     gitUrl: "https://youtu.be/CADFoemU5Jo",
+  },
+  {
+    id: 8,
+    title: "Roloway Live at Pub Webb",
+    description: "Expansion Project | Roloway recorded Live in Philadelphia",
+    image: "/images/projects/rolothumb.webp",
+    tag: ["All", "Live"],
+    gitUrl: "https://youtu.be/CADFoemU5Jo",
+  },
+  {
+    id: 9,
+    title: "Conscious Tour Live Recap",
+    description: " Expansion Project | 2019 Conscious Tour Live Recap",
+    image: "/images/projects/ctourThumb.webp",
+    tag: ["All", "Live"],
+    gitUrl: "https://youtu.be/33Z-kHOVQ64",
   },
 ];
 
