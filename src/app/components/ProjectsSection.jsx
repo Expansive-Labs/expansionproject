@@ -41,9 +41,9 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "Expansion Project | Emagination (Official Music Video)",
+    title: "Emagination (Official Music Video)",
     description:
-      "Inspired by the film 'Willy Wonka & the Chocolate Factory (1971)'",
+      "Expansion Project | Inspired by the film 'Willy Wonka & the Chocolate Factory (1971)'",
     image: "/images/projects/emaginationThumbnail.webp",
     tag: ["All", "Studio"],
     gitUrl: "https://youtu.be/Mflab1MxKaI",
@@ -58,8 +58,8 @@ const projectsData = [
   },
   {
     id: 7,
-    title: "Expansion Project | Lincoln Boulevard (Official Music Video)",
-    description: "Music video for Lincoln Boulevard",
+    title: "Lincoln Boulevard (Official Music Video)",
+    description: "Expansion Project |  Lincoln Boulevard",
     image: "/images/projects/linkBThumbnail.webp",
     tag: ["All", "Studio"],
     gitUrl: "https://youtu.be/CADFoemU5Jo",
@@ -75,7 +75,7 @@ const projectsData = [
   {
     id: 9,
     title: "Conscious Tour Live Recap",
-    description: " Expansion Project | 2019 Conscious Tour Live Recap",
+    description: " Expansion Project | Conscious Tour 2019 Recap",
     image: "/images/projects/ctourThumb.webp",
     tag: ["All", "Live"],
     gitUrl: "https://youtu.be/33Z-kHOVQ64",
@@ -105,6 +105,116 @@ const ProjectsSection = () => {
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         Music
       </h2>
+
+        {/* Audio Player */}
+        {/* <div
+          style={{
+            width: 355,
+            height: 155,
+            margin: "0 auto",
+            marginBottom: 0,
+          }}
+          className="window"
+        >
+          <div className="title-bar">
+            <div className="title-bar-text" style={{ letterSpacing: "1px" }}>
+              Music Player - Now playing.. Royal
+            </div>
+            <div className="title-bar-controls">
+              <button aria-label="Minimize" />
+              <button aria-label="Maximize" />
+              <button aria-label="Close" />
+            </div>
+          </div>
+{/* 
+          <div className="window-body">
+            <p
+              style={{
+                textAlign: "center",
+                color: "black",
+                paddingTop: "2px",
+                letterSpacing: "1px",
+              }}
+            >
+              Play Count: {audioCount}
+            </p>
+
+            <div className="field-row" style={{ justifyContent: "center" }}>
+              <button onClick={() => setAudioCount(audioCount + 1)}>▶️</button>
+              <button onClick={() => setAudioCount(audioCount)}>⏩</button>
+              <button onClick={() => setAudioCount(0)}>⏹️</button>
+            </div>
+
+            <div
+              class="field-row"
+              style={{
+                paddingTop: "4px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+            >
+              <div
+                style={{
+                  marginBottom: "1px",
+                  fontWeight: "bold",
+                }}
+              >
+                Volume:
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "100%",
+                }}
+              >
+                <label
+                  for="range26"
+                  style={{
+                    paddingLeft: "13px",
+                    letterSpacing: "1px",
+                  }}
+                >
+                  Low
+                </label>
+
+                <label
+                  for="range27"
+                  style={{
+                    paddingRight: "13px",
+                    letterSpacing: "1px",
+                  }}
+                >
+                  High
+                </label>
+              </div>
+              <input
+                id="range26"
+                type="range"
+                min="1"
+                max="11"
+                value={audioVolume}
+                onChange={(e) => setAudioVolume(e.target.value)}
+                style={{ width: "100%" }}
+              />
+            </div>
+
+            <p
+              style={{
+                textAlign: "center",
+                color: "black",
+                paddingTop: "3px",
+                letterSpacing: "1px",
+              }}
+            >
+              Visitor Count: {visitorCount}
+            </p>
+          </div> */}
+        {/* </div> */}
+
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
