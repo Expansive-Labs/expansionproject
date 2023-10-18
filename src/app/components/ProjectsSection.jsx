@@ -106,8 +106,8 @@ const ProjectsSection = () => {
         Music
       </h2>
 
-        {/* Audio Player */}
-        {/* <div
+      {/* Audio Player */}
+      {/* <div
           style={{
             width: 355,
             height: 155,
@@ -213,7 +213,7 @@ const ProjectsSection = () => {
               Visitor Count: {visitorCount}
             </p>
           </div> */}
-        {/* </div> */}
+      {/* </div> */}
 
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag

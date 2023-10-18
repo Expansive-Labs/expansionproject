@@ -35,3 +35,16 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.tab-buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.centered-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure the container takes full height */
+}
