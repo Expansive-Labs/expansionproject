@@ -10,7 +10,7 @@ const TAB_DATA = [
     title: "Festivals",
     id: "festivals",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className="list-disc pl-2 centered-text">
         <li style={{ color: "#50fd9a", fontSize: 16 }}>
           Night Lights Music Festival
         </li>
@@ -27,7 +27,7 @@ const TAB_DATA = [
     title: "Upcoming",
     id: "upcoming",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className="list-disc pl-2 centered-text">
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Butter Lounge</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>Cosmic Art Studio</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Grape Room</li>
@@ -38,7 +38,7 @@ const TAB_DATA = [
     title: "Past",
     id: "past",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className="list-disc pl-2 centered-text">
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Moose</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Pickle</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Fire</li>
@@ -87,7 +87,8 @@ const AboutSection = () => {
           <p className="text-center text-4xl font-bold text-white mt-12 mb-0 md:mb-2">
             Shows
           </p>
-          <div className="flex flex-row justify-start mt-8">
+
+          <div className="flex flex-row justify-center mt-8 tab-buttons-container">
             <TabButton
               selectTab={() => handleTabChange("festivals")}
               active={tab === "festivals"}
@@ -110,6 +111,7 @@ const AboutSection = () => {
               Past{" "}
             </TabButton>
           </div>
+
           <div className="mt-8">
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
