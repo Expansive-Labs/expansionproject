@@ -258,7 +258,9 @@ const ProjectsSection = () => {
         Scene, Jazz Fusion, Funk, Rock, Progressive Rock, Jam, Jambands, Power
         Trio, Lotus, Octave Cat, Dopapod, Tauk, Papadosio, Sunsquabi, Umphreys
         Mcgee, Disco Biscuts, Pigeons Playing Ping Pong, Cory Wong, Cory Henry
-        Funk Apostles, Bad Bad Not Good, Snarky Puppy, Jaco, Herbie, George Duke
+        Funk Apostles, Bad Bad Not Good, Snarky Puppy, Jaco, Herbie, George
+        Duke, Incubus Red Hot Chili Peppers, Flea, John Frusciante, Tribal Tech,
+        Gary Willis, Bass, Drums, Keyboard, Piano, Synthesizer
       </p>
     </section>
   );
