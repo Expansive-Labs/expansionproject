@@ -23,7 +23,7 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Live at Wissahickon Brewery",
+    title: "Live at Wissahickon Brewery | Expansion Project",
     description:
       "Expansion Project | Golden > Ghostbusters recorded Live in Philadelphia",
     image: "/images/projects/wissahiconBrew.webp",
@@ -32,7 +32,7 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "The Psychedelic Shindig",
+    title: "The Psychedelic Shindig | Expansion Project Live",
     description:
       "Expansion Project | Lincoln Boulevard recorded Live at Cosmic Art Studio",
     image: "/images/projects/psyshindig.webp",
@@ -41,7 +41,7 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "Emagination (Official Music Video)",
+    title: "Emagination (Official Music Video) | Expansion Project",
     description:
       "Expansion Project | Inspired by the film 'Willy Wonka & the Chocolate Factory (1971)'",
     image: "/images/projects/emaginationThumbnail.webp",
@@ -50,7 +50,7 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Royal Chords",
+    title: "Royal Chords | Expansion Project Live",
     description: "Expansion Project | Royal recorded Live in Philadelphia",
     image: "/images/projects/royalChordsThumbnail.webp",
     tag: ["All", "Live"],
@@ -58,7 +58,7 @@ const projectsData = [
   },
   {
     id: 7,
-    title: "Lincoln Boulevard (Official Music Video)",
+    title: "Lincoln Boulevard (Official Music Video) | Expansion Project",
     description: "Expansion Project |  Lincoln Boulevard",
     image: "/images/projects/linkBThumbnail.webp",
     tag: ["All", "Studio"],
@@ -66,7 +66,7 @@ const projectsData = [
   },
   {
     id: 8,
-    title: "Roloway Live at Pub Webb",
+    title: "Roloway at Pub Webb Live | Expansion Project Live",
     description: "Expansion Project | Roloway recorded Live in Philadelphia",
     image: "/images/projects/rolothumb.webp",
     tag: ["All", "Live"],
@@ -74,7 +74,7 @@ const projectsData = [
   },
   {
     id: 9,
-    title: "Conscious Tour Live Recap",
+    title: "Conscious Tour Live Recap | Expansion Project",
     description: " Expansion Project | Conscious Tour 2019 Recap",
     image: "/images/projects/ctourThumb.webp",
     tag: ["All", "Live"],

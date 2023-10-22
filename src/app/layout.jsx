@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Expansion Project | Philly Band Philly Grooves",
   description:
-    "Music, videos and information about the Philadelphia Fusion Funk sensation also known as Expansion Project",
+    "Music, videos and information about the Philadelphia Fusion Funk sensation also known as The Expansion Project",
   image: "/images/infiniteLogo.webp",
   metadataBase: new URL("https://www.expansionprojectmusic.com"),
   languages: {
@@ -28,7 +28,7 @@ export const metadata = {
   openGraph: {
     title: "Expansion Project | Philly Band Philly Grooves",
     description:
-      "Music, videos and information about the Philadelphia Fusion Funk sensation also known as Expansion Project",
+      "Music, videos and information about the Philadelphia Fusion Funk sensation also known as The Expansion Project",
     url: "https://www.expansionprojectmusic.com/",
     siteName: "The Expansion Project",
     images: [
@@ -41,7 +41,7 @@ export const metadata = {
         url: "/images/moon_Logo.webp",
         width: 1260,
         height: 800,
-        alt: "alt image",
+        alt: "The Moon logo",
       },
     ],
     locale: "en_US",
