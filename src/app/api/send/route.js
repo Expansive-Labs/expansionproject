@@ -17,8 +17,8 @@ export async function POST(req, res) {
       react: (
         <>
           <h1>{subject}</h1>
-          <p style={font - semibold}>Thank you for contacting us!</p>
-          <p style={font - italic}>Your message to the band:</p>
+          <p>Thank you for contacting us!</p>
+          <p>Your message to the band:</p>
           <p>{message}</p>
         </>
       ),
