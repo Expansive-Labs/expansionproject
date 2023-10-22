@@ -36,12 +36,8 @@ export const metadata = {
         url: "/images/moon_Logo.webp", // update with AI swirls for social media share cards
         width: 1260,
         height: 800,
-      },
-      {
-        url: "/images/moon_Logo.webp",
-        width: 1260,
-        height: 800,
         alt: "The Moon logo",
+        description: "Hello World",
       },
     ],
     locale: "en_US",

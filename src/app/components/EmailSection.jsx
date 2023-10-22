@@ -53,10 +53,10 @@ const EmailSection = () => {
         </h5>
         <p className="text-[#ADB7BE] text-sm mb-8 max-w-md">
           {" "}
-          Greetings! We are always looking for new and exciting opportunities.
-          Whether you have a question or just want to say hi, our inbox is
-          always open. Feel free to reach out to us about booking us, working
-          together or we can just have some interesting conversation!
+          Greetings! We&apos;re always on the lookout for new and exciting
+          connections. Whether you have a question or just want to say hello,
+          our inbox is open. Feel free to get in touch with us about
+          collaborations, bookings, or just to have an interesting conversation!
         </p>
         <div className="socials flex flex-row gap-4">
           <Link
