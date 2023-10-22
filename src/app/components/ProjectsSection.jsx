@@ -262,6 +262,10 @@ const ProjectsSection = () => {
         Duke, Incubus Red Hot Chili Peppers, Flea, John Frusciante, Tribal Tech,
         Gary Willis, Bass, Drums, Keyboard, Piano, Synthesizer
       </p>
+      {/* Add some text here */}
+      <p
+        style={{ color: "#c0c0c0", fontFamily: "unset", fontWeight: "lighter" }}
+      ></p>
     </section>
   );
 };
