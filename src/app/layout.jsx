@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Expansion Project | Philly Band Philly Grooves",
+  title: "The Expansion Project", // Change this to the new name
   description:
     "Music, videos and information about the Philadelphia Fusion Funk sensation also known as The Expansion Project",
   image: "/images/infiniteLogo.webp",
@@ -13,7 +13,7 @@ export const metadata = {
     "en-US": "/en-US",
   },
   keywords: [
-    "Expansion Project",
+    "The Expansion Project",
     "Band",
     "Music",
     "Jazz Fusion",
@@ -26,7 +26,7 @@ export const metadata = {
     "Philly Music Scene",
   ],
   openGraph: {
-    title: "Expansion Project | Philly Band Philly Grooves",
+    title: "The Expansion Project", // Change this to the new name
     description:
       "Music, videos and information about the Philadelphia Fusion Funk sensation also known as The Expansion Project",
     url: "https://www.expansionprojectmusic.com/",
