@@ -78,7 +78,7 @@ const AboutSection = () => {
             Tilotta and Matthew Silva have for creating music. Zamere Williams
             joined the band in 2016. The chemistry in and out of their
             Philadelphia studio was as if the power trio had been playing
-            together for years. Expansion Project&apos;s evolving sound could be
+            together for years. Expansion Project&apos;s evolving sound can be
             described through their influences, which could range from
             jazz-fusion icons to modern progressive rock jambands. They take the
             most pride in their live shows, when creativity and raw passion for
