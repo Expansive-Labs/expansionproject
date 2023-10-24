@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
@@ -61,12 +61,8 @@ const Navbar = () => {
         </Link>
 
         <h2></h2>
-        <ThemeSwitcher />
 
-        {/* THEME MODE BUTTON */}
-        {/* <button onClick={toggleMode}>
-          {darkMode ? "Light Mode" : "Dark Mode"}
-        </button> */}
+        <ThemeSwitcher />
 
         {/* Hamburger Menu */}
         <div className="mobile-menu block md:hidden">
