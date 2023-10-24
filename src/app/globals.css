@@ -1,6 +1,20 @@
+/* global.css */
+
+@font-face {
+  font-family: "Determination Mono";
+  src: url("/public/fonts/DeterminationMonoWebRegular-Z5oq.ttf")
+    format("truetype");
+  /* Add additional formats if needed (e.g., woff2) */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Add a custom class for Determination Mono font */
+.determination-mono-font {
+  font-family: "Determination Mono", monospace;
+}
 
 :root {
   --foreground-rgb: 255, 255, 255;
@@ -26,9 +40,15 @@
   color: #333333;
 }
 
-body {
+/* Remove the following lines to apply Press Start 2P to the entire body */
+/* body {
   color: rgb(var(--foreground-rgb));
   background-color: var(--background-start-rgb);
+  font-family: "Press Start 2P", sans-serif; 
+} */
+
+.code {
+  font-family: "Determination Mono", monospace; /* Apply Determination Mono to elements with class 'code' */
 }
 
 .tab-buttons-container {

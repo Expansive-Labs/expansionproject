@@ -47,11 +47,11 @@ const EmailSection = () => {
       <div className=" from-[#50fd9a] to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
 
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">
+        <h5 className="text-xl font-bold text-white my-2 determination-mono-font">
           {" "}
           Let&apos;s Connect.
         </h5>
-        <p className="text-[#ADB7BE] text-sm mb-8 max-w-md">
+        <p className="text-[#ADB7BE] text-sm mb-8 max-w-md determination-mono-font">
           {" "}
           Greetings! We&apos;re always on the lookout for new and exciting
           connections. Whether you have a question or just want to say hello,

@@ -1,4 +1,3 @@
-// "use client";
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
@@ -10,7 +9,7 @@ const TAB_DATA = [
     title: "Festivals",
     id: "festivals",
     content: (
-      <ul className="list-disc pl-2 centered-text">
+      <ul className="list-disc pl-2 centered-text determination-mono-font">
         <li style={{ color: "#50fd9a", fontSize: 16 }}>
           Night Lights Music Festival
         </li>
@@ -27,7 +26,7 @@ const TAB_DATA = [
     title: "Upcoming",
     id: "upcoming",
     content: (
-      <ul className="list-disc pl-2 centered-text">
+      <ul className="list-disc pl-2 centered-text determination-mono-font">
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Butter Lounge</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>Cosmic Art Studio</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Grape Room</li>
@@ -38,7 +37,7 @@ const TAB_DATA = [
     title: "Past",
     id: "past",
     content: (
-      <ul className="list-disc pl-2 centered-text">
+      <ul className="list-disc pl-2 centered-text determination-mono-font">
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Moose</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Pickle</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Fire</li>
@@ -70,10 +69,10 @@ const AboutSection = () => {
           />
         </Parallax>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl text-center font-bold text-white mb-4">
+          <h2 className="text-4xl text-center font-bold text-white determination-mono-font mb-4">
             About Us
           </h2>
-          <p className="text-base text-center lg:text-lg">
+          <p className="text-base text-center lg:text-lg determination-mono-font">
             Expansion Project grew out of the passion longtime friends Anthony
             Tilotta and Matthew Silva have for creating music. Zamere Williams
             joined the band in 2016. The chemistry in and out of their
@@ -84,7 +83,7 @@ const AboutSection = () => {
             most pride in their live shows, when creativity and raw passion for
             music collide and form a truly unique experience.
           </p>
-          <p className="text-center text-4xl font-bold text-white mt-12 mb-0 md:mb-2">
+          <p className="text-center text-4xl font-bold text-white mt-12 mb-0 md:mb-2 determination-mono-font">
             Shows
           </p>
 
