@@ -38,7 +38,6 @@ export const metadata = {
         width: 1260,
         height: 800,
         alt: "The Moon logo",
-        description: "Hello World",
       },
     ],
     locale: "en_US",
