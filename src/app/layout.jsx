@@ -1,10 +1,11 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Providers from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "The Expansion Project", // Change this to the new name
+  title: "The Expansion Project",
   description:
     "Music, videos and information about the Philadelphia Fusion Funk sensation also known as The Expansion Project",
   image: "/images/infiniteLogo.webp",
@@ -13,7 +14,7 @@ export const metadata = {
     "en-US": "/en-US",
   },
   keywords: [
-    "The Expansion Project",
+    "Expansion Project",
     "Band",
     "Music",
     "Jazz Fusion",
@@ -26,7 +27,7 @@ export const metadata = {
     "Philly Music Scene",
   ],
   openGraph: {
-    title: "The Expansion Project", // Change this to the new name
+    title: "The Expansion Project",
     description:
       "Music, videos and information about the Philadelphia Fusion Funk sensation also known as The Expansion Project",
     url: "https://www.expansionprojectmusic.com/",
@@ -47,8 +48,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="light" style={{ colorScheme: "light" }}>
+      <Providers>
+        <body className={inter.className}>{children}</body>
+      </Providers>
     </html>
   );
 }

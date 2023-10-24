@@ -38,7 +38,7 @@ const HeroSection = () => {
                 display: "inline-block",
                 color: "#50fd9a",
               }}
-              repeat={Infinity}
+              repeat={1}
             />
           </h1>
           <p className="text-[#65686b] text-base sm:text-lg mb-6 lg:text-xl">
