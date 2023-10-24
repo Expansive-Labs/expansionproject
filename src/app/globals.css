@@ -28,12 +28,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background-start-rgb);
 }
 
 .tab-buttons-container {
@@ -46,5 +41,5 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%; /* Ensure the container takes full height */
+  height: 100%;
 }
