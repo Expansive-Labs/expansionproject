@@ -39,6 +39,11 @@ const EmailSection = () => {
     }
   };
 
+  // not applied
+  const iconStyle = {
+    fill: "black",
+  };
+
   return (
     <section
       id="contact"
@@ -63,13 +68,13 @@ const EmailSection = () => {
             href="https://www.facebook.com/expansionproject?mibextid=MKOS29"
             target="_blank"
           >
-            <Image src={FacebookIcon} alt="Github Icon" />
+            <Image src={FacebookIcon} alt="Facebook Icon" style={iconStyle} />
           </Link>
           <Link
             href="https://www.instagram.com/expansionproject/"
             target="_blank"
           >
-            <Image src={InstagramIcon} alt="Linkedin Icon" />
+            <Image src={InstagramIcon} alt="Instagram Icon" style={iconStyle} />
           </Link>
         </div>
       </div>

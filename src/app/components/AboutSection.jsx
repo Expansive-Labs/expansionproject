@@ -72,10 +72,10 @@ const AboutSection = () => {
           />
         </Parallax>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl text-center font-bold text-white determination-mono-font mb-4">
+          <h2 className="text-4xl text-center font-bold determination-mono-font mb-4 text-[#50fd9a]">
             About Us
           </h2>
-          <p className="text-base text-center lg:text-lg determination-mono-font">
+          <p className="text-base text-center text-[#bababa] lg:text-lg determination-mono-font">
             Expansion Project grew out of the passion longtime friends Anthony
             Tilotta and Matthew Silva have for creating music. Zamere Williams
             joined the band in 2016. The chemistry in and out of their
@@ -86,7 +86,7 @@ const AboutSection = () => {
             most pride in their live shows, when creativity and raw passion for
             music collide and form a truly unique experience.
           </p>
-          <p className="text-center text-4xl font-bold text-white mt-12 mb-0 md:mb-2 determination-mono-font">
+          <p className="text-center text-4xl font-bold text-[#50fd9a] mt-12 mb-0 md:mb-2 determination-mono-font">
             Shows
           </p>
 
