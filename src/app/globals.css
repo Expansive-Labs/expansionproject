@@ -1,15 +1,14 @@
-/* global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* global.css */
 @font-face {
   font-family: "Determination Mono";
   src: url("/public/fonts/DeterminationMonoWebRegular-Z5oq.ttf")
     format("truetype");
   /* Add additional formats if needed (e.g., woff2) */
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* Add a custom class for Determination Mono font */
 .determination-mono-font {

@@ -27,11 +27,11 @@ export const metadata = {
     "Philly Music Scene",
   ],
   openGraph: {
-    title: "The Expansion Project",
+    title: "The Expansion Project | Philly band Philly grooves",
     description:
       "Music, videos and information about the Philadelphia Fusion Funk sensation also known as The Expansion Project",
     url: "https://www.expansionprojectmusic.com/",
-    siteName: "The Expansion Project",
+    siteName: "The Expansion Project | Philly band Philly grooves",
     images: [
       {
         url: "/images/moon_Logo.webp", // update with AI swirls for social media share cards

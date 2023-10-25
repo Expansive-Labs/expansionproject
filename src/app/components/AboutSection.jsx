@@ -65,7 +65,10 @@ const AboutSection = () => {
             alt="Expansion Project"
             width={500}
             height={500}
-            style={{ borderRadius: "3%" }}
+            style={{
+              borderRadius: "10%",
+              filter: "drop-shadow(0 0 48px #bababa)",
+            }}
           />
         </Parallax>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">

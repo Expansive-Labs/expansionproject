@@ -15,34 +15,36 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-2xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold determination-mono-font">
+          <h1 className="text-white mb-4 text-2xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold ">
             <span className=" text-transparent bg-clip-text bg-gradient-to-r to-gray-400 from-gray-300">
               Hello, we are{" "}
             </span>
             <br></br>
-            <TypeAnimation
-              sequence={[
-                "Expansion Project",
-                3256,
-                "funky",
-                808,
-                "jazzy",
-                808,
-                "groovy",
-                808,
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{
-                fontSize: "1em",
-                display: "inline-block",
-                color: "#50fd9a",
-              }}
-              repeat={Infinity}
-            />
+            <span className=" text-transparent bg-clip-text bg-gradient-to-r to-gray-400 from-gray-300 determination-mono-font">
+              <TypeAnimation
+                sequence={[
+                  "Expansion Project",
+                  3256,
+                  "funky",
+                  808,
+                  "jazzy",
+                  808,
+                  "groovy",
+                  808,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{
+                  fontSize: "1em",
+                  display: "inline-block",
+                  color: "#50fd9a",
+                }}
+                repeat={Infinity}
+              />
+            </span>
           </h1>
           <p className="text-[#65686b] text-base sm:text-lg mb-6 lg:text-xl determination-mono-font">
-            Power Fusion Trio | Philly Band Philly Grooves
+            Power Fusion Trio /// Philadelphia, PA
           </p>
           <div>
             <Link

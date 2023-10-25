@@ -215,7 +215,7 @@ const ProjectsSection = () => {
           </div> */}
       {/* </div> */}
 
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      <div className="text-white flex flex-row justify-center items-center gap-2 py-6 ">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -232,7 +232,10 @@ const ProjectsSection = () => {
           isSelected={tag === "Live"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul
+        ref={ref}
+        className="grid md:grid-cols-3 gap-8 md:gap-12 determination-mono-font"
+      >
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
@@ -253,7 +256,7 @@ const ProjectsSection = () => {
         ))}
       </ul>
       {/* SEO METADATA */}
-      <p style={{ opacity: 0.1 }}>
+      {/* <p style={{ opacity: 0.1 }}>
         Expansion Project, Band, Music, Philadelphia, Philly Band, Philly Music
         Scene, Jazz Fusion, Funk, Rock, Progressive Rock, Jam, Jambands, Power
         Trio, Lotus, Octave Cat, Dopapod, Tauk, Papadosio, Sunsquabi, Umphreys
@@ -261,7 +264,7 @@ const ProjectsSection = () => {
         Funk Apostles, Bad Bad Not Good, Snarky Puppy, Jaco, Herbie, George
         Duke, Incubus Red Hot Chili Peppers, Flea, John Frusciante, Tribal Tech,
         Gary Willis, Bass, Drums, Keyboard, Piano, Synthesizer
-      </p>
+      </p> */}
       {/* Add some text here */}
       <p
         style={{ color: "#c0c0c0", fontFamily: "unset", fontWeight: "lighter" }}
