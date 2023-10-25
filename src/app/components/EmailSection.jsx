@@ -133,7 +133,7 @@ const EmailSection = () => {
             Send Message
           </button>
           {emailSubmitted && (
-            <p className="text-[#50fd9a] text-lg mt-2">
+            <p className="text-[#50fd9a] text-lg mt-2 determination-mono-font">
               Your message has been sent to Expansion Project!
             </p>
           )}
