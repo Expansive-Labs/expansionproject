@@ -67,7 +67,7 @@ const AboutSection = () => {
             height={500}
             style={{
               borderRadius: "10%",
-              filter: "drop-shadow(0 0 48px #bababa)",
+              filter: "drop-shadow(0 0 44px #bababa)",
             }}
           />
         </Parallax>

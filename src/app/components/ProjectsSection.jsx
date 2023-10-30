@@ -1,4 +1,3 @@
-// "use client";
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
@@ -100,6 +99,17 @@ const ProjectsSection = () => {
     animate: { y: 0, opacity: 1 },
   };
 
+  // Audio Play Counter and Volume Slider
+  const [audioCount, setAudioCount] = React.useState(0);
+  const [audioVolume, setAudioVolume] = useState(5);
+
+  // Video Play Counter and Volume Slider
+  const [videoCount, setVideoCount] = React.useState(0);
+  const [videoVolume, setVideoVolume] = useState(5);
+
+  // Webaite Visitor Counter
+  const [visitorCount, setVisitorCount] = useState(0);
+
   return (
     <section id="music">
       <h2 className="text-center text-4xl font-bold text-[#50fd9a] mt-4 mb-8 md:mb-12 determination-mono-font">
@@ -107,113 +117,122 @@ const ProjectsSection = () => {
       </h2>
 
       {/* Audio Player */}
-      {/* <div
-          style={{
-            width: 355,
-            height: 155,
-            margin: "0 auto",
-            marginBottom: 0,
-          }}
-          className="window"
-        >
-          <div className="title-bar">
-            <div className="title-bar-text" style={{ letterSpacing: "1px" }}>
-              Music Player - Now playing.. Royal
-            </div>
-            <div className="title-bar-controls">
-              <button aria-label="Minimize" />
-              <button aria-label="Maximize" />
-              <button aria-label="Close" />
-            </div>
+      <div
+        style={{
+          width: "90%",
+          maxWidth: "480px",
+          margin: "0 auto",
+          marginBottom: 0,
+        }}
+        className="window"
+      >
+        <div className="title-bar">
+          <div className="title-bar-text" style={{ letterSpacing: "1px" }}>
+            Audio Media Player
           </div>
-{/* 
-          <div className="window-body">
-            <p
+          <div className="title-bar-controls">
+            <button aria-label="Minimize" />
+            <button aria-label="Maximize" />
+            <button aria-label="Close" />
+          </div>
+        </div>
+
+        <div className="window-body">
+          <p
+            style={{
+              textAlign: "center",
+              color: "black",
+              paddingTop: "2px",
+              letterSpacing: "1px",
+            }}
+          >
+            Play Count: {videoCount}
+          </p>
+
+          <div className="field-row" style={{ justifyContent: "center" }}>
+            <button onClick={() => setVideoCount(videoCount + 1)}>▶</button>
+            <button onClick={() => setVideoCount(videoCount)}>▶▶</button>
+            <button onClick={() => setVideoCount(0)}>X</button>
+          </div>
+
+          {/* Audio embedded link */}
+          <iframe
+            title="Audio Media Player"
+            style={{
+              paddingTop: "16px",
+            }}
+            width="100%"
+            height="256"
+            src="https://expansionproject.bandcamp.com/album/conscious-tortoise"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+
+          <div
+            class="field-row"
+            style={{
+              paddingTop: "4px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+            }}
+          >
+            <div
               style={{
-                textAlign: "center",
-                color: "black",
-                paddingTop: "2px",
-                letterSpacing: "1px",
+                marginBottom: "1px",
+                fontWeight: "bold",
               }}
             >
-              Play Count: {audioCount}
-            </p>
-
-            <div className="field-row" style={{ justifyContent: "center" }}>
-              <button onClick={() => setAudioCount(audioCount + 1)}>▶️</button>
-              <button onClick={() => setAudioCount(audioCount)}>⏩</button>
-              <button onClick={() => setAudioCount(0)}>⏹️</button>
+              Volume:
             </div>
 
             <div
-              class="field-row"
               style={{
-                paddingTop: "4px",
                 display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
+                justifyContent: "space-between",
+                width: "100%",
               }}
             >
-              <div
+              <label
+                for="range26"
                 style={{
-                  marginBottom: "1px",
-                  fontWeight: "bold",
+                  paddingLeft: "13px",
+                  letterSpacing: "1px",
                 }}
               >
-                Volume:
-              </div>
+                Low
+              </label>
 
-              <div
+              <label
+                for="range27"
                 style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  width: "100%",
+                  paddingRight: "13px",
+                  letterSpacing: "1px",
                 }}
               >
-                <label
-                  for="range26"
-                  style={{
-                    paddingLeft: "13px",
-                    letterSpacing: "1px",
-                  }}
-                >
-                  Low
-                </label>
+                High
+              </label>
 
-                <label
-                  for="range27"
-                  style={{
-                    paddingRight: "13px",
-                    letterSpacing: "1px",
-                  }}
-                >
-                  High
-                </label>
-              </div>
-              <input
-                id="range26"
-                type="range"
-                min="1"
-                max="11"
-                value={audioVolume}
-                onChange={(e) => setAudioVolume(e.target.value)}
-                style={{ width: "100%" }}
-              />
+              {/* Volume Slider */}
             </div>
+            <input
+              id="range26"
+              type="range"
+              min="1"
+              max="11"
+              value={videoVolume}
+              onChange={(e) => setVideoVolume(e.target.value)}
+              style={{ width: "100%" }}
+            />
+          </div>
+        </div>
+      </div>
 
-            <p
-              style={{
-                textAlign: "center",
-                color: "black",
-                paddingTop: "3px",
-                letterSpacing: "1px",
-              }}
-            >
-              Visitor Count: {visitorCount}
-            </p>
-          </div> */}
-      {/* </div> */}
+      <h2 className="text-center text-4xl font-bold text-[#50fd9a] mt-16 mb-8 md:mb-12 determination-mono-font">
+        Videos
+      </h2>
 
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6 ">
         <ProjectTag

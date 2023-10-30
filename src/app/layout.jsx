@@ -34,7 +34,7 @@ export const metadata = {
     siteName: "The Expansion Project | Philly band Philly grooves",
     images: [
       {
-        url: "/images/moon_Logo.webp", // update with AI swirls for social media share cards
+        url: "/images/moon_Logo.webp",
         width: 1260,
         height: 800,
         alt: "The Moon logo",
