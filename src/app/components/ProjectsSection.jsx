@@ -177,6 +177,7 @@ const ProjectsSection = () => {
               flexDirection: "column",
               alignItems: "center",
               textAlign: "center",
+              marginBottom: "20px",
             }}
           >
             <div

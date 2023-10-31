@@ -62,7 +62,7 @@ const Navbar = () => {
 
         <h2></h2>
 
-        <ThemeSwitcher />
+        {/* <ThemeSwitcher /> */}
 
         {/* Hamburger Menu */}
         <div className="mobile-menu block md:hidden">

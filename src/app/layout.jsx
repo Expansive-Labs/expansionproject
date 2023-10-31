@@ -1,56 +1,65 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Providers from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "The Expansion Project",
+  title: "Expansion Project",
   description:
-    "Music, videos and information about the Philadelphia Fusion Funk sensation also known as The Expansion Project",
-  image: "/images/infiniteLogo.webp",
-  metadataBase: new URL("https://www.expansionprojectmusic.com"),
-  languages: {
-    "en-US": "/en-US",
-  },
+    "Philly Band Philly Grooves. Music, videos and info about the Fusion Funk Trio",
   keywords: [
     "Expansion Project",
-    "Band",
     "Music",
+    "Band",
     "Jazz Fusion",
     "Funk",
     "Rock",
+    "Progressive Rock",
+    "Jam",
     "Jambands",
     "Power Trio",
     "Philadelphia",
     "Philly Band",
     "Philly Music Scene",
+    "Lotus",
+    "Octave Cat",
+    "Dopapod",
+    "Tauk",
+    "Papadosio",
+    "Sunsquabi",
+    "Umphrey's Mcgee",
+    "Disco Biscuts",
+    "Pigeons Playing Ping Pong",
+    "Cory Wong",
+    "Cory Henry Funk Apostles",
+    "Bad Bad Not Good",
+    "Snarky Puppy",
+    "Red Hot Chili Peppers",
+    "John Frusciante",
+    "Flea",
+    "Jaco",
+    "George Duke",
+    "Victor Wooten",
   ],
   openGraph: {
-    title: "The Expansion Project | Philly band Philly grooves",
-    description:
-      "Music, videos and information about the Philadelphia Fusion Funk sensation also known as The Expansion Project",
+    title: "Expansion Project | Fusion Funk Music",
+    description: "Philly Band Philly Grooves.",
     url: "https://www.expansionprojectmusic.com/",
-    siteName: "The Expansion Project | Philly band Philly grooves",
     images: [
       {
         url: "/images/moon_Logo.webp",
         width: 1260,
         height: 800,
-        alt: "The Moon logo",
       },
     ],
-    locale: "en_US",
-    type: "website",
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="light" style={{ colorScheme: "light" }}>
-      <Providers>
-        <body className={inter.className}>{children}</body>
-      </Providers>
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

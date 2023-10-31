@@ -60,7 +60,7 @@ const HeroSection = () => {
             >
               <span
                 className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 determination-mono-font"
-                href="/"
+                href="#contact"
                 target="_blank"
               >
                 Download EPK
