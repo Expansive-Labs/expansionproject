@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Expansion Project",
   description:
-    "Philly Band Philly Grooves. Music, videos and info about the Fusion Funk Trio",
+    "Philly Band Philly Grooves. Music, videos and info about the band",
   keywords: [
     "Expansion Project",
     "Music",
@@ -42,7 +42,7 @@ export const metadata = {
     "Victor Wooten",
   ],
   openGraph: {
-    title: "Expansion Project | Fusion Funk Music",
+    title: "Expansion Project | Fusion Funk Music", // edit this line to change share card title
     description: "Philly Band Philly Grooves.",
     url: "https://www.expansionprojectmusic.com/",
     images: [
@@ -53,12 +53,15 @@ export const metadata = {
       },
     ],
   },
-  manifest: "/site.webmanifest",
+  manifest: "./site.webmanifest",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link rel="icon" href="favicon.ico" type="image/x-icon" />
+      <title>{metadata.title}</title>
+      <description>{metadata.description}</description>
       <body className={inter.className}>{children}</body>
     </html>
   );

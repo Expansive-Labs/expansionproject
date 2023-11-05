@@ -150,8 +150,8 @@ const ProjectsSection = () => {
           </p>
 
           <div className="field-row" style={{ justifyContent: "center" }}>
-            <button onClick={() => setVideoCount(videoCount + 1)}>▶</button>
-            <button onClick={() => setVideoCount(videoCount)}>▶▶</button>
+            <button onClick={() => setVideoCount(videoCount + 1)}>Play</button>
+            <button onClick={() => setVideoCount(videoCount)}>Pause</button>
             <button onClick={() => setVideoCount(0)}>X</button>
           </div>
 
