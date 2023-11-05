@@ -7,6 +7,7 @@ export const metadata = {
   title: "Expansion Project",
   description:
     "Philly Band Philly Grooves. Music, videos and info about the band",
+  icon: "/images/greenInfinityLogo.png",
   keywords: [
     "Expansion Project",
     "Music",
@@ -59,9 +60,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="icon" href="favicon.ico" type="image/x-icon" />
+      <link rel="icon" href={metadata.icon} type="image/png" />
       <title>{metadata.title}</title>
-      <description>{metadata.description}</description>
       <body className={inter.className}>{children}</body>
     </html>
   );
