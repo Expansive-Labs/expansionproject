@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import Image from "next/image";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
@@ -184,6 +185,7 @@ const ProjectsSection = () => {
               style={{
                 marginBottom: "1px",
                 fontWeight: "bold",
+                color: "black",
               }}
             >
               Volume:
@@ -201,6 +203,7 @@ const ProjectsSection = () => {
                 style={{
                   paddingLeft: "13px",
                   letterSpacing: "1px",
+                  color: "black",
                 }}
               >
                 Low
@@ -211,6 +214,7 @@ const ProjectsSection = () => {
                 style={{
                   paddingRight: "13px",
                   letterSpacing: "1px",
+                  color: "black",
                 }}
               >
                 High
@@ -275,17 +279,6 @@ const ProjectsSection = () => {
           </motion.li>
         ))}
       </ul>
-      {/* SEO METADATA */}
-      {/* <p style={{ opacity: 0.1 }}>
-        Expansion Project, Band, Music, Philadelphia, Philly Band, Philly Music
-        Scene, Jazz Fusion, Funk, Rock, Progressive Rock, Jam, Jambands, Power
-        Trio, Lotus, Octave Cat, Dopapod, Tauk, Papadosio, Sunsquabi, Umphreys
-        Mcgee, Disco Biscuts, Pigeons Playing Ping Pong, Cory Wong, Cory Henry
-        Funk Apostles, Bad Bad Not Good, Snarky Puppy, Jaco, Herbie, George
-        Duke, Incubus Red Hot Chili Peppers, Flea, John Frusciante, Tribal Tech,
-        Gary Willis, Bass, Drums, Keyboard, Piano, Synthesizer
-      </p> */}
-      {/* Add some text here */}
       <p
         style={{ color: "#c0c0c0", fontFamily: "unset", fontWeight: "lighter" }}
       ></p>
