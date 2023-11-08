@@ -48,7 +48,7 @@ export const metadata = {
     url: "https://www.expansionprojectmusic.com/",
     images: [
       {
-        url: "/images/moon_Logo.webp",
+        url: "/images/expansion_moon_logo.webp", 
         width: 1260,
         height: 800,
       },
