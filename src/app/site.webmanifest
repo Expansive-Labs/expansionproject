@@ -1,5 +1,5 @@
 {
-  "name": "The Expansion Project",
+  "name": "Expansion Project",
   "short_name": "Expansion Project",
   "description": "Fusion Funk Music!",
   "icons": [
@@ -9,13 +9,13 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
+      "src": "/images/infiniteLogo.webp",
+      "type": "image/webp",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
+      "src": "public/images/infiniteLogo.webp",
+      "type": "image/webp",
       "sizes": "512x512"
     }
   ],

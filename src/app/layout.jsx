@@ -7,7 +7,7 @@ export const metadata = {
   title: "Expansion Project",
   description:
     "Philly Band Philly Grooves. Music, videos and info about the band",
-  icon: "/images/greenInfinityLogo.png",
+  icon: "/images/greenInfinityLogo.webp",
   keywords: [
     "Expansion Project",
     "Music",
@@ -48,7 +48,7 @@ export const metadata = {
     url: "https://www.expansionprojectmusic.com/",
     images: [
       {
-        url: "/images/expansion_moon_logo.webp", 
+        url: "/images/expansion_moon_logo.webp",
         width: 1260,
         height: 800,
       },
@@ -60,7 +60,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="icon" href={metadata.icon} type="image/png" />
+      <link rel="icon" href={metadata.icon} type="image/webp" />
       <title>{metadata.title}</title>
       <body className={inter.className}>{children}</body>
     </html>
