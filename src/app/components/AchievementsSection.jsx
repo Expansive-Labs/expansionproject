@@ -13,7 +13,7 @@ const achievementsList = [
     postfix: "+",
   },
   {
-    metric: "Tap or Scan. Stream New Song",
+    metric: "Tap or scan. Stream new song",
   },
   {
     metric: "Earth Years",
@@ -34,9 +34,9 @@ const AchievementsSection = () => {
             key={index}
             className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
           >
-            <h2 className="text-white text-4xl mb-2 font-bold flex flex-row determination-mono-font">
+            <h2 className="text-[#f6f3ed] text-4xl mb-2 font-bold flex flex-row determination-mono-font">
               {achievement.prefix}
-              {achievement.metric === "Tap or Scan. Stream New Song" ? (
+              {achievement.metric === "Tap or scan. Stream new song" ? (
                 <a href={albumQRLink} target="_blank" rel="noopener noreferrer">
                   <QRCode value={albumQRLink} size={qrCodeSize} />
                 </a>
@@ -45,7 +45,7 @@ const AchievementsSection = () => {
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
                   locale="en-US"
-                  className="text-white text-4xl font-bold"
+                  className="text-[#f6f3ed] text-4xl font-bold"
                   configs={(_, index) => ({
                     mass: 1,
                     friction: 100,

@@ -100,13 +100,9 @@ const ProjectsSection = () => {
     animate: { y: 0, opacity: 1 },
   };
 
-  // Audio Play Counter and Volume Slider
+  // Audio Plays Counter and Audio volume slide
   const [audioCount, setAudioCount] = React.useState(0);
   const [audioVolume, setAudioVolume] = useState(5);
-
-  // Video Play Counter and Volume Slider
-  const [videoCount, setVideoCount] = React.useState(0);
-  const [videoVolume, setVideoVolume] = useState(5);
 
   // Webaite Visitor Counter
   const [visitorCount, setVisitorCount] = useState(0);
@@ -147,13 +143,13 @@ const ProjectsSection = () => {
               letterSpacing: "1px",
             }}
           >
-            Play Count: {videoCount}
+            Play Count: {audioCount}
           </p>
 
           <div className="field-row" style={{ justifyContent: "center" }}>
-            <button onClick={() => setVideoCount(videoCount + 1)}>Play</button>
-            <button onClick={() => setVideoCount(videoCount)}>Pause</button>
-            <button onClick={() => setVideoCount(0)}>X</button>
+            <button onClick={() => setAudioCount(audioCount + 1)}>Play</button>
+            <button onClick={() => setAudioCount(audioCount)}>Pause</button>
+            <button onClick={() => setAudioCount(0)}>Stop</button>
           </div>
 
           {/* Audio embedded link */}
@@ -227,8 +223,8 @@ const ProjectsSection = () => {
               type="range"
               min="1"
               max="11"
-              value={videoVolume}
-              onChange={(e) => setVideoVolume(e.target.value)}
+              value={audioVolume}
+              onChange={(e) => setAudioVolume(e.target.value)}
               style={{ width: "100%" }}
             />
           </div>
@@ -239,7 +235,7 @@ const ProjectsSection = () => {
         Videos
       </h2>
 
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6 ">
+      <div className="text-[#f6f3ed] flex flex-row justify-center items-center gap-2 py-6 ">
         <ProjectTag
           onClick={handleTagChange}
           name="All"

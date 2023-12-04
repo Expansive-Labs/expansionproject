@@ -52,7 +52,7 @@ const EmailSection = () => {
       <div className=" from-[#50fd9a] to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
 
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2 determination-mono-font flex items-center">
+        <h5 className="text-xl font-bold text-[#f6f3ed] my-2 determination-mono-font flex items-center">
           {" "}
           Let&apos;s Connect.
           <Image
@@ -90,7 +90,7 @@ const EmailSection = () => {
           <div className="mb-6">
             <label
               htmlFor="email"
-              className="text-white block mt-8 mb-2 text-sm font-medium"
+              className="text-[#f6f3ed] block mt-8 mb-2 text-sm font-medium"
             >
               Your email
             </label>
@@ -122,7 +122,7 @@ const EmailSection = () => {
           <div className="mb-6">
             <label
               htmlFor="message"
-              className="text-white block text-sm mb-2 font-medium"
+              className="text-[#f6f3ed] block text-sm mb-2 font-medium"
             >
               Message
             </label>

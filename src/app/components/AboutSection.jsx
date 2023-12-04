@@ -57,7 +57,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section className="text-[#f6f3ed]" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 xl:gap-16 sm:py-16 xl:px-16">
         <Parallax speed={10} opacity={[-2, 1, "easeOutBack"]}>
           <Image

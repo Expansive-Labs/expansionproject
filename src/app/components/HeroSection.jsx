@@ -44,28 +44,26 @@ const HeroSection = () => {
             </span>
           </h1>
           <p className="text-[#65686b] text-base sm:text-lg mb-6 lg:text-xl determination-mono-font">
-            Power Fusion Trio /// Philadelphia, PA
+            Fusion Power Trio /// Philadelphia, PA
           </p>
           <div>
             <Link
               href="#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#50fd9a] hover:bg-slate-700 text-white determination-mono-font"
+              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#50fd9a] hover:bg-slate-700 text-[#f6f3ed] determination-mono-font"
             >
               Book Us
             </Link>
-            <Link
-              href="#contact"
-              target="_blank"
+
+            <a
+              href="https://drive.google.com/file/d/1FCc0rxk_vOCqduH4qGhrv2aY9Kvcdp4u/view?usp=drive_link" // Replace with the correct API route
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#50fd9a] to-secondary-900 hover:bg-slate-800 text-white mt-3"
+              download="Expansion Project EPK 2024"
+              target="_blank"
             >
-              <span
-                className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 determination-mono-font"
-                href="#contact"
-                target="_blank"
-              >
+              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 determination-mono-font">
                 Download EPK
               </span>
-            </Link>
+            </a>
           </div>
         </motion.div>
         <motion.div

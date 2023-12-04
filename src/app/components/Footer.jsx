@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <footer className="footer border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-white determination-mono-font">
+    <footer className="footer border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-[#f6f3ed] determination-mono-font">
       <div className="text-center p-12 justify-center">
         {/* EXPANSIVE LABS */}
         <div style={{ position: "relative", top: "-10px", margin: "10px 0" }}>
