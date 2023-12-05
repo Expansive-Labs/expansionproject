@@ -43,7 +43,7 @@ export const metadata = {
     "Victor Wooten",
   ],
   openGraph: {
-    title: "Expansion Project | Fusion Funk Music", // edit this line to change share card title
+    title: "Expansion Project | Fusion Funk Music!", // edit this line to change share card title
     description: "Philly Band Philly Grooves.",
     url: "https://www.expansionprojectmusic.com/",
     images: [

@@ -15,7 +15,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-2xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold ">
+          <h1 className="text-[#f6f3ed] mb-4 text-2xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold ">
             <span className=" text-transparent bg-clip-text bg-gradient-to-r to-gray-400 from-gray-300">
               Hello, we are{" "}
             </span>
@@ -56,7 +56,7 @@ const HeroSection = () => {
 
             <a
               href="https://drive.google.com/file/d/1FCc0rxk_vOCqduH4qGhrv2aY9Kvcdp4u/view?usp=drive_link" // Replace with the correct API route
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#50fd9a] to-secondary-900 hover:bg-slate-800 text-white mt-3"
+              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#50fd9a] to-secondary-900 hover:bg-slate-800 text-[#f6f3ed] mt-3"
               download="Expansion Project EPK 2024"
               target="_blank"
             >

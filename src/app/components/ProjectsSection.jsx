@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "Wissahickon Brewery | Live Recap",
-    description: "Wissahickon Brewery live show recap | Philadelphia PA",
+    description: "Expansion Project | Wissahickon Brewery live show recap",
     image: "/images/projects/wissThumbnail.webp",
     tag: ["All", "Live", "Recap"],
     gitUrl: "https://youtu.be/RuI-TDbnUX0?si=l0x_RFemRgP5ZBXh",
@@ -16,16 +16,16 @@ const projectsData = [
   {
     id: 2,
     title: "Pub Webb | Live Recap",
-    description: "Pub Webb live show recap | Philadelphia PA",
+    description: "Expansion Project | Pub Webb live show recap",
     image: "/images/projects/liveRecap.webp",
     tag: ["All", "Live", "Recap"],
     gitUrl: "https://youtu.be/Um_VF3GP_mQ",
   },
   {
     id: 3,
-    title: "Live at Wissahickon Brewery | Expansion Project",
+    title: "Live at Wissahickon Brewery",
     description:
-      "Expansion Project | Golden > Ghostbusters recorded Live in Philadelphia",
+      "Expansion Project | Recorded live at Wissahickon Brewery",
     image: "/images/projects/wissahiconBrew.webp",
     tag: ["All", "Live"],
     gitUrl: "https://youtu.be/n-8jbdDxo4o",
@@ -34,7 +34,7 @@ const projectsData = [
     id: 4,
     title: "The Psychedelic Shindig | Expansion Project Live",
     description:
-      "Expansion Project | Lincoln Boulevard recorded Live at Cosmic Art Studio",
+      "Expansion Project | Lincoln Boulevard recorded Live at Cosmic Art Studio, Pottstown PA",
     image: "/images/projects/psyshindig.webp",
     tag: ["All", "Live"],
     gitUrl: "https://youtu.be/OX4BN2sJ9mo",
@@ -50,7 +50,7 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Royal Chords | Expansion Project Live",
+    title: "Royal Chords Live | Expansion Project",
     description: "Expansion Project | Royal recorded Live in Philadelphia",
     image: "/images/projects/royalChordsThumbnail.webp",
     tag: ["All", "Live"],
