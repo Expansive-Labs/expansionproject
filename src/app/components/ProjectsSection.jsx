@@ -24,8 +24,7 @@ const projectsData = [
   {
     id: 3,
     title: "Live at Wissahickon Brewery",
-    description:
-      "Expansion Project | Recorded live at Wissahickon Brewery",
+    description: "Expansion Project | Recorded live at Wissahickon Brewery",
     image: "/images/projects/wissahiconBrew.webp",
     tag: ["All", "Live"],
     gitUrl: "https://youtu.be/n-8jbdDxo4o",
@@ -50,7 +49,7 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Royal Chords Live | Expansion Project",
+    title: "Royal Chords | Expansion Project Live",
     description: "Expansion Project | Royal recorded Live in Philadelphia",
     image: "/images/projects/royalChordsThumbnail.webp",
     tag: ["All", "Live"],
@@ -74,7 +73,7 @@ const projectsData = [
   },
   {
     id: 9,
-    title: "Conscious Tour Live Recap | Expansion Project",
+    title: "Conscious Tour Recap | Expansion Project",
     description: " Expansion Project | Conscious Tour 2019 Recap",
     image: "/images/projects/ctourThumb.webp",
     tag: ["All", "Live"],
@@ -230,54 +229,59 @@ const ProjectsSection = () => {
           </div>
         </div>
       </div>
+      <section id="videos">
+        <h2 className="text-center text-4xl font-bold text-[#50fd9a] mt-16 mb-8 md:mb-12 determination-mono-font">
+          Videos
+        </h2>
 
-      <h2 className="text-center text-4xl font-bold text-[#50fd9a] mt-16 mb-8 md:mb-12 determination-mono-font">
-        Videos
-      </h2>
-
-      <div className="text-[#f6f3ed] flex flex-row justify-center items-center gap-2 py-6 ">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Studio"
-          isSelected={tag === "Studio"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Live"
-          isSelected={tag === "Live"}
-        />
-      </div>
-      <ul
-        ref={ref}
-        className="grid md:grid-cols-3 gap-8 md:gap-12 determination-mono-font"
-      >
-        {filteredProjects.map((project, index) => (
-          <motion.li
-            key={index}
-            variants={cardVariants}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
-          >
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
-          </motion.li>
-        ))}
-      </ul>
-      <p
-        style={{ color: "#c0c0c0", fontFamily: "unset", fontWeight: "lighter" }}
-      ></p>
+        <div className="text-[#f6f3ed] flex flex-row justify-center items-center gap-2 py-6 ">
+          <ProjectTag
+            onClick={handleTagChange}
+            name="All"
+            isSelected={tag === "All"}
+          />
+          <ProjectTag
+            onClick={handleTagChange}
+            name="Studio"
+            isSelected={tag === "Studio"}
+          />
+          <ProjectTag
+            onClick={handleTagChange}
+            name="Live"
+            isSelected={tag === "Live"}
+          />
+        </div>
+        <ul
+          ref={ref}
+          className="grid md:grid-cols-3 gap-8 md:gap-12 determination-mono-font"
+        >
+          {filteredProjects.map((project, index) => (
+            <motion.li
+              key={index}
+              variants={cardVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              transition={{ duration: 0.3, delay: index * 0.4 }}
+            >
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                imgUrl={project.image}
+                gitUrl={project.gitUrl}
+                previewUrl={project.previewUrl}
+              />
+            </motion.li>
+          ))}
+        </ul>
+        <p
+          style={{
+            color: "#c0c0c0",
+            fontFamily: "unset",
+            fontWeight: "lighter",
+          }}
+        ></p>
+      </section>
     </section>
   );
 };

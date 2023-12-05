@@ -16,9 +16,17 @@ const navLinks = [
     path: "#music",
   },
   {
-    title: "Shows",
-    path: "#about",
+    title: "Videos",
+    path: "#videos",
   },
+  {
+    title: "Merch",
+    path: "#contact",
+  },
+  // {
+  //   title: "Shows",
+  //   path: "#about",
+  // },
   {
     title: "Contact",
     path: "#contact",

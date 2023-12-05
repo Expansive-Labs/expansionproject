@@ -106,7 +106,7 @@ const EmailSection = () => {
           <div className="mb-6">
             <label
               htmlFor="subject"
-              className="text-white block text-sm mb-2 font-medium"
+              className="text-[#f6f3ed] block text-sm mb-2 font-medium"
             >
               Subject
             </label>

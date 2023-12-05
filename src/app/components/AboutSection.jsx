@@ -34,8 +34,8 @@ const TAB_DATA = [
     ),
   },
   {
-    title: "Past",
-    id: "past",
+    title: "Previous",
+    id: "previous",
     content: (
       <ul className="list-disc pl-2 centered-text determination-mono-font">
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Moose</li>
@@ -106,11 +106,11 @@ const AboutSection = () => {
               Upcoming{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("past")}
-              active={tab === "past"}
+              selectTab={() => handleTabChange("previous")}
+              active={tab === "previous"}
             >
               {" "}
-              Past{" "}
+              Previous{" "}
             </TabButton>
           </div>
 
