@@ -21,12 +21,8 @@ const navLinks = [
   },
   {
     title: "Merch",
-    path: "#contact",
+    path: "#merch",
   },
-  // {
-  //   title: "Shows",
-  //   path: "#about",
-  // },
   {
     title: "Contact",
     path: "#contact",
