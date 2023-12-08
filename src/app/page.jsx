@@ -9,7 +9,7 @@ import AchievementsSection from "./components/AchievementsSection";
 import { ParallaxProvider } from "react-scroll-parallax";
 import BackToTopButton from "./components/BackToTopButton";
 import Providers from "./providers";
-import MerchSection from "./components/MerchSection";
+import MerchCarousel from "./components/MerchCarousel";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
             <AchievementsSection />
             <AboutSection />
             <ProjectsSection />
-            {/* <MerchSection /> */}
+            <MerchCarousel />
             <EmailSection />
           </ParallaxProvider>
         </div>
