@@ -5,8 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Expansion Project",
-  description:
-    "Philly Band Philly Grooves. Music, videos and info about the band",
+  description: "Expansion Project band website",
   icon: "/images/greenInfinityLogo.webp",
   keywords: [
     "Expansion Project",
@@ -43,14 +42,29 @@ export const metadata = {
     "Victor Wooten",
   ],
   openGraph: {
-    title: "Expansion Project | Fusion Funk Music!", // edit this line to change share card title
-    description: "Philly Band Philly Grooves.",
+    title: "Expansion Project | Philly Band Philly Grooves.",
+    description: "Fusion Funk Music!",
+    type: "music.album",
     url: "https://www.expansionprojectmusic.com/",
     images: [
       {
         url: "/images/expansion_moon_logo.webp",
         width: 1260,
         height: 800,
+        alt: "Expansion Project Logo",
+      },
+    ],
+    locale: "en_US",
+    site_name: "Expansion Project",
+    determiner: "the",
+    video: [
+      {
+        url: "https://youtu.be/Mflab1MxKaI?si=NfLbcwqrJ5Bn1XuP",
+        secure_url: "https://youtu.be/Mflab1MxKaI?si=NfLbcwqrJ5Bn1XuP",
+        type: "text/html",
+        width: 400,
+        height: 300,
+        description: "Emagination (Offical Music Video) | Expansion Project",
       },
     ],
   },
