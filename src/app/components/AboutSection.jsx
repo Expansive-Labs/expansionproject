@@ -56,8 +56,21 @@ const AboutSection = () => {
     });
   };
 
+  const sectionStyle = {
+    backgroundColor: "#121212",
+    padding: "20px",
+  };
+
+  const titleStyle = {
+    color: "#50fd9a",
+    textAlign: "center",
+    fontSize: "3em",
+    marginTop: "2em",
+    marginBottom: "2em",
+  };
+
   return (
-    <section className="text-[#f6f3ed]" id="about">
+    <section className="text-[#f6f3ed]" id="about" style={sectionStyle}>
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 xl:gap-16 sm:py-16 xl:px-16">
         <Parallax speed={10} opacity={[-2, 1, "easeOutBack"]}>
           <Image
@@ -71,7 +84,7 @@ const AboutSection = () => {
             }}
           />
         </Parallax>
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+        <div className="mt-4 md:mt-0 text-left flex flex-col h-full" style={sectionStyle}>
           <h2 className="text-4xl text-center font-bold determination-mono-font mb-4 text-[#50fd9a]">
             About Us
           </h2>
