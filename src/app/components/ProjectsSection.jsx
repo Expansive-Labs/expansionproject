@@ -120,11 +120,8 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="music" style={sectionStyle}>
-      <h2
-        style={titleStyle}
-        className="text-center text-4xl font-bold text-[#50fd9a] mt-4 mb-8 md:mb-12 determination-mono-font"
-      >
+    <section id="music">
+      <h2 className="text-center text-4xl font-bold text-[#50fd9a] mt-4 mb-8 md:mb-12 determination-mono-font">
         Music
       </h2>
 
@@ -245,11 +242,8 @@ const ProjectsSection = () => {
           </div>
         </div>
       </div>
-      <section id="videos" style={sectionStyle}>
-        <h2
-          style={titleStyle}
-          className="text-center text-4xl font-bold text-[#50fd9a] mt-4 mb-8 md:mb-12 determination-mono-font"
-        >
+      <section id="videos">
+        <h2 className="text-center text-4xl font-bold text-[#50fd9a] mt-16 mb-8 md:mb-12 determination-mono-font">
           Videos
         </h2>
 
