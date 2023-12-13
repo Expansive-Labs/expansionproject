@@ -4,7 +4,6 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import Image from "next/image";
-// import ThemeSwitcher from "./ThemeSwitcher";
 
 const navLinks = [
   {
@@ -31,23 +30,6 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  // const [darkMode, setDarkMode] = useState(false);
-
-  // useEffect(() => {
-  //   const body = document.body;
-
-  //   if (darkMode) {
-  //     body.classList.add("dark");
-  //     body.classList.remove("light");
-  //   } else {
-  //     body.classList.add("light");
-  //     body.classList.remove("dark");
-  //   }
-  // }, [darkMode]);
-
-  // const toggleMode = () => {
-  //   setDarkMode(!darkMode);
-  // };
 
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100 determination-mono-font">
@@ -65,8 +47,6 @@ const Navbar = () => {
         </Link>
 
         <h2></h2>
-
-        {/* <ThemeSwitcher /> */}
 
         {/* Hamburger Menu */}
         <div className="mobile-menu block md:hidden">
