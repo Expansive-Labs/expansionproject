@@ -10,6 +10,11 @@
   /* Add additional formats if needed (e.g., woff2) */
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* Add a custom class for Determination Mono font */
 .determination-mono-font {
   font-family: "Determination Mono", monospace;
@@ -54,6 +59,7 @@
   display: flex;
   justify-content: center;
 }
+
 
 .centered-text {
   display: flex;
