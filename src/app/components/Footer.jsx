@@ -1,4 +1,5 @@
 // import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
   return (
@@ -31,7 +32,8 @@ const Footer = () => {
           </h1>
         </div>
         <span className="text-muted"></span>
-        <p className="text-slate-700">All rights reserved.</p>
+        <p className="mt-1 text-slate-600">Visitor count: 256 {}</p>
+        <p className="text-slate-600">All rights reserved.</p>
       </div>
     </footer>
   );
