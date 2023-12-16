@@ -25,7 +25,7 @@ const HeroSection = () => {
             </span>
             <br></br>
             <span className=" text-transparent bg-clip-text bg-gradient-to-r to-gray-400 from-gray-300 determination-mono-font">
-              {/* <TypeAnimation
+              <TypeAnimation
                 sequence={[
                   "Expansion Project",
                   3256,
@@ -44,7 +44,7 @@ const HeroSection = () => {
                   color: "#50fd9a",
                 }}
                 repeat={Infinity}
-              /> */}
+              />
             </span>
           </h1>
           <p className="text-[#65686b] text-base sm:text-lg mb-6 lg:text-xl determination-mono-font">

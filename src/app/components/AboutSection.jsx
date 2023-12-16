@@ -72,7 +72,7 @@ const AboutSection = () => {
   return (
     <section className="text-[#f6f3ed]" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 xl:gap-16 sm:py-16 xl:px-16">
-        <Parallax speed={10} opacity={[-2, 1, "easeOutBack"]}>
+      <Parallax speed={10} opacity={[-2, 1, "easeOutBack"]}>
           <Image
             src="/images/wissPicLive.webp"
             alt="Expansion Project"
@@ -81,6 +81,7 @@ const AboutSection = () => {
             style={{
               borderRadius: "10%",
               filter: "drop-shadow(0 0 44px #bababa)",
+              marginTop: "-80px",
             }}
           />
         </Parallax>
