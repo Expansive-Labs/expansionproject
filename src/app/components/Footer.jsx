@@ -2,14 +2,15 @@
 import { useEffect, useState } from "react";
 
 const Footer = () => {
-
   const [visitorCount, setVisitorCount] = useState(0);
 
   useEffect(() => {
-    fetch("/visitorCount")
-      .then(response => response.json())
-      .then(data => setVisitorCount(data.visitorCount))
-  }, [])
+    // Increment the visitor count
+    fetch("/visitorCount", { method: "POST" })
+      .then(() => fetch("/visitorCount")) // Fetch the updated count
+      .then((response) => response.json())
+      .then((data) => setVisitorCount(data.visitorCount));
+  }, []);
 
   return (
     <footer className="footer border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-[#f6f3ed] determination-mono-font">
