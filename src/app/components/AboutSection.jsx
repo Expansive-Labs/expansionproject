@@ -72,7 +72,7 @@ const AboutSection = () => {
   return (
     <section className="text-[#f6f3ed]" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 xl:gap-16 sm:py-16 xl:px-16">
-      <Parallax speed={10} opacity={[-2, 1, "easeOutBack"]}>
+        <Parallax speed={10} opacity={[-2, 1, "easeOutBack"]}>
           <Image
             src="/images/wissPicLive.webp"
             alt="Expansion Project"
@@ -105,7 +105,7 @@ const AboutSection = () => {
             electrifying and truly memorable experience. As they continue to
             evolve together, the band invites both seasoned fans and newcomers
             on an odyssey, promising adventure as they unfold new chapters to
-            their story, the ever expanding canvas of music and history &infin;
+            their story, the ever expanding canvas of music history &infin;
           </p>
           <p className="text-center text-4xl font-bold text-[#50fd9a] mt-12 mb-0 md:mb-2 determination-mono-font">
             Shows
