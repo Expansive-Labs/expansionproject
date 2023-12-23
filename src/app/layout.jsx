@@ -33,6 +33,8 @@ export const metadata = {
     "Cory Wong",
     "Cory Henry Funk Apostles",
     "Bad Bad Not Good",
+    "Cory Wong",
+    "Allen Stone",
     "Snarky Puppy",
     "Red Hot Chili Peppers",
     "John Frusciante",
