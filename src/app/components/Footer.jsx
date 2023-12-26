@@ -1,9 +1,4 @@
-// import Image from "next/image";
-import { useEffect, useState } from "react";
-
 const Footer = () => {
-
-
 
   return (
     <footer className="footer border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-[#f6f3ed] determination-mono-font">
@@ -35,7 +30,9 @@ const Footer = () => {
           </h1>
         </div>
         <span className="text-muted"></span>
-        <p className="mt-1 text-slate-600">Visitor count: (still loading) {}</p>
+        <p className="mt-1 text-slate-600">
+          Visitor count: (still loading) {}
+        </p>
         <p className="text-slate-600">All rights reserved.</p>
       </div>
     </footer>
