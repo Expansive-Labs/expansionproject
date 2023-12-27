@@ -7,9 +7,7 @@
   font-family: "Determination Mono";
   src: url("/public/fonts/DeterminationMonoWebRegular-Z5oq.ttf")
     format("truetype");
-  /* Add additional formats if needed (e.g., woff2) */
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -23,7 +21,6 @@ html {
   color: #f6f3ed;
 }
 
-/* Add a custom class for Determination Mono font */
 .determination-mono-font {
   font-family: "Determination Mono", monospace;
 }
@@ -52,22 +49,14 @@ html {
   color: #333333;
 }
 
-/* Remove the following lines to apply Press Start 2P to the entire body */
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background-color: var(--background-start-rgb);
-  font-family: "Press Start 2P", sans-serif; 
-} */
-
 .code {
-  font-family: "Determination Mono", monospace; /* Apply Determination Mono to elements with class 'code' */
+  font-family: "Determination Mono", monospace;
 }
 
 .tab-buttons-container {
   display: flex;
   justify-content: center;
 }
-
 
 .centered-text {
   display: flex;
