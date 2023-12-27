@@ -1,6 +1,4 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const MerchCarousel = () => {
   const sectionStyle = {
@@ -24,9 +22,6 @@ const MerchCarousel = () => {
       >
         Merch (coming soon!)
       </h2>
-      <Carousel>
-        <div></div>
-      </Carousel>
     </section>
   );
 };
