@@ -155,14 +155,14 @@ const ProjectsSection = () => {
               letterSpacing: "1px",
             }}
           >
-            Play Count: {audioCount}
+            {/* Play Count: {audioCount} */}
           </p>
 
-          <div className="field-row" style={{ justifyContent: "center" }}>
+          {/* <div className="field-row" style={{ justifyContent: "center" }}>
             <button onClick={() => setAudioCount(audioCount + 1)}>Play</button>
             <button onClick={() => setAudioCount(audioCount)}>Pause</button>
             <button onClick={() => setAudioCount(0)}>Stop</button>
-          </div>
+          </div> */}
 
           {/* Audio embedded link */}
           <iframe
@@ -192,7 +192,7 @@ const ProjectsSection = () => {
             <div
               style={{
                 marginBottom: "1px",
-                fontWeight: "bold",
+                // fontWeight: "bold",
                 color: "black",
               }}
             >

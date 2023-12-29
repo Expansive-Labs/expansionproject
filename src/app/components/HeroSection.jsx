@@ -28,13 +28,13 @@ const HeroSection = () => {
               <TypeAnimation
                 sequence={[
                   "Expansion Project",
-                  3256,
+                  3000,
                   "funky",
-                  808,
+                  1000,
                   "jazzy",
-                  808,
+                  1000,
                   "groovy",
-                  808,
+                  2000,
                 ]}
                 wrapper="span"
                 speed={50}

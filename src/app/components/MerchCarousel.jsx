@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 
 const images = [
   // Sweatshirt
@@ -83,6 +85,14 @@ const images = [
 const MerchCarousel = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setCurrentImage((currentImage + 1) % images.length),
+    onSwipedRight: () =>
+      setCurrentImage((currentImage - 1 + images.length) % images.length),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
   const handleNext = () => {
     setCurrentImage((prevImage) => (prevImage + 1) % images.length);
   };
@@ -98,7 +108,20 @@ const MerchCarousel = () => {
       <h2 className="text-4xl font-bold text-[#50fd9a] mt-12 mb-8 md:mb-12 determination-mono-font">
         Merch
       </h2>
-      <div className="relative w-full md:w-[512px] h-64 md:h-[512px] rounded-lg">
+      <h1
+        style={{
+          fontSize: "16px",
+          textAlign: "center",
+          color: "#50fd9a",
+          fontFamily: "determination-mono-font",
+        }}
+      >
+        *swipe and click
+      </h1>
+      <div
+        className="relative w-full md:w-[512px] h-64 md:h-[512px] rounded-lg"
+        {...handlers}
+      >
         <a
           href={images[currentImage].linkUrl}
           target="_blank"
@@ -116,13 +139,15 @@ const MerchCarousel = () => {
         </a>
         <button
           onClick={handlePrevious}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-l"
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 text-black px-4 py-4 rounded-full"
+          style={{ backgroundColor: "#c0c0c0" }}
         >
           Previous
         </button>
         <button
           onClick={handleNext}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-r"
+          className="absolute top-1/2 right-1 transform -translate-y-1/2 text-black px-6 py-4 rounded-full"
+          style={{ backgroundColor: "#c0c0c0" }}
         >
           Next
         </button>
