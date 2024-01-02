@@ -95,15 +95,14 @@ const AboutSection = () => {
           <p className="text-base text-center text-[#bababa] lg:text-lg determination-mono-font">
             Expansion Project grew out of the passion longtime friends Anthony
             Tilotta and Matthew Silva have for creating music. Zamere Williams
-            joined the band in 2016, solidifying the trio. Their ever-evolving
-            sound draws inspiration from jazz fusion icons to the modern
-            progressive funk scene, forming a unique sonic identity. While
-            studio recordings capture their creative essence, Expansion Project
-            takes immense pride in their live shows, where collective creativity
-            and a raw passion for music fuse together. As they continue to
-            evolve, the band invites both seasoned fans and newcomers on an
-            odyssey, promising adventure as they unfold new chapters to their
-            story and the ever expanding canvas of music history &infin;
+            joined the band in 2016, solidifying this trio. Their sound draws
+            inspiration from jazz fusion icons to modern funk masters, forming a
+            unique sonic identity. While studio recordings capture their
+            creative essence on tape, Expansion Project takes immense pride in
+            their live shows, where creativity and a raw passion for music fuse
+            into one. The band invites both seasoned fans and newcomers on their
+            musical odyssey, promising adventure as they unfold new chapters to
+            their story and the ever expanding canvas of music history &infin;
           </p>
           <p className="text-center text-4xl font-bold text-[#50fd9a] mt-12 mb-0 md:mb-2 determination-mono-font">
             Shows

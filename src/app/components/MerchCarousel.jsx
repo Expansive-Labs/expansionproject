@@ -10,52 +10,52 @@ const images = [
     imageUrl: "/images/merchThumbnails/sweatFIT.webp",
     linkUrl:
       "https://expansion-project-merch.printify.me/product/4518889/expansion-project-premium-hoodie",
-    caption: "Premium Sweatshirt",
+    caption: "Premium Sweatshirt (Grey)",
   },
   {
     imageUrl: "/images/merchThumbnails/sweatBACK.webp",
     linkUrl:
       "https://expansion-project-merch.printify.me/product/4518889/expansion-project-premium-hoodie",
-    caption: "Premium Sweatshirt",
+    caption: "Premium Sweatshirt (Black)",
   },
   {
     imageUrl: "/images/merchThumbnails/sweatM.webp",
     linkUrl:
       "https://expansion-project-merch.printify.me/product/4518889/expansion-project-premium-hoodie",
-    caption: "Premium Sweatshirt",
+    caption: "Premium Sweatshirt (Grey)",
   },
   {
     imageUrl: "/images/merchThumbnails/sweatF.webp",
     linkUrl:
       "https://expansion-project-merch.printify.me/product/4518889/expansion-project-premium-hoodie",
-    caption: "Premium Sweatshirt",
+    caption: "Premium Sweatshirt (Pink)",
   },
   // T-Shirt
   {
     imageUrl: "/images/merchThumbnails/classicTFRONT.webp",
     linkUrl:
-      "https://expansion-projects-merch-store.printify.me/product/4518887/expansion-project-classic-t-shirt",
-    caption: "Classic T-Shirt",
+      "https://expansion-project-merch.printify.me/product/4518887/expansion-project-classic-t-shirt",
+    caption: "Classic T-Shirt (Grey)",
   },
   {
     imageUrl: "/images/merchThumbnails/classicTBACK.webp",
     linkUrl:
-      "https://expansion-projects-merch-store.printify.me/product/4518887/expansion-project-classic-t-shirt",
-    caption: "Classic T-Shirt",
+      "https://expansion-project-merch.printify.me/product/4518887/expansion-project-classic-t-shirt",
+    caption: "Classic T-Shirt (Grey)",
   },
   {
     imageUrl: "/images/merchThumbnails/classicM.webp",
     linkUrl:
-      "https://expansion-projects-merch-store.printify.me/product/4518887/expansion-project-classic-t-shirt",
-    caption: "Classic T-Shirt",
+      "https://expansion-project-merch.printify.me/product/4518887/expansion-project-classic-t-shirt",
+    caption: "Classic T-Shirt (Grey)",
   },
   {
     imageUrl: "/images/merchThumbnails/classicF.webp",
     linkUrl:
-      "https://expansion-projects-merch-store.printify.me/product/4518887/expansion-project-classic-t-shirt",
-    caption: "Classic T-Shirt",
+      "https://expansion-project-merch.printify.me/product/4518887/expansion-project-classic-t-shirt",
+    caption: "Classic T-Shirt (Grey)",
   },
-  // Long Sleeve
+  // Socks
   // {
   //   imageUrl: "/images/merchThumbnails/classicF.webp",
   //   linkUrl:

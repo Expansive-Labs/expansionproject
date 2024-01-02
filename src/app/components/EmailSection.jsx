@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import FacebookIcon from "../../../public/facebook-icon-w2.svg";
 import InstagramIcon from "../../../public/instagram-icon-w2.svg";
+// import AppleMusicIcon from "../../../public/applemusic-icon-w2.svg";
+// import SpotifyIcon from "../../../public/spotify-icon-w2.svg";
 import Link from "next/link";
 import Image from "next/image";
 
