@@ -7,6 +7,8 @@ import InstagramIcon from "../../../public/instagram-icon-w2.svg";
 import Link from "next/link";
 import Image from "next/image";
 
+/// EMAIL SECTION ///
+
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 

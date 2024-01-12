@@ -1,3 +1,4 @@
+/// FOOTER ///
 const Footer = () => {
 
   return (

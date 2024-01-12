@@ -5,6 +5,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import Image from "next/image";
 
+/// NAVBAR ///
+
 const navLinks = [
   {
     title: "About Us",
@@ -53,14 +55,14 @@ const Navbar = () => {
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-7 py-2 border rounded border-slate-200 text-slate-900 hover:text-[#f6f3ed] hover:border-white"
+              className="flex items-center px-7 py-2 border rounded border-slate-200 text-slate-900 hover:text-[#f6f3ed] hover:border-[#f6f3ed]"
             >
               <Bars3Icon className="h-5 w-5" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-7 py-2 border rounded border-slate-200 text-slate-900 hover:text-[#f6f3ed] hover:border-white"
+              className="flex items-center px-7 py-2 border rounded border-slate-200 text-slate-900 hover:text-[#f6f3ed] hover:border-[#f6f3ed]"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>

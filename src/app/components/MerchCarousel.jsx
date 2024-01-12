@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 
+/// MERCH CAROUSEL ///
+
 const images = [
   // Sweatshirt
   {

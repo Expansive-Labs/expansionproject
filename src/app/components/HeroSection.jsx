@@ -5,6 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+/// LANDING PAGE VIEW /// 
+
 const HeroSection = () => {
   const handleScroll = () => {
     document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });

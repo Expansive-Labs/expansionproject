@@ -2,6 +2,8 @@ import React from "react";
 import { EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
+/// PROJECT CARDS ///
+
 const ProjectCard = ({ imgUrl, title, description, gitUrl }) => {
   return (
     <div>

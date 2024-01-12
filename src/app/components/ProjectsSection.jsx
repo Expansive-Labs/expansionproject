@@ -4,6 +4,8 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
+/// PROJECTS SECTION ///
+
 const projectsData = [
   {
     id: 1,

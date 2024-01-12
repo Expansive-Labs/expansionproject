@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 import QRCode from "qrcode.react";
 
+/// ACHIEVEMENTS SECTION ///
+
 const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
   ssr: false,
 });

@@ -1,6 +1,8 @@
 // components/BackToTopButton.js
 import { useEffect, useState } from "react";
 
+/// BACK TO TOP ///
+
 const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 

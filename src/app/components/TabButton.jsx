@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+/// TAB BUTTON ///
+
 const variants = {
   default: { width: 0 },
   active: { width: "calc(100% - 0.75rem" },

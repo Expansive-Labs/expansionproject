@@ -1,6 +1,8 @@
 import React from "react";
 import "98.css";
 
+/// PROJECTS BUTTONS ///
+
 const ProjectTag = ({ name, onClick, isSelected }) => {
   const buttonStyles = isSelected
     ? "text-[black] border-[#50fd9a] ring-2 ring-[#50fd9a]"

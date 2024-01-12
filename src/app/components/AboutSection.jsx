@@ -4,6 +4,8 @@ import TabButton from "./TabButton";
 import { Parallax } from "react-scroll-parallax";
 import Link from "next/link";
 
+/// ABOUT SECTION ///
+
 const TAB_DATA = [
   {
     title: "Festivals",
