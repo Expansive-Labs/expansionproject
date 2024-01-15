@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import FacebookIcon from "../../../public/facebook-icon-w2.svg";
 import InstagramIcon from "../../../public/instagram-icon-w2.svg";
+import LinktreeIcon from "../../../public/linktree-icon-w2.svg";
 // import AppleMusicIcon from "../../../public/applemusic-icon-w2.svg";
 // import SpotifyIcon from "../../../public/spotify-icon-w2.svg";
 import Link from "next/link";
@@ -86,6 +87,12 @@ const EmailSection = () => {
             target="_blank"
           >
             <Image src={InstagramIcon} alt="Instagram Icon" style={iconStyle} />
+          </Link>
+          <Link
+            href="https://linktr.ee/expansionproject"
+            target="_blank"
+          >
+            <Image src={LinktreeIcon} alt="Linktree Icon" style={iconStyle} />
           </Link>
         </div>
       </div>
