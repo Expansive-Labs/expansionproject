@@ -119,7 +119,7 @@ const EmailSection = () => {
               htmlFor="subject"
               className="text-[#f6f3ed] block text-sm mb-2 font-medium"
             >
-              Subject
+              Subject Title
             </label>
             <input
               name="subject"
@@ -135,7 +135,7 @@ const EmailSection = () => {
               htmlFor="message"
               className="text-[#f6f3ed] block text-sm mb-2 font-medium"
             >
-              Message
+              Message to the band
             </label>
             <textarea
               name="message"
