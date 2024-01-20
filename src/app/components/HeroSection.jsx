@@ -21,12 +21,12 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-[#f6f3ed] mb-4 text-2xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold ">
+          <h1 className="text-[#f6f3ed] mb-4 text-2xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
             <span className=" text-transparent bg-clip-text bg-gradient-to-r to-gray-400 from-gray-300">
               Hello, we are{" "}
             </span>
             <br></br>
-            <span className=" text-transparent bg-clip-text bg-gradient-to-r to-gray-400 from-gray-300 determination-mono-font">
+            <span className=" text-transparent bg-clip-text bg-gradient-to-r to-gray-400 from-gray-300">
               <TypeAnimation
                 sequence={[
                   "Expansion Project",
@@ -41,7 +41,8 @@ const HeroSection = () => {
                 wrapper="span"
                 speed={50}
                 style={{
-                  fontSize: "1em",
+                  fontSize: "1.1em",
+                  fontFamily: "Kallisto-Lined",
                   display: "inline-block",
                   color: "#50fd9a",
                 }}
@@ -76,7 +77,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
+          className="col-span-4 place-self-center mt-8 lg:mt-0"
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
