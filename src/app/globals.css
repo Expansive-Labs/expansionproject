@@ -4,8 +4,8 @@
 
 /* global.css */
 @font-face {
-  font-family: "Killisto Lined";
-  src: url("/public/fonts/Killisto-Lined.ttf") format("truetype");
+  font-family: "Kallisto Lined";
+  src: url("../../public/fonts/Kallisto-Lined.otf") format("opentype");
 }
 
 @font-face {
