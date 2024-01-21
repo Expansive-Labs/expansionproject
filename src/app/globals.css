@@ -9,11 +9,6 @@
     format("truetype");
 }
 
-@font-face {
-  font-family: "Kallisto-Lined";
-  src: url("/public/fonts/Kallisto-Lined.otf") format("truetype");
-}
-
 html {
   scroll-behavior: smooth;
 }
