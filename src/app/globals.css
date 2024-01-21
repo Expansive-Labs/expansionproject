@@ -4,6 +4,11 @@
 
 /* global.css */
 @font-face {
+  font-family: "Killisto Lined";
+  src: url("/public/fonts/Killisto-Lined.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Determination Mono";
   src: url("/public/fonts/DeterminationMonoWebRegular-Z5oq.ttf")
     format("truetype");

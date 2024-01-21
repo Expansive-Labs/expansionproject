@@ -26,7 +26,7 @@ const HeroSection = () => {
               Hello, we are{" "}
             </span>
             <br></br>
-            <span className=" text-transparent bg-clip-text bg-gradient-to-r to-gray-400 from-gray-300 determination-mono-font">
+            <span className=" text-transparent bg-clip-text bg-gradient-to-r to-gray-400 from-gray-300">
               <TypeAnimation
                 sequence={[
                   "Expansion Project",
@@ -42,6 +42,7 @@ const HeroSection = () => {
                 speed={50}
                 style={{
                   fontSize: "1em",
+                  fontFamily: "Kallisto Lined",
                   display: "inline-block",
                   color: "#50fd9a",
                 }}
