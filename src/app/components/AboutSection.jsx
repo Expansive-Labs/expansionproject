@@ -8,6 +8,17 @@ import Link from "next/link";
 
 const TAB_DATA = [
   {
+    title: "Upcoming",
+    id: "upcoming",
+    content: (
+      <ul className="list-disc pl-2 centered-text determination-mono-font">
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>TBA</li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>TBA</li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>TBA</li>
+      </ul>
+    ),
+  },
+  {
     title: "Festivals",
     id: "festivals",
     content: (
@@ -21,17 +32,6 @@ const TAB_DATA = [
         <li style={{ color: "#50fd9a", fontSize: 16 }}>
           Philadelphia Funk Fest
         </li>
-      </ul>
-    ),
-  },
-  {
-    title: "Upcoming",
-    id: "upcoming",
-    content: (
-      <ul className="list-disc pl-2 centered-text determination-mono-font">
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>The Butter Lounge</li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>Cosmic Art Studio</li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>The Grape Room</li>
       </ul>
     ),
   },
@@ -100,8 +100,8 @@ const AboutSection = () => {
             joined the band in 2016, solidifying this trio. Their sound draws
             inspiration from many sources, forming a unique sonic identity.
             Studio recordings have captured their creative essence on tape while
-            live shows are a place for creativity and raw passion for the love
-            of music &infin;
+            their live shows are events for collaboration and a raw passion for
+            the love of live music &infin;
           </p>
           <p className="text-center text-4xl font-bold text-[#50fd9a] mt-12 mb-0 md:mb-2 determination-mono-font">
             Shows
