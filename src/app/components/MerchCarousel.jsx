@@ -57,31 +57,38 @@ const images = [
       "https://expansion-project-merch.printify.me/product/4518887/expansion-project-classic-t-shirt",
     caption: "Classic T-Shirt (Grey)",
   },
-  // Socks
-  // {
-  //   imageUrl: "/images/merchThumbnails/classicF.webp",
-  //   linkUrl:
-  //     "https://expansion-projects-merch-store.printify.me/product/4518887/expansion-project-classic-t-shirt",
-  //   caption: "Long Sleeve",
-  // },
-  // {
-  //   imageUrl: "/images/merchThumbnails/classicF.webp",
-  //   linkUrl:
-  //     "https://expansion-projects-merch-store.printify.me/product/4518887/expansion-project-classic-t-shirt",
-  //   caption: "Long Sleeve",
-  // },
-  // {
-  //   imageUrl: "/images/merchThumbnails/classicF.webp",
-  //   linkUrl:
-  //     "https://expansion-projects-merch-store.printify.me/product/4518887/expansion-project-classic-t-shirt",
-  //   caption: "Long Sleeve",
-  // },
-  // {
-  //   imageUrl: "/images/merchThumbnails/classicF.webp",
-  //   linkUrl:
-  //     "https://expansion-projects-merch-store.printify.me/product/4518887/expansion-project-classic-t-shirt",
-  //   caption: "Long Sleeve",
-  // },
+  // Mug
+  {
+    imageUrl: "/images/merchThumbnails/mug_front.webp",
+    linkUrl: "https://expansion-project-merch.printify.me/product/5289177",
+    caption: "The Mug | 11oz",
+  },
+  {
+    imageUrl: "/images/merchThumbnails/mug_qr.webp",
+    linkUrl: "https://expansion-project-merch.printify.me/product/5289177",
+    caption: "The Mug | 11oz",
+  },
+  {
+    imageUrl: "/images/merchThumbnails/mug_logo.webp",
+    linkUrl: "https://expansion-project-merch.printify.me/product/5289177",
+    caption: "The Mug | 11oz",
+  },
+  // Tapestry
+  {
+    imageUrl: "/images/merchThumbnails/tapestry_whitewall.webp",
+    linkUrl: "https://expansion-project-merch.printify.me/product/5289674",
+    caption: "Moon Tapestry",
+  },
+  {
+    imageUrl: "/images/merchThumbnails/tapestry_bluewall.webp",
+    linkUrl: "https://expansion-project-merch.printify.me/product/5289674",
+    caption: "Moon Tapestry",
+  },
+  {
+    imageUrl: "/images/merchThumbnails/tapestry_wall.webp",
+    linkUrl: "https://expansion-project-merch.printify.me/product/5289674",
+    caption: "Moon Tapestry",
+  },
 ];
 
 const MerchCarousel = () => {

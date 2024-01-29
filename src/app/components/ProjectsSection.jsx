@@ -130,7 +130,7 @@ const ProjectsSection = () => {
       {/* Audio Player */}
       <div
         style={{
-          width: "90%",
+          width: "100%",
           maxWidth: "480px",
           margin: "0 auto",
           marginBottom: 0,
@@ -153,7 +153,7 @@ const ProjectsSection = () => {
             style={{
               textAlign: "center",
               color: "black",
-              paddingTop: "2px",
+              paddingTop: "1px",
               letterSpacing: "1px",
             }}
           >
@@ -173,7 +173,7 @@ const ProjectsSection = () => {
               paddingTop: "16px",
             }}
             width="100%"
-            height="600"
+            height="420"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/623047767&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=tru"
             seamless
             frameborder="0"
