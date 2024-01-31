@@ -112,6 +112,7 @@ const MerchCarousel = () => {
     );
   };
 
+  // Merch Window
   return (
     <section id="merch" className="flex flex-col items-center">
       <h2 className="text-4xl font-bold text-[#50fd9a] mt-12 mb-8 md:mb-12 determination-mono-font">
@@ -142,7 +143,11 @@ const MerchCarousel = () => {
             className="object-cover w-full h-full rounded-2xl"
             layout="fill"
           />
-          <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-center py-2">
+          <div
+            className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-center py-2"
+            style={{
+            }}
+          >
             {images[currentImage].caption}
           </div>
         </a>
