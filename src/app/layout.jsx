@@ -1,7 +1,9 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
+const googleAnalytics = process.env.GOOGLE_ANALYTICS;
 
 export const metadata = {
   title: "Expansion Project",
@@ -76,9 +78,28 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="icon" href={metadata.icon} type="image/webp" />
-      <title>{metadata.title}</title>
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel="icon" href={metadata.icon} type="image/webp" />
+        <title>{metadata.title}</title>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalytics}`}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${googleAnalytics}');
+            `,
+          }}
+        />
+      </head>
+      <body className={inter.className}>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
