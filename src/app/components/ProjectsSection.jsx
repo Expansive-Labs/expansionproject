@@ -1,11 +1,9 @@
 import React, { useState, useRef } from "react";
-import Image from "next/image";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
 /// PROJECTS SECTION ///
-
 const projectsData = [
   {
     id: 1,
@@ -104,9 +102,6 @@ const ProjectsSection = () => {
   // Audio Plays Counter and Audio volume slide
   const [audioCount, setAudioCount] = React.useState(0);
   const [audioVolume, setAudioVolume] = useState(5);
-
-  // Webaite Visitor Counter
-  const [visitorCount, setVisitorCount] = useState(0);
 
   const sectionStyle = {
     backgroundColor: "#121212",

@@ -29,7 +29,10 @@ const Footer = () => {
           </h1>
         </div>
         <span className="text-muted"></span>
-        <p className="mt-1 text-slate-600">Visitor count: (still loading) {}</p>
+        <p className="mt-1 text-slate-600">
+          Visitor count:{" "}
+          <span className="text-[#50fd9a]">(still loading) {}</span>
+        </p>
         <p className="text-slate-600">All rights reserved.</p>
       </div>
     </footer>
