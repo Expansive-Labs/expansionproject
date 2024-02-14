@@ -9,13 +9,6 @@ import AchievementsSection from "./components/AchievementsSection";
 import BackToTopButton from "./components/BackToTopButton";
 import MerchCarousel from "./components/MerchCarousel";
 import { ParallaxProvider } from "react-scroll-parallax";
-import { db } from "./firebaseConfig";
-import { useEffect, useState } from "react";
-import { getDoc, collection } from "firebase/firestore";
-
-async function fetchDataFromFirestore() {
-  const querySnapshot = await getDoc(collection(db, "")); // add visitorCount in quotes
-}
 
 export default function Home() {
   return (
