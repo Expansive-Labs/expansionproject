@@ -1,3 +1,37 @@
+import { useEffect } from "react";
+import useSWR from "swr";
+
+async function fetcher(...args) {
+  const res = await fetch(...args);
+  return res.json();
+}
+
+function ViewCounter({ slug, footer = false }) {
+  const { data } = useSWR(`/api/views/${slug}`, fetcher);
+  const views = new Number(data?.total);
+
+  useEffect(() => {
+    const registerView = () =>
+      fetch(`/api/views/${slug}`, {
+        method: "POST",
+      });
+
+    if (footer) {
+      registerView();
+    }
+  }, [slug]);
+
+  return (
+    <span className="text-[#50fd9a]">
+      {data ? `${views.toLocaleString()} views` : "(still loading)"}
+    </span>
+  );
+}
+
+function formatViews(views) {
+  return `${views > 0 ? views.toLocaleString() : "–––"} views`;
+}
+
 /// FOOTER ///
 const Footer = () => {
   return (
@@ -30,8 +64,8 @@ const Footer = () => {
         </div>
         <span className="text-muted"></span>
         <p className="mt-1 text-slate-600">
-          Visitor count:{" "}
-          <span className="text-[#50fd9a]">(still loading) {}</span>
+          Visitor count:
+          <span className="text-[#50fd9a]">(still loading) {ViewCounter}</span>
         </p>
         <p className="text-slate-600">All rights reserved.</p>
       </div>
