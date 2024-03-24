@@ -50,7 +50,7 @@ const Navbar = () => {
 
         <h2></h2>
 
-        {/* Hamburger Menu */}
+        {/* Hamburger Menu */} 
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button
