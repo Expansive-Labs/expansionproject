@@ -1,3 +1,4 @@
+"use client";
 import ViewCounter from "../viewCounter/page";
 
 /// FOOTER ///
