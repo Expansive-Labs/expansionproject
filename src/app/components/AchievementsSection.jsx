@@ -26,7 +26,7 @@ const achievementsList = [
 
 const AchievementsSection = () => {
   const qrCodeSize = 128; // Adjust the size as needed
-  const albumQRLink = "https://expansionproject.bandcamp.com/track/emaginaiton"; // Replace with your actual link
+  const albumQRLink = "https://soundcloud.com/expansionproject/emagination"; // Replace with your actual link
 
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">

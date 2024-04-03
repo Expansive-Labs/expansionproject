@@ -12,8 +12,12 @@ const TAB_DATA = [
     id: "upcoming",
     content: (
       <ul className="list-disc pl-2 centered-text determination-mono-font">
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>TBA</li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>TBA</li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>
+          Circus Shindig @ Cosmic Art Studio, Pottstown, PA
+        </li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>
+          Private Event - Brooklyn, NY
+        </li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>TBA</li>
       </ul>
     ),

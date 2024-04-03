@@ -1,32 +1,30 @@
-import { useEffect } from "react";
-import useSWR from "swr";
-import counter from "../api/views/counter";
+import { useEffect, useState, useMemo } from 'react'
+import { get, ref, runTransaction, set, update } from 'firebase/database'
+import { database } from '../firebaseConfig'
 
-async function fetcher(...args) {
-  const res = await fetch(...args);
-  return res.json();
-}
 
-function ViewCounter({ slug }) {
-  //   const { data } = useSWR(`/api/views/${slug}`, fetcher);
-  const { data } = useSWR(`/api/views/${counter}`, fetcher);
-  const views = new Number(data?.total);
-  console.log("views", data);
+const ViewCounter = () => {
+  const [count, setCount] = useState(0)
 
   useEffect(() => {
-    const registerView = () =>
-      fetch(`/api/views/${slug}`, {
-        method: "POST",
-      });
-
-    registerView();
-  }, [slug]);
-
+    const counterRef = ref(database, 'views')
+    get(counterRef).then((snapshot) => {
+      if(snapshot.exists()) {
+        setCount(snapshot.val())
+        set(counterRef, (snapshot.val() + 1))
+      } else {
+        console.log('No data available')
+      }
+    }).catch((error) => {
+      console.log(error)
+    })
+  }, [])
+  
   return (
     <span className="text-[#50fd9a]">
-      {data ? `${views.toLocaleString()} views` : " (still loading)"}
+      {count !== undefined ? `${count}` : "(still loading)"}
     </span>
   );
 }
 
-export default ViewCounter;
+export default ViewCounter
