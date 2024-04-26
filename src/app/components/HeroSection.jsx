@@ -62,9 +62,9 @@ const HeroSection = () => {
             </Link>
 
             <a
-              href="/pdfs/Expansion_Project_EPK_2023.pdf.pdf"
+              href="/pdfs/Expansion_Project_EPK.pdf"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#50fd9a] to-secondary-900 hover:bg-slate-800 text-[#f6f3ed] mt-3 transition duration-500 ease-in-out"
-              download="Expansion Project EPK 2024"
+              download="Expansion Project EPK"
               target="_blank"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 determination-mono-font transition duration-500 ease-in-out">
