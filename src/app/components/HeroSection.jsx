@@ -51,7 +51,7 @@ const HeroSection = () => {
             </span>
           </h1>
           <div className="text-[#65686b] text-base sm:text-lg mb-6 lg:text-xl determination-mono-font">
-            Fusion Funk Power Trio /// Philadelphia, PA
+            funk_power_trio /// philadelphia_pa
             <div className="mt-4 flex justify-center sm:justify-start">
               <a
                 href="https://open.spotify.com/artist/4qBVPcT7Wo61vUkymokvyx?si=86dLWpyUQhyqEnlgoniqHw&nd=1&dlsi=7f3de69325eb463b"
@@ -90,7 +90,7 @@ const HeroSection = () => {
               Book Us
             </Link>
 
-            <a
+            {/* <a
               href="/pdfs/Expansion_Project_EPK.pdf"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#50fd9a] to-secondary-900 hover:bg-slate-800 text-[#f6f3ed] mt-3 transition duration-500 ease-in-out"
               download="Expansion Project EPK"
@@ -99,7 +99,7 @@ const HeroSection = () => {
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 determination-mono-font transition duration-500 ease-in-out">
                 Download EPK
               </span>
-            </a>
+            </a> */}
           </div>
         </motion.div>
         <motion.div

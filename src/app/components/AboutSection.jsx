@@ -12,30 +12,9 @@ const TAB_DATA = [
     id: "upcoming",
     content: (
       <ul className="list-disc pl-2 centered-text determination-mono-font">
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>
-          Circus Shindig @ Cosmic Art Studio, Pottstown, PA
-        </li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>
-          Private Event - Brooklyn, NY
-        </li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>TBA</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Festivals",
-    id: "festivals",
-    content: (
-      <ul className="list-disc pl-2 centered-text determination-mono-font">
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>
-          Night Lights Music Festival
-        </li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>
-          Art Jam Music Festival
-        </li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>
-          Philadelphia Funk Fest
-        </li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>TBA</li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>TBA</li>
       </ul>
     ),
   },
@@ -44,16 +23,16 @@ const TAB_DATA = [
     id: "previous",
     content: (
       <ul className="list-disc pl-2 centered-text determination-mono-font">
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>Cosmic Art Studio</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Butter Lounge</li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>Pub Webb</li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>Cosmic Art Studio</li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>Philly Funk Fest</li>
       </ul>
     ),
   },
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("festivals");
+  const [tab, setTab] = useState("upcoming");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -112,13 +91,6 @@ const AboutSection = () => {
           </p>
 
           <div className="flex flex-row justify-center mt-8 tab-buttons-container">
-            <TabButton
-              selectTab={() => handleTabChange("festivals")}
-              active={tab === "festivals"}
-            >
-              {" "}
-              Festivals{" "}
-            </TabButton>
             <TabButton
               selectTab={() => handleTabChange("upcoming")}
               active={tab === "upcoming"}
