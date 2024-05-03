@@ -50,9 +50,38 @@ const HeroSection = () => {
               />
             </span>
           </h1>
-          <p className="text-[#65686b] text-base sm:text-lg mb-6 lg:text-xl determination-mono-font">
-            Fusion Power Trio /// Philadelphia, PA
-          </p>
+          <div className="text-[#65686b] text-base sm:text-lg mb-6 lg:text-xl determination-mono-font">
+            Fusion Funk Power Trio /// Philadelphia, PA
+            <div className="mt-4 flex justify-center sm:justify-start">
+              <a
+                href="https://open.spotify.com/artist/4qBVPcT7Wo61vUkymokvyx?si=86dLWpyUQhyqEnlgoniqHw&nd=1&dlsi=7f3de69325eb463b"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2"
+              >
+                <Image
+                  src="/spotify-icon-w2.svg"
+                  alt="Expansion Project on Spotify"
+                  width={40}
+                  height={40}
+                />
+              </a>
+              <a
+                href="https://music.apple.com/us/artist/expansion-project/1353151967"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2"
+              >
+                <Image
+                  src="/appleMusic-icon-w2.svg"
+                  alt="Expansion Project on Apple Music"
+                  width={40}
+                  height={40}
+                />
+              </a>
+            </div>
+          </div>
+
           <div>
             <Link
               href="#contact"
