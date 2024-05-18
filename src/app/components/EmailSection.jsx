@@ -77,21 +77,19 @@ const EmailSection = () => {
         </p>
         <div className="socials flex flex-row gap-4">
           <Link
-            href="https://www.facebook.com/expansionproject?mibextid=MKOS29"
-            target="_blank"
-          >
-            <Image src={FacebookIcon} alt="Facebook Icon" style={iconStyle} />
-          </Link>
-          <Link
             href="https://www.instagram.com/expansionproject/"
             target="_blank"
           >
             <Image src={InstagramIcon} alt="Instagram Icon" style={iconStyle} />
           </Link>
           <Link
-            href="https://linktr.ee/expansionproject"
+            href="https://www.facebook.com/expansionproject?mibextid=MKOS29"
             target="_blank"
           >
+            <Image src={FacebookIcon} alt="Facebook Icon" style={iconStyle} />
+          </Link>
+
+          <Link href="https://linktr.ee/expansionproject" target="_blank">
             <Image src={LinktreeIcon} alt="Linktree Icon" style={iconStyle} />
           </Link>
         </div>
