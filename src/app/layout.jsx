@@ -46,7 +46,7 @@ export const metadata = {
     "Victor Wooten",
   ],
   openGraph: {
-    title: "Expansion Project | Fusion Funk Music!",
+    title: "Expansion Project Music",
     description: "Expansion Project | Philly Band Philly Grooves",
     type: "music.album",
     url: "https://www.expansionprojectmusic.com/",
