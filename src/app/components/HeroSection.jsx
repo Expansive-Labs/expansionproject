@@ -87,7 +87,7 @@ const HeroSection = () => {
               href="#contact"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#50fd9a] hover:bg-slate-700 text-[#f6f3ed] determination-mono-font transition duration-500 ease-in-out"
             >
-              Book Us
+              Contact Us
             </Link>
 
             {/* <a
