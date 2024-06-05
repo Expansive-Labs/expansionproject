@@ -6,8 +6,9 @@ const inter = Inter({ subsets: ["latin"] });
 const googleAnalytics = process.env.GOOGLE_ANALYTICS;
 
 export const metadata = {
-  title: "Expansion Project",
-  description: "Expansion Project band website",
+  title: "Expansion Project - Official Band Website",
+  description:
+    "Explore the music of Expansion Project, a dynamic jazz fusion band from Philadelphia PA",
   icon: "/images/greenInfinityLogo.webp",
   keywords: [
     "Expansion Project",
@@ -46,7 +47,7 @@ export const metadata = {
     "Victor Wooten",
   ],
   openGraph: {
-    title: "Expansion Project Music",
+    title: "Expansion Project",
     description: "Expansion Project | Philly Band Philly Grooves",
     type: "music.album",
     url: "https://www.expansionprojectmusic.com/",
