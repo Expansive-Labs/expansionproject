@@ -11,7 +11,7 @@ const projectsData = [
     description: "Expansion Project | Wissahickon Brewery live show recap",
     image: "/images/projects/wissThumbnail.webp",
     tag: ["All", "Live", "Recap"],
-    gitUrl: "https://youtu.be/RuI-TDbnUX0?si=l0x_RFemRgP5ZBXh",
+    gitUrl: "https://www.youtube.com/watch?v=2NoiRAy0dw0",
   },
   {
     id: 2,
