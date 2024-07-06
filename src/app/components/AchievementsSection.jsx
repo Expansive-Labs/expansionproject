@@ -27,7 +27,7 @@ const achievementsList = [
 const AchievementsSection = () => {
   const qrCodeSize = 128;
   const albumQRLink =
-    "https://distrokid.com/hyperfollow/expansionproject1/way-up";
+    "https://distrokid.com/hyperfollow/expansionproject1/the-garden";
 
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
