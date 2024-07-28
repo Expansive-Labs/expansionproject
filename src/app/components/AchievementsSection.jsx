@@ -39,7 +39,7 @@ const AchievementsSection = () => {
           >
             <h2 className="text-[#f6f3ed] text-4xl mb-2 font-bold flex flex-row determination-mono-font">
               {achievement.prefix}
-              {achievement.metric === "Tap or scan. Stream new song" ? (
+              {achievement.metric === "Tap or scan. Stream new album" ? (
                 <a href={albumQRLink} target="_blank" rel="noopener noreferrer">
                   <QRCode value={albumQRLink} size={qrCodeSize} />
                 </a>
