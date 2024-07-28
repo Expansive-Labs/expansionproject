@@ -1,7 +1,5 @@
 import db from "../../lib/firebase-admin";
 
-// http://localhost:3000/api/views/this-is-a-view-slug
-
 export default async (req, res) => {
   // increment the views
   if (req.method === "POST") {

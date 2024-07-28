@@ -15,7 +15,7 @@ const achievementsList = [
     postfix: "+",
   },
   {
-    metric: "Tap or scan. Stream new song",
+    metric: "Tap or scan. Stream new album",
   },
   {
     metric: "Earth Years",
@@ -27,7 +27,7 @@ const achievementsList = [
 const AchievementsSection = () => {
   const qrCodeSize = 128;
   const albumQRLink =
-    "https://distrokid.com/hyperfollow/expansionproject1/the-garden";
+    "https://distrokid.com/hyperfollow/expansionproject1/phenomenal-thought";
 
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">

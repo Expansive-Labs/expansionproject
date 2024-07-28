@@ -169,7 +169,7 @@ const ProjectsSection = () => {
             }}
             width="100%"
             height="420"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/623047767&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=tru"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1822673709%3Fsecret_token%3Ds-GzVIQHFsOxC&color=%23df7c20&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
             seamless
             frameborder="0"
             allow="encrypted-media; gyroscope; picture-in-picture"

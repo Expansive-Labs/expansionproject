@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState, useMemo } from "react";
-import { get, ref, runTransaction, set, update } from "firebase/database";
+import { useEffect, useState } from "react";
+import { get, ref, set } from "firebase/database";
 import { database } from "../firebaseConfig";
 
 const ViewCounter = () => {
@@ -24,7 +24,7 @@ const ViewCounter = () => {
 
   return (
     <span className="text-[#50fd9a]">
-      {count !== undefined ? `${count}` : "(still loading)"}
+      {count !== undefined ? `${count}` : "(loading...)"}
     </span>
   );
 };
