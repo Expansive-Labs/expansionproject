@@ -169,51 +169,12 @@ const ProjectsSection = () => {
             }}
             width="100%"
             height="420"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1822673709%3Fsecret_token%3Ds-GzVIQHFsOxC&color=%23df7c20&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1822673709%3Fsecret_token%3Ds-GzVIQHFsOxC&color=%23df7c20&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
             seamless
             frameborder="0"
             allow="encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           />
-
-          {/* SoundCloud embedded link */}
-          {/* <iframe
-            width="100%"
-            height="600"
-            scrolling="no"
-            frameborder="no"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/623047767&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-          ></iframe>
-          <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-            <a
-              href="https://soundcloud.com/expansionproject"
-              title="Expansion Project"
-              target="_blank"
-              style="color: #cccccc; text-decoration: none;"
-            >
-              Expansion Project
-            </a>{" "}
-            ·{" "}
-            <a
-              href="https://soundcloud.com/expansionproject/sets/conscious-tortoise"
-              title="Conscious Tortoise"
-              target="_blank"
-              style="color: #cccccc; text-decoration: none;"
-            >
-              Conscious Tortoise
-            </a>
-          </div> */}
-
-          {/* Bandcamp embedded link */}
-          {/* <iframe
-            style="border: 0; width: 350px; height: 470px;"
-            src="https://bandcamp.com/EmbeddedPlayer/album=2126036743/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
-            seamless
-          >
-            <a href="https://expansionproject.bandcamp.com/album/conscious-tortoise">
-              Conscious Tortoise by Expansion Project
-            </a>
-          </iframe> */}
 
           <div
             class="field-row"

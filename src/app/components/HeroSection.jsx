@@ -64,6 +64,7 @@ const HeroSection = () => {
                   alt="Expansion Project on Spotify"
                   width={40}
                   height={40}
+                  className="transition-transform duration-300 hover:transform hover:-translate-y-1"
                 />
               </a>
               <a
@@ -77,6 +78,7 @@ const HeroSection = () => {
                   alt="Expansion Project on Apple Music"
                   width={40}
                   height={40}
+                  className="transition-transform duration-300 hover:transform hover:-translate-y-1"
                 />
               </a>
             </div>
