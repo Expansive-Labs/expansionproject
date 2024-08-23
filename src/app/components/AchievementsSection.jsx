@@ -27,7 +27,7 @@ const achievementsList = [
 const AchievementsSection = () => {
   const qrCodeSize = 128;
   const albumQRLink =
-    "https://distrokid.com/hyperfollow/expansionproject1/phenomenal-thought";
+    "https://distrokid.com/hyperfollow/expansionproject1/phenomenal-thought-2?utm_campaign=website&utm_medium=Email+&utm_source=SendGrid";
 
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">

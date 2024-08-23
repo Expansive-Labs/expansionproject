@@ -28,6 +28,10 @@ const navLinks = [
     title: "Contact",
     path: "#contact",
   },
+  // {
+  // title: "Blog",
+  // path: "/blog",
+  // },
 ];
 
 const Navbar = () => {
