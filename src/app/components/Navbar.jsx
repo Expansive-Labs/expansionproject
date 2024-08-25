@@ -28,10 +28,12 @@ const navLinks = [
     title: "Contact",
     path: "#contact",
   },
-  // {
-  // title: "Blog",
-  // path: "/blog",
-  // },
+  //{
+  //title: "Blog",
+  //path: "/blog",
+  //openInNewTab: true,
+  //color: "text-[#f67306]",
+  //},
 ];
 
 const Navbar = () => {
@@ -76,7 +78,12 @@ const Navbar = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                <NavLink
+                  href={link.path}
+                  title={link.title}
+                  openInNewTab={link.openInNewTab}
+                  color={link.color}
+                />
               </li>
             ))}
           </ul>
