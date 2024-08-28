@@ -9,12 +9,12 @@ export function getBlogPosts() {
   try {
     const fileNames = fs.readdirSync(postsDirectory);
     console.log("Found files:", fileNames);
-    
+
     if (fileNames.length === 0) {
       console.log("No blog posts found.");
       return [];
     }
-    
+
     return fileNames.map((fileName) => {
       const id = fileName.replace(/\.md$/, "");
       const fullPath = path.join(postsDirectory, fileName);
@@ -30,7 +30,7 @@ export function getBlogPosts() {
     });
   } catch (error) {
     console.error("Error in getBlogPosts:", error);
-    if (error.code === 'ENOENT') {
+    if (error.code === "ENOENT") {
       console.log("Blog directory does not exist.");
       return [];
     }

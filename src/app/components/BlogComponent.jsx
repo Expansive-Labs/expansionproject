@@ -1,30 +1,33 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { FaHeart, FaShareAlt } from "react-icons/fa";
-import ReactMarkdown from "react-markdown";
+import { useRouter } from 'next/navigation';
+import { FaHeart, FaSearch } from "react-icons/fa";
 
-const BlogPost = ({ title, content, initialLikes }) => {
-  const [likes, setLikes] = useState(initialLikes);
-
-  const handleLike = () => {
-    setLikes(likes + 1);
-  };
-
-  const handleShare = () => {
-    alert("Share options will be implemented here");
-  };
+const BlogPostPreview = ({ id, title, content, likes }) => {
+  const router = useRouter();
+  const [isHovered, setIsHovered] = useState(false);
+  const previewContent = content.slice(0, 150) + "...";
 
   return (
-    <div className="bg-[#c0c0c0] p-6 rounded-lg mb-8">
-      <h2 className="text-2xl font-bold mb-4">{title}</h2>
-      <div className="mb-4">{content}</div>
+    <div 
+      className={`bg-[#c0c0c0] p-6 rounded-lg mb-8 cursor-pointer transition-all duration-300 ease-in-out ${
+        isHovered ? 'transform scale-105 shadow-lg' : ''
+      }`}
+      onClick={() => router.push(`/blog/${id}`)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <h2 className="text-2xl font-bold mb-4 transition-colors duration-300 ease-in-out">
+        {title}
+      </h2>
+      <div className="mb-4">{previewContent}</div>
       <div className="flex items-center">
-        <button onClick={handleLike} className="flex items-center mr-4">
-          <FaHeart className="mr-2" /> {likes}
-        </button>
-        <button onClick={handleShare} className="flex items-center">
-          <FaShareAlt className="mr-2" /> Share
-        </button>
+        <span className="flex items-center">
+          <FaHeart className={`mr-2 transition-colors duration-300 ease-in-out ${
+            isHovered ? 'text-red-500' : ''
+          }`} /> 
+          {likes}
+        </span>
       </div>
     </div>
   );
@@ -32,29 +35,43 @@ const BlogPost = ({ title, content, initialLikes }) => {
 
 const BlogComponent = () => {
   const [blogPosts, setBlogPosts] = useState([]);
+  const [filteredPosts, setFilteredPosts] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     async function fetchBlogPosts() {
       try {
-        console.log("Fetching blog posts...");
-        const response = await fetch("/api/blogPosts");
+        console.log('Fetching blog posts...');
+        const response = await fetch('/api/blogPosts');
         if (!response.ok) {
-          const errorData = await response.json();
-          throw new Error(
-            `HTTP error! status: ${response.status}, message: ${errorData.error}`
-          );
+          throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const data = await response.json();
-        console.log("Fetched blog posts:", data);
-        setBlogPosts(data);
+        const posts = await response.json();
+        console.log('Fetched posts:', posts);
+        setBlogPosts(posts);
       } catch (e) {
         console.error("Fetching blog posts failed:", e);
         setError(`Failed to load blog posts. Error: ${e.message}`);
+      } finally {
+        setLoading(false);
       }
     }
     fetchBlogPosts();
   }, []);
+
+  useEffect(() => {
+    const results = blogPosts.filter(post =>
+      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.content.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredPosts(results);
+  }, [searchTerm, blogPosts]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   if (error) {
     return <div className="text-red-500">{error}</div>;
@@ -73,13 +90,26 @@ const BlogComponent = () => {
           expansive music
         </h1>
       </div>
-      {blogPosts.length > 0 ? (
-        blogPosts.map((post, index) => (
-          <BlogPost
-            key={index}
+      <div className="mb-8">
+        <div className="relative">
+          <input
+            type="text"
+            placeholder="Search posts..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full p-2 pl-10 border rounded"
+          />
+          <FaSearch className="absolute left-3 top-3 text-gray-400" />
+        </div>
+      </div>
+      {filteredPosts.length > 0 ? (
+        filteredPosts.map((post) => (
+          <BlogPostPreview
+            key={post.id}
+            id={post.id}
             title={post.title}
-            content={<ReactMarkdown>{post.content}</ReactMarkdown>}
-            initialLikes={post.likes}
+            content={post.content}
+            likes={post.likes}
           />
         ))
       ) : (
