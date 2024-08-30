@@ -28,12 +28,12 @@ const navLinks = [
     title: "Contact",
     path: "#contact",
   },
-  //{
-  //title: "Blog",
-  //path: "/blog",
-  //openInNewTab: true,
-  //color: "text-[#f67306]",
-  //},
+  {
+    title: "Blog",
+    path: "/blog",
+    openInNewTab: true,
+    color: "text-[#f67306]",
+  },
 ];
 
 const Navbar = () => {

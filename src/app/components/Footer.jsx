@@ -32,7 +32,7 @@ const Footer = ({ count }) => {
           </h1>
         </div>
         <span className="text-muted"></span>
-        <p className="mt-1 text-slate-600">
+        <p className="mt-1 text-slate-500">
           Visitor count:{" "}
           <span className="text-[#50fd9a]">{<ViewCounter />}</span>
         </p>
