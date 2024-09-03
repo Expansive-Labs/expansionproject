@@ -30,6 +30,12 @@ html {
   font-family: "Determination Mono", monospace;
 }
 
+.markdown-background {
+  background-color: #121212;
+  color: white; /* Optional: to ensure text is readable */
+  padding: 20px; /* Optional: for spacing */
+}
+
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
