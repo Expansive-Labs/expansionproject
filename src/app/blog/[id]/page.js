@@ -22,19 +22,21 @@ const BlogPost = () => {
   useEffect(() => {
     async function fetchBlogPost() {
       try {
-        console.log('Fetching post with id:', id);
+        console.log("Fetching post with id:", id);
         const response = await fetch(`/api/blogPosts?id=${id}`);
         const contentType = response.headers.get("content-type");
         if (contentType && contentType.indexOf("application/json") !== -1) {
           const data = await response.json();
           if (!response.ok) {
-            throw new Error(data.error || `HTTP error! status: ${response.status}`);
+            throw new Error(
+              data.error || `HTTP error! status: ${response.status}`
+            );
           }
-          console.log('Fetched post:', data);
+          console.log("Fetched post:", data);
           setPost(data);
         } else {
           const text = await response.text();
-          console.error('Received non-JSON response:', text);
+          console.error("Received non-JSON response:", text);
           throw new Error("Received non-JSON response from server");
         }
       } catch (e) {
@@ -43,7 +45,7 @@ const BlogPost = () => {
       }
     }
     fetchBlogPost();
-    
+
     // Load comments from local storage
     const storedComments = localStorage.getItem(`comments_${id}`);
     if (storedComments) {
@@ -56,7 +58,7 @@ const BlogPost = () => {
     const comment = {
       author: "Anonymous", // You can add user authentication later
       content: newComment,
-      date: new Date().toISOString()
+      date: new Date().toISOString(),
     };
     const updatedComments = [...comments, comment];
     setComments(updatedComments);
@@ -101,7 +103,10 @@ const BlogPost = () => {
             placeholder="Add a comment..."
             required
           />
-          <button type="submit" className="mt-2 bg-blue-500 text-white px-4 py-2 rounded">
+          <button
+            type="submit"
+            className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"
+          >
             Post Comment
           </button>
         </form>
