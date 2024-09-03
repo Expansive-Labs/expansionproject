@@ -32,7 +32,7 @@ const navLinks = [
     title: "Blog",
     path: "/blog",
     openInNewTab: true,
-    color: "text-[#f67306]",
+    // Removed color property to match other links
   },
 ];
 
