@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { FaHeart, FaSearch } from "react-icons/fa";
+import { FaHeart, FaSearch, FaShareAlt } from "react-icons/fa";
 
 const BlogPostPreview = ({ id, title, content, likes }) => {
   const router = useRouter();
@@ -10,26 +10,33 @@ const BlogPostPreview = ({ id, title, content, likes }) => {
 
   return (
     <div
-      className={`bg-[#c0c0c0] p-6 rounded-lg mb-8 cursor-pointer transition-all duration-300 ease-in-out ${
-        isHovered ? "transform scale-105 shadow-lg" : ""
-      }`}
+      className="bg-[#c0c0c0] rounded-lg cursor-pointer overflow-hidden"
       onClick={() => router.push(`/blog/${id}`)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <h2 className="text-2xl font-bold mb-4 transition-colors duration-300 ease-in-out">
-        {title}
-      </h2>
-      <div className="mb-4">{previewContent}</div>
-      <div className="flex items-center">
-        <span className="flex items-center">
-          <FaHeart
-            className={`mr-2 transition-colors duration-300 ease-in-out ${
-              isHovered ? "text-red-500" : ""
-            }`}
-          />
-          {likes}
-        </span>
+      <div 
+        className={`p-6 transition-all duration-300 ease-in-out ${
+          isHovered ? "transform scale-[1.02] shadow-lg" : ""
+        }`}
+      >
+        <h2 className="text-2xl font-bold mb-4 transition-colors duration-300 ease-in-out">
+          {title}
+        </h2>
+        <div className="mb-4">{previewContent}</div>
+        <div className="flex items-center">
+          <span className="flex items-center mr-4">
+            <FaHeart
+              className={`mr-2 transition-colors duration-300 ease-in-out ${
+                isHovered ? "text-red-500" : ""
+              }`}
+            />
+            {likes}
+          </span>
+          <span className="flex items-center">
+            <FaShareAlt className="mr-2" /> Share
+          </span>
+        </div>
       </div>
     </div>
   );
