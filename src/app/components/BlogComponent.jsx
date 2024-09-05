@@ -81,7 +81,7 @@ const BlogComponent = () => {
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#121212" }}>
+    <div className="blog-content">
       <div className="container mx-auto px-4 py-8">
         <div className="bg-gradient-to-r from-gray-600 to-indigo-800 text-white text-center py-12 mb-8 rounded-lg">
           <h1
@@ -108,16 +108,18 @@ const BlogComponent = () => {
         </div>
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (
-            <BlogPostPreview
-              key={post.id}
-              id={post.id}
-              title={post.title}
-              content={post.content}
-              likes={post.likes}
-            />
+            <div className="blog-post-area mb-8">
+              <BlogPostPreview
+                key={post.id}
+                id={post.id}
+                title={post.title}
+                content={post.content}
+                likes={post.likes}
+              />
+            </div>
           ))
         ) : (
-          <p>No blog posts available.</p>
+          <p className="text-white">No blog posts available.</p>
         )}
       </div>
     </div>
