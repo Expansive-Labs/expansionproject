@@ -19,8 +19,8 @@ export async function POST(req, res) {
             Thank you for contacting Expansion Project!
           </h1>
           <p style={{ fontFamily: "Arial, sans-serif" }}>
-            We've received your message and appreciate you reaching out. Here's
-            a summary of what you sent:
+            We&apos;ve received your message and appreciate you reaching out.
+            Here&apos;s a summary of what you sent:
           </p>
           <div
             style={{
@@ -44,8 +44,9 @@ export async function POST(req, res) {
             </p>
           </div>
           <p style={{ fontFamily: "Arial, sans-serif" }}>
-            We'll get back to you as soon as possible. In the meantime, feel
-            free to check out our latest updates on our social media channels:
+            We&apos;ll get back to you as soon as possible. In the meantime,
+            feel free to check out our latest updates on our social media
+            channels:
           </p>
           <ul style={{ fontFamily: "Arial, sans-serif" }}>
             <li>
