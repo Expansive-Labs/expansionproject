@@ -15,7 +15,7 @@ const BlogPostPreview = ({ id, title, content, likes }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div 
+      <div
         className={`p-6 transition-all duration-300 ease-in-out ${
           isHovered ? "transform scale-[1.02] shadow-lg" : ""
         }`}
@@ -115,9 +115,8 @@ const BlogComponent = () => {
         </div>
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (
-            <div className="blog-post-area mb-8">
+            <div key={post.id} className="blog-post-area mb-8">
               <BlogPostPreview
-                key={post.id}
                 id={post.id}
                 title={post.title}
                 content={post.content}
