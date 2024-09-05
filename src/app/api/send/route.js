@@ -44,11 +44,17 @@ export async function POST(req, res) {
             </p>
           </div>
           <p style={{ fontFamily: "Arial, sans-serif" }}>
-            We&apos;ll get back to you as soon as possible. In the meantime,
-            feel free to check out our latest updates on our social media
-            channels:
+            In the meantime, enjoy our music and stay updated on social media!
           </p>
           <ul style={{ fontFamily: "Arial, sans-serif" }}>
+            <li>
+              <a
+                href="https://distrokid.com/dashboard/album/?albumuuid=A060BEB7-0777-459F-8ACBD3D7070C4560"
+                style={{ color: "#38d57c" }}
+              >
+                Stream our latest album: PHENOMENAL THOUGHT
+              </a>
+            </li>
             <li>
               <a
                 href="https://www.instagram.com/expansionproject/"
@@ -75,8 +81,13 @@ export async function POST(req, res) {
             </li>
           </ul>
           <p style={{ fontFamily: "Arial, sans-serif" }}>Rock on!</p>
-          <p style={{ fontFamily: "Arial, sans-serif", fontWeight: "bold" }}>
-            The Expansion Project Team
+          <p
+            style={{
+              fontFamily: "Arial, sans-serif, italic",
+              fontWeight: "bold",
+            }}
+          >
+            Expansive Records.
           </p>
         </>
       ),
