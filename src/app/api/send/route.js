@@ -15,7 +15,7 @@ export async function POST(req, res) {
       subject: `Expansion Project: ${subject}`,
       react: (
         <>
-          <h1 style={{ color: "#38d57c", fontFamily: "Arial, sans-serif" }}>
+          <h1 style={{ color: "#387178", fontFamily: "Arial, sans-serif" }}>
             Thank you for contacting Expansion Project!
           </h1>
           <p style={{ fontFamily: "Arial, sans-serif" }}>
@@ -24,7 +24,7 @@ export async function POST(req, res) {
           </p>
           <div
             style={{
-              background: "#f0f0f0",
+              background: "#c0c0c0",
               padding: "15px",
               borderRadius: "5px",
               margin: "15px 0",
@@ -49,8 +49,8 @@ export async function POST(req, res) {
           <ul style={{ fontFamily: "Arial, sans-serif" }}>
             <li>
               <a
-                href="https://distrokid.com/dashboard/album/?albumuuid=A060BEB7-0777-459F-8ACBD3D7070C4560"
-                style={{ color: "#38d57c" }}
+                href="https://distrokid.com/hyperfollow/expansionproject1/phenomenal-thought-2"
+                style={{ color: "#387178" }}
               >
                 Stream our latest album: PHENOMENAL THOUGHT
               </a>
@@ -58,7 +58,7 @@ export async function POST(req, res) {
             <li>
               <a
                 href="https://www.instagram.com/expansionproject/"
-                style={{ color: "#38d57c" }}
+                style={{ color: "#387178" }}
               >
                 Instagram
               </a>
@@ -66,7 +66,7 @@ export async function POST(req, res) {
             <li>
               <a
                 href="https://www.facebook.com/expansionproject"
-                style={{ color: "#38d57c" }}
+                style={{ color: "#387178" }}
               >
                 Facebook
               </a>
@@ -74,9 +74,17 @@ export async function POST(req, res) {
             <li>
               <a
                 href="https://linktr.ee/expansionproject"
-                style={{ color: "#38d57c" }}
+                style={{ color: "#387178" }}
               >
                 Linktree
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.expansionprojectmusic.com/"
+                style={{ color: "#387178" }}
+              >
+                Website
               </a>
             </li>
           </ul>
@@ -87,7 +95,7 @@ export async function POST(req, res) {
               fontWeight: "bold",
             }}
           >
-            Expansive Records.
+            - EXP
           </p>
         </>
       ),
