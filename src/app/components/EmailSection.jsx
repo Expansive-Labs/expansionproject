@@ -154,7 +154,7 @@ const EmailSection = () => {
                 Thank you for contacting Expansion Project!
               </p>
               <p className="text-[#ADB7BE] text-sm mt-2 determination-mono-font">
-                Your message was sent to Expansion Project!
+                Your message was sent to the band!
               </p>
             </div>
           )}
