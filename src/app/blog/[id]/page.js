@@ -75,41 +75,43 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="bg-[#c0c0c0] p-6 rounded-lg mb-8">
-        <h2 className="text-2xl font-bold mb-4">{post.title}</h2>
-        <div className="mb-4">
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+    <div className="blog-content">
+      <div className="container mx-auto px-4 py-8">
+        <div className="blog-post-area mb-8">
+          <h2 className="text-2xl font-bold mb-4">{post.title}</h2>
+          <div className="mb-4">
+            <ReactMarkdown>{post.content}</ReactMarkdown>
+          </div>
+          <div className="flex items-center">
+            <button className="flex items-center mr-4">
+              <FaHeart className="mr-2" /> {post.likes}
+            </button>
+            <button className="flex items-center">
+              <FaShareAlt className="mr-2" /> Share
+            </button>
+          </div>
         </div>
-        <div className="flex items-center">
-          <button className="flex items-center mr-4">
-            <FaHeart className="mr-2" /> {post.likes}
-          </button>
-          <button className="flex items-center">
-            <FaShareAlt className="mr-2" /> Share
-          </button>
+        <div className="mt-8 blog-post-area">
+          <h3 className="text-xl font-bold mb-4">Comments</h3>
+          {comments.map((comment, index) => (
+            <Comment key={index} {...comment} />
+          ))}
+          <form onSubmit={handleCommentSubmit} className="mt-4">
+            <textarea
+              className="w-full p-2 border rounded"
+              value={newComment}
+              onChange={(e) => setNewComment(e.target.value)}
+              placeholder="Add a comment..."
+              required
+            />
+            <button
+              type="submit"
+              className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"
+            >
+              Post Comment
+            </button>
+          </form>
         </div>
-      </div>
-      <div className="mt-8">
-        <h3 className="text-xl font-bold mb-4">Comments</h3>
-        {comments.map((comment, index) => (
-          <Comment key={index} {...comment} />
-        ))}
-        <form onSubmit={handleCommentSubmit} className="mt-4">
-          <textarea
-            className="w-full p-2 border rounded"
-            value={newComment}
-            onChange={(e) => setNewComment(e.target.value)}
-            placeholder="Add a comment..."
-            required
-          />
-          <button
-            type="submit"
-            className="mt-2 bg-blue-500 text-white px-4 py-2 rounded"
-          >
-            Post Comment
-          </button>
-        </form>
       </div>
     </div>
   );

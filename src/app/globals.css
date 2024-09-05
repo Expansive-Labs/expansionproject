@@ -76,3 +76,17 @@ html {
   justify-content: center;
   height: 100%;
 }
+
+.blog-content {
+  background-color: #121212;
+  color: #333333; /* Darker text color for better readability on light background */
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.blog-post-area {
+  background-color: #c0c0c0;
+  color: #333333;
+  padding: 2rem;
+  border-radius: 8px;
+}
