@@ -79,14 +79,24 @@ html {
 
 .blog-content {
   background-color: #121212;
-  color: #333333; /* Darker text color for better readability on light background */
-  padding: 2rem;
+  color: #333333;
+  padding: 0.25rem 1rem 1rem;
   min-height: 100vh;
 }
 
 .blog-post-area {
   background-color: #c0c0c0;
   color: #333333;
-  padding: 2rem;
+  padding: 0.75rem;
   border-radius: 8px;
+}
+
+@media (min-width: 640px) {
+  .blog-content {
+    padding: 0.5rem 2rem 2rem;
+  }
+
+  .blog-post-area {
+    padding: 1.5rem;
+  }
 }
