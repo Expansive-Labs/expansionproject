@@ -1,5 +1,5 @@
 ---
-id: "first-post"
+id: "expansive-music"
 title: "Welcome to Expansive Music"
 description: "An introduction to the Expansive Music blog, covering various aspects of the music world."
 keywords: "music blog, expansive project, expansive project music, expansive project band, expansive music, album reviews, artist spotlights, music theory, industry trends, music communities, fusion, jazz fusion, band, alternative, alternative rock, neo soul, funk, funk music, funk band, jam, jambands, jam band, music festivals"

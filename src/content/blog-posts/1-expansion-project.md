@@ -1,8 +1,8 @@
 ---
-id: "second-post"
+id: "expansion-project"
 title: "Expansion Project: Pushing the Boundaries of Funk Jazz Fusion"
 description: "Exploring how Expansion Project is bringing funk jazz fusion to new heights while honoring traditional roots."
-keywords: "Expansion Project, funk jazz fusion, George Duke, Weather Report, Snarky Puppy, Hiromi, Jeff Beck, musical innovation, genre blending"
+keywords: "Expansion Project, funk jazz fusion, jazz fusion, jazz, funk, jam, bands, groovy, George Duke, Weather Report, Snarky Puppy, Hiromi, Jeff Beck, musical innovation, genre blending, delco, delco music, philly music, philly music scene, anthony tilotta, matthew silva, zamere williams"
 ---
 
 # Expansion Project: Pushing the Boundaries of Funk Jazz Fusion
