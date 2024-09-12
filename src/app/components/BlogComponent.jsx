@@ -8,8 +8,16 @@ import Link from "next/link";
 const BlogPostPreview = ({ id, title, content, likes }) => {
   const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   const previewContent = content.slice(0, 100) + "..."; // Reduced preview length
   const truncatedTitle = title.length > 50 ? title.slice(0, 50) + "..." : title; // Truncate long titles
+
+  const handleClick = () => {
+    setIsClicked(true);
+    setTimeout(() => {
+      router.push(`/blog/${id}`);
+    }, 150); // Delay navigation to allow animation to complete
+  };
 
   return (
     <div
@@ -17,8 +25,12 @@ const BlogPostPreview = ({ id, title, content, likes }) => {
         isHovered
           ? "transform translate-y-[-4px] translate-x-[-4px] shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)]"
           : "shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)]"
+      } ${
+        isClicked
+          ? "transform translate-y-[2px] translate-x-[2px] shadow-[1px_1px_0px_0px_rgba(0,0,0,0.1)]"
+          : ""
       }`}
-      onClick={() => router.push(`/blog/${id}`)}
+      onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
