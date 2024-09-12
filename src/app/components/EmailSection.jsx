@@ -49,6 +49,13 @@ const EmailSection = () => {
     fill: "black",
   };
 
+  const handleSocialIconClick = (e, url) => {
+    e.preventDefault();
+    setTimeout(() => {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }, 200);
+  };
+
   return (
     <section
       id="contact"
@@ -76,22 +83,28 @@ const EmailSection = () => {
           collaborations, bookings, or just to have an interesting conversation!
         </p>
         <div className="socials flex flex-row gap-4">
-          <Link
+          <a
             href="https://www.instagram.com/expansionproject/"
-            target="_blank"
+            onClick={(e) => handleSocialIconClick(e, "https://www.instagram.com/expansionproject/")}
+            className="social-icon-button"
           >
-            <Image src={InstagramIcon} alt="Instagram Icon" style={iconStyle} />
-          </Link>
-          <Link
+            <Image src={InstagramIcon} alt="Instagram Icon" width={40} height={40} />
+          </a>
+          <a
             href="https://www.facebook.com/expansionproject?mibextid=MKOS29"
-            target="_blank"
+            onClick={(e) => handleSocialIconClick(e, "https://www.facebook.com/expansionproject?mibextid=MKOS29")}
+            className="social-icon-button"
           >
-            <Image src={FacebookIcon} alt="Facebook Icon" style={iconStyle} />
-          </Link>
+            <Image src={FacebookIcon} alt="Facebook Icon" width={40} height={40} />
+          </a>
 
-          <Link href="https://linktr.ee/expansionproject" target="_blank">
-            <Image src={LinktreeIcon} alt="Linktree Icon" style={iconStyle} />
-          </Link>
+          <a
+            href="https://linktr.ee/expansionproject"
+            onClick={(e) => handleSocialIconClick(e, "https://linktr.ee/expansionproject")}
+            className="social-icon-button"
+          >
+            <Image src={LinktreeIcon} alt="Linktree Icon" width={40} height={40} />
+          </a>
         </div>
       </div>
       <div>
@@ -144,9 +157,9 @@ const EmailSection = () => {
           </div>
           <button
             type="submit"
-            className="bg-[#38d57c] hover:bg-[#8fffbf] text-black font-medium py-4 px-5 rounded-lg w-full"
+            className="send-message-button bg-gradient-to-br from-[#38d57c] to-[#50fd9a] text-[#121212] font-bold determination-mono-font py-4 px-5 rounded-lg w-full relative overflow-hidden transition-all duration-300 ease-in-out transform hover:-translate-y-1 active:translate-y-0"
           >
-            Send Message
+            <span className="relative z-10 text-lg tracking-wide">Send Message</span>
           </button>
           {emailSubmitted && (
             <div className="mt-4 p-4 bg-[#50fd9a] bg-opacity-20 rounded-lg">

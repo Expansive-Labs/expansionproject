@@ -29,13 +29,13 @@ One of the most striking differences in "Phenomenal Thought" is the presence of 
 
 The evolution of Expansion Project's sound on "Phenomenal Thought" draws from a diverse pool of influences. The band's love for various genres - from funk and jazz to rock and pop - naturally shaped this new direction. Some key inspirations include:
 
-- Red Hot Chili Peppers: For their fusion of rock and funk
-- Domi & JD Beck: Known for their innovative approach to jazz and rhythm
 - Ghost Note: Masters of pushing the boundaries of groove music
-- Evan Marien: For his unique blend of jazz fusion and electronic elements
 - Snarky Puppy: Pioneers in modern jazz fusion
 - Cory Henry: Bringing soul and funk to modern compositions
+- Evan Marien: For his unique blend of jazz fusion and electronic elements
 - Chris Dave: Innovative drumming techniques and rhythmic complexity
+- Domi & JD Beck: Known for their innovative approach to jazz and rhythm
+- Red Hot Chili Peppers: For their fusion of rock and funk
 
 These influences blend seamlessly with Expansion Project's own unique vision, resulting in a sound that's both familiar and refreshingly original.
 

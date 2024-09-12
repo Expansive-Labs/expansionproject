@@ -1,4 +1,3 @@
-// "use client";
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
@@ -8,8 +7,18 @@ import Link from "next/link";
 /// LANDING PAGE VIEW ///
 
 const HeroSection = () => {
-  const handleScroll = () => {
-    document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    setTimeout(() => {
+      document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+    }, 200);
+  };
+
+  const handleMusicIconClick = (e, url) => {
+    e.preventDefault();
+    setTimeout(() => {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }, 400);
   };
 
   return (
@@ -52,42 +61,49 @@ const HeroSection = () => {
             <div className="mt-4 flex justify-center sm:justify-start">
               <a
                 href="https://open.spotify.com/artist/4qBVPcT7Wo61vUkymokvyx?si=86dLWpyUQhyqEnlgoniqHw&nd=1&dlsi=7f3de69325eb463b"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mx-2"
+                onClick={(e) =>
+                  handleMusicIconClick(
+                    e,
+                    "https://open.spotify.com/artist/4qBVPcT7Wo61vUkymokvyx?si=86dLWpyUQhyqEnlgoniqHw&nd=1&dlsi=7f3de69325eb463b"
+                  )
+                }
+                className="mx-2 music-icon-button"
               >
                 <Image
                   src="/spotify-icon-w2.svg"
                   alt="Expansion Project on Spotify"
                   width={40}
                   height={40}
-                  className="transition-transform duration-300 hover:transform hover:-translate-y-1"
                 />
               </a>
               <a
                 href="https://music.apple.com/us/artist/expansion-project/1353151967"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mx-2"
+                onClick={(e) =>
+                  handleMusicIconClick(
+                    e,
+                    "https://music.apple.com/us/artist/expansion-project/1353151967"
+                  )
+                }
+                className="mx-2 music-icon-button apple-music-icon"
               >
                 <Image
                   src="/appleMusic-icon-w2.svg"
                   alt="Expansion Project on Apple Music"
                   width={40}
                   height={40}
-                  className="transition-transform duration-300 hover:transform hover:-translate-y-1"
                 />
               </a>
             </div>
           </div>
 
           <div>
-            <Link
+            <a
               href="#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-[#50fd9a] hover:bg-slate-700 text-[#f6f3ed] determination-mono-font transition duration-500 ease-in-out"
+              onClick={handleContactClick}
+              className="contact-button px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 text-[#121212] font-bold determination-mono-font transition-all duration-300 ease-in-out relative overflow-hidden transform hover:-translate-y-1 active:translate-y-0"
             >
-              Contact Us
-            </Link>
+              <span className="relative z-10">Contact Us</span>
+            </a>
 
             {/* <a
               href="/pdfs/Expansion_Project_EPK.pdf"

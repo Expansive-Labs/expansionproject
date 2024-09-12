@@ -100,3 +100,180 @@ html {
     padding: 1.5rem;
   }
 }
+
+/* Add this at the end of the file */
+.bg-gradient-to-br {
+  transition: background-position 0.3s ease-in-out;
+}
+
+.bg-gradient-to-br:hover {
+  background-position: 100% 100%;
+}
+
+.contact-button {
+  background-image: linear-gradient(to bottom right, #50fd9a, #38d57c);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 0 #2ca05a, 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.contact-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom right, #7ffeb7, #50fd9a);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.contact-button:hover::before {
+  opacity: 1;
+}
+
+.contact-button:hover {
+  background-position: 100% 100%;
+}
+
+.contact-button:active {
+  transform: translateY(4px) !important;
+  box-shadow: 0 2px 0 #2ca05a, 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.music-icon-button {
+  display: inline-block;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+  transform: translateY(-2px);
+}
+
+.music-icon-button::before {
+  content: "";
+  position: absolute;
+  top: -4px; /* Increased from -2px */
+  left: -4px; /* Increased from -2px */
+  right: -4px; /* Increased from -2px */
+  bottom: -4px; /* Increased from -2px */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%; /* Keep this circular for Spotify */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.music-icon-button:hover::before {
+  opacity: 1;
+}
+
+.music-icon-button:active {
+  transform: translateY(2px);
+  transition: all 0.25s ease-in-out;
+}
+
+.music-icon-button img {
+  filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.4));
+  transition: all 0.25s ease-in-out;
+}
+
+.music-icon-button:active img {
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+  transition: all 0.25s ease-in-out;
+}
+
+.apple-music-icon::before {
+  border-radius: 30%; /* Increased from 25% for a slightly rounder square */
+}
+
+.send-message-button {
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 0 #2ca05a, 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.send-message-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom right, #50fd9a, #7ffeb7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.send-message-button:hover::before {
+  opacity: 1;
+}
+
+.send-message-button:hover {
+  background-position: 100% 100%;
+}
+
+.send-message-button:active {
+  transform: translateY(4px) !important;
+  box-shadow: 0 2px 0 #2ca05a, 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-in-out;
+}
+
+/* Add this at the end of the file */
+.back-to-top-button {
+  box-shadow: 0 4px 0 #2ca05a, 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.back-to-top-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom right, #7ffeb7, #50fd9a);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.back-to-top-button:hover {
+  transform: translateY(-4px);
+}
+
+.back-to-top-button:hover::before {
+  opacity: 1;
+}
+
+.back-to-top-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #2ca05a, 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.social-icon-button {
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon-button:hover {
+  transform: translateY(-4px);
+}
+
+.social-icon-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-in-out;
+}
