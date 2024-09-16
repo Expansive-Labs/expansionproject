@@ -15,8 +15,10 @@ Expansion Project is thrilled to announce their participation in the upcoming Fu
 
 ### The Event
 
+**Event:** Funktoberfest IV
 **Date:** September 28, 2024
-**Venue:** Attic Brewery, Philadelphia
+**Time:** 12:00 PM – 11:00 PM
+**Venue:** Attic Brewery, 137 Berkley St, Philadelphia, PA 19144, USA
 **Host:** The Funktorium
 **Cost:** Free admission
 
