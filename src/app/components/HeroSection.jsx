@@ -57,7 +57,7 @@ const HeroSection = () => {
             </span>
           </h1>
           <div className="text-[#65686b] text-base sm:text-lg mb-6 lg:text-xl determination-mono-font">
-            funk_power_trio /// philadelphia_pa
+            fusion_trio /// philadelphia_pa
             <div className="mt-4 flex justify-center sm:justify-start">
               <a
                 href="https://open.spotify.com/artist/4qBVPcT7Wo61vUkymokvyx?si=86dLWpyUQhyqEnlgoniqHw&nd=1&dlsi=7f3de69325eb463b"
