@@ -86,7 +86,7 @@ const AboutSection = () => {
             inspiration from many sources, forming a unique sonic identity.
             Studio recordings have captured their creative essence on tape while
             their live shows are events for collaborations that pushes the
-            boundries of fusion music &infin;
+            boundries of music &infin;
           </p>
           <p className="text-center text-4xl font-bold text-[#50fd9a] mt-12 mb-0 md:mb-2 determination-mono-font">
             Shows
