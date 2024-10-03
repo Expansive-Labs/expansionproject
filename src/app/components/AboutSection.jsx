@@ -23,7 +23,7 @@ const TAB_DATA = [
     id: "previous",
     content: (
       <ul className="list-disc pl-2 centered-text determination-mono-font">
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>Funktoberfest '24</li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>Funktoberfest</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Butter Lounge</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>Cosmic Art Studio</li>
       </ul>
