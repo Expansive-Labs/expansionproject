@@ -12,9 +12,7 @@ const TAB_DATA = [
     id: "upcoming",
     content: (
       <ul className="list-disc pl-2 centered-text determination-mono-font">
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>
-          Funktoberfest | 9.28.24
-        </li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>TBA</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>TBA</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>TBA</li>
       </ul>
@@ -25,9 +23,9 @@ const TAB_DATA = [
     id: "previous",
     content: (
       <ul className="list-disc pl-2 centered-text determination-mono-font">
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>Funktoberfest '24</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>The Butter Lounge</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>Cosmic Art Studio</li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>Philly Funk Fest</li>
       </ul>
     ),
   },

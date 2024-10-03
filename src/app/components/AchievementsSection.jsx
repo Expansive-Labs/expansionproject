@@ -19,7 +19,7 @@ const achievementsList = [
   },
   {
     metric: "Earth Years",
-    value: "7",
+    value: "8",
     postfix: "",
   },
 ];

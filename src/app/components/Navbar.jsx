@@ -32,14 +32,16 @@ const navLinks = [
     title: "Blog",
     path: "/blog",
     openInNewTab: true,
+    showArrow: true,
   },
 ];
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState(null);
 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-20 bg-[#121212] bg-opacity-100 determination-mono-font"> 
+    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-20 bg-[#121212] bg-opacity-100 determination-mono-font">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-1">
         <Link
           href={"/"}
@@ -77,12 +79,33 @@ const Navbar = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink
-                  href={link.path}
-                  title={link.title}
-                  openInNewTab={link.openInNewTab}
-                  color={link.color}
-                />
+                <div 
+                  className="flex items-center"
+                  onMouseEnter={() => setHoveredLink(link.title)}
+                  onMouseLeave={() => setHoveredLink(null)}
+                >
+                  <NavLink
+                    href={link.path}
+                    title={link.title}
+                    openInNewTab={link.openInNewTab}
+                    color={link.color}
+                  />
+                  {link.showArrow && (
+                    <svg
+                      className={`w-5 h-5 ml-1 transition-colors duration-300 ${
+                        hoveredLink === link.title ? 'text-green-400' : 'text-[#7c7c78]'
+                      }`}
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                    </svg>
+                  )}
+                </div>
               </li>
             ))}
           </ul>
