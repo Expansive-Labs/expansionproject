@@ -8,8 +8,8 @@ const googleAnalytics = process.env.GOOGLE_ANALYTICS;
 export const metadata = {
   title: "Expansion Project - Official Band Website",
   description:
-    "Explore the music of Expansion Project, a dynamic jazz fusion band from Philadelphia PA",
-  icon: "/images/greenInfinityLogo.webp",
+    "Explore the music of Expansion Project, a dynamic fusion band from Philadelphia PA",
+  icon: "/images/greenInfinityLogoV2.webp",
   keywords: [
     "Expansion Project",
     "Music",
