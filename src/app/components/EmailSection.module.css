@@ -1,0 +1,3 @@
+.bandcampIcon {
+  filter: brightness(0) saturate(100%) invert(83%) sepia(29%) saturate(1080%) hue-rotate(86deg) brightness(104%) contrast(103%);
+}

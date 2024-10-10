@@ -158,7 +158,9 @@ const BlogComponent = () => {
             ))}
           </div>
         ) : (
-          <p className="text-white text-center text-lg">No blog posts available.</p>
+          <p className="text-white text-center text-lg">
+            No blog posts available.
+          </p>
         )}
       </div>
     </div>

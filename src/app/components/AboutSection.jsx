@@ -78,13 +78,14 @@ const AboutSection = () => {
             About Us
           </h2>
           <p className="text-base text-center text-[#bababa] lg:text-lg determination-mono-font">
-            Expansion Project grew out of the passion longtime friends Anthony
-            Tilotta and Matthew Silva have for creating music. Zamere Williams
-            joined the band in 2016, solidifying this trio. Their sound draws
-            inspiration from many sources, forming a unique sonic identity.
-            Studio recordings have captured their creative essence on tape while
-            their live shows are events for collaborations that pushes the
-            Boundaries of music &infin;
+            Philadelphia based fusion trio. Anthony Tilotta on bass, Matthew
+            Silva on piano, and Zamere Williams on drums blend elements of funk,
+            jazz, soul and rock into an innovative sound that&apos;s as
+            explosive as it is deeply rooted in musical tradition. Their sound
+            draws inspiration from many sources, forming a unique sonic
+            identity. Studio recordings have captured their creative essence on
+            tape, while their live shows are events for collaboration that
+            pushes the boundaries of music &infin;
           </p>
           <p className="text-center text-4xl font-bold text-[#50fd9a] mt-12 mb-0 md:mb-2 determination-mono-font">
             Shows

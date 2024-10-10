@@ -1,8 +1,8 @@
-// "use client";
 import React, { useState } from "react";
-import FacebookIcon from "../../../public/facebook-icon-w2.svg";
+import FacebookIcon from "../../../public/facebook-icon-sq.svg";
 import InstagramIcon from "../../../public/instagram-icon-w2.svg";
-import LinktreeIcon from "../../../public/linktree-icon-w2.svg";
+// import LinktreeIcon from "../../../public/linktree-icon-w2.svg";
+import BandcampIcon from "../../../public/BandcampIconLogo.svg";
 // import AppleMusicIcon from "../../../public/applemusic-icon-w2.svg";
 // import SpotifyIcon from "../../../public/spotify-icon-w2.svg";
 import Link from "next/link";
@@ -77,33 +77,68 @@ const EmailSection = () => {
         </h5>
         <p className="text-[#ADB7BE] text-sm mb-8 max-w-md determination-mono-font">
           {" "}
-          Greetings! We&apos;re always on the lookout for new and exciting
-          connections. Whether you have a question or just want to say hello,
-          our inbox is open. Feel free to get in touch with us about
-          collaborations, bookings, or just to have an interesting conversation!
+          Greetings! We&apos;re on the lookout for new and exciting connections.
+          Whether you have a question about the band or just want to say hello,
+          our inbox is always open. Feel free to get in touch with us about
+          bookings, collaborations, or just to have an interesting conversation!
         </p>
-        <div className="socials flex flex-row gap-4">
+        <div className="socials flex flex-row gap-4 items-center"> {/* Added items-center for vertical alignment */}
           <a
             href="https://www.instagram.com/expansionproject/"
-            onClick={(e) => handleSocialIconClick(e, "https://www.instagram.com/expansionproject/")}
+            onClick={(e) =>
+              handleSocialIconClick(
+                e,
+                "https://www.instagram.com/expansionproject/"
+              )
+            }
             className="social-icon-button"
           >
-            <Image src={InstagramIcon} alt="Instagram Icon" width={40} height={40} />
+            <Image
+              src={InstagramIcon}
+              alt="Instagram Icon"
+              width={40}  // Reverted from 50 to 40
+              height={40} // Reverted from 50 to 40
+            />
           </a>
           <a
             href="https://www.facebook.com/expansionproject?mibextid=MKOS29"
-            onClick={(e) => handleSocialIconClick(e, "https://www.facebook.com/expansionproject?mibextid=MKOS29")}
+            onClick={(e) =>
+              handleSocialIconClick(
+                e,
+                "https://www.facebook.com/expansionproject?mibextid=MKOS29"
+              )
+            }
             className="social-icon-button"
           >
-            <Image src={FacebookIcon} alt="Facebook Icon" width={40} height={40} />
+            <Image
+              src={FacebookIcon}
+              alt="Facebook Icon"
+              width={44}  // Increased from 40 to 44
+              height={44} // Increased from 40 to 44
+              style={{
+                filter: 'brightness(0) saturate(100%) invert(83%) sepia(29%) saturate(1080%) hue-rotate(86deg) brightness(104%) contrast(103%)',
+              }}
+            />
           </a>
-
+          {/* Linktree icon removed */}
           <a
-            href="https://linktr.ee/expansionproject"
-            onClick={(e) => handleSocialIconClick(e, "https://linktr.ee/expansionproject")}
-            className="social-icon-button"
+            href="https://expansionproject.bandcamp.com/"
+            onClick={(e) =>
+              handleSocialIconClick(e, "https://expansionproject.bandcamp.com/")
+            }
+            className="social-icon-button ml-8" // Increased from ml-4 to ml-8 for more margin-left
           >
-            <Image src={LinktreeIcon} alt="Linktree Icon" width={40} height={40} />
+            <Image
+              src={BandcampIcon}
+              alt="Bandcamp Icon"
+              width={85}  // Increased from 75 to 85
+              height={85} // Increased from 75 to 85
+              style={{
+                filter: 'brightness(0) saturate(100%) invert(83%) sepia(29%) saturate(1080%) hue-rotate(86deg) brightness(104%) contrast(103%)',
+                transform: 'scale(2)', // Increased from 1.8 to 2
+                margin: '0 5px',
+              }}
+            />
           </a>
         </div>
       </div>
@@ -159,7 +194,9 @@ const EmailSection = () => {
             type="submit"
             className="send-message-button bg-gradient-to-br from-[#38d57c] to-[#50fd9a] text-[#121212] font-bold determination-mono-font py-4 px-5 rounded-lg w-full relative overflow-hidden transition-all duration-300 ease-in-out transform hover:-translate-y-1 active:translate-y-0"
           >
-            <span className="relative z-10 text-lg tracking-wide">Send Message</span>
+            <span className="relative z-10 text-lg tracking-wide">
+              Send Message
+            </span>
           </button>
           {emailSubmitted && (
             <div className="mt-4 p-4 bg-[#50fd9a] bg-opacity-20 rounded-lg">

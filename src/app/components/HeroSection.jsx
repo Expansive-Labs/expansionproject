@@ -56,7 +56,7 @@ const HeroSection = () => {
               />
             </span>
           </h1>
-          <div className="text-[#65686b] text-base sm:text-lg mb-6 lg:text-xl determination-mono-font">
+          <div className="text-[#717477] text-base sm:text-lg mb-6 lg:text-xl determination-mono-font">
             fusion_trio /// philadelphia_pa
             <div className="mt-4 flex justify-center sm:justify-start">
               <a
@@ -125,7 +125,7 @@ const HeroSection = () => {
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src="/images/mainCPGv2.webp"
+              src="/images/mainCPG.webp"
               alt="Expansion Project main band photo"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={300}
