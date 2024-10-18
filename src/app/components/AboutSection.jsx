@@ -80,8 +80,8 @@ const AboutSection = () => {
           <p className="text-base text-center text-[#bababa] lg:text-lg determination-mono-font">
             Philadelphia based fusion trio. Anthony Tilotta on bass, Matthew
             Silva on piano, and Zamere Williams on drums blend elements of funk,
-            jazz, soul and rock into an innovative sound that&apos;s as
-            explosive as it is deeply rooted in musical tradition. Their sound
+            jazz and rock into an innovative sound that&apos;s as
+            expansive as it is deeply rooted in musical tradition. Their sound
             draws inspiration from many sources, forming a unique sonic
             identity. Studio recordings have captured their creative essence on
             tape, while their live shows are events for collaboration that
