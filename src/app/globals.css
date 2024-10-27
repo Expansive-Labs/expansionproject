@@ -277,3 +277,11 @@ html {
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.1s ease-in-out;
 }
+
+/* Add this to your global CSS or create a new CSS module */
+@media (min-width: 1024px) {
+  .hero-image {
+    width: 350px;
+    height: 350px;
+  }
+}

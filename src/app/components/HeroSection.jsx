@@ -67,13 +67,14 @@ const HeroSection = () => {
                     "https://open.spotify.com/artist/4qBVPcT7Wo61vUkymokvyx?si=86dLWpyUQhyqEnlgoniqHw&nd=1&dlsi=7f3de69325eb463b"
                   )
                 }
-                className="mx-2 music-icon-button"
+                className="mx-2 music-icon-button transition-all duration-300 ease-in-out hover:translate-y-[-5px] active:translate-y-[4px] active:scale-95"
               >
                 <Image
                   src="/spotify-icon-w2.svg"
                   alt="Expansion Project on Spotify"
                   width={40}
                   height={40}
+                  className="transition-all duration-300 shadow-lg hover:shadow-xl active:shadow-inner"
                 />
               </a>
               <a
@@ -84,13 +85,14 @@ const HeroSection = () => {
                     "https://music.apple.com/us/artist/expansion-project/1353151967"
                   )
                 }
-                className="mx-2 music-icon-button apple-music-icon"
+                className="mx-2 music-icon-button apple-music-icon transition-all duration-300 ease-in-out hover:translate-y-[-5px] active:translate-y-[4px] active:scale-95"
               >
                 <Image
                   src="/appleMusic-icon-w2.svg"
                   alt="Expansion Project on Apple Music"
                   width={40}
                   height={40}
+                  className="transition-all duration-300 shadow-lg hover:shadow-xl active:shadow-inner"
                 />
               </a>
             </div>
@@ -123,14 +125,17 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-            <Image
-              src="/images/mainCPG.webp"
-              alt="Expansion Project main band photo"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
-            />
+          <div className="rounded-full bg-[#181818] w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] relative overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Image
+                src="/images/mainCPGv2.webp"
+                alt="Expansion Project main band photo"
+                className="rounded-full object-cover hero-image"
+                width={250}
+                height={250}
+                sizes="(max-width: 1024px) 250px, 350px"
+              />
+            </div>
           </div>
         </motion.div>
       </div>
