@@ -125,12 +125,25 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] relative overflow-hidden">
+          <div
+            className="rounded-full bg-[#181818] w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] relative overflow-hidden 
+            transition-all duration-700 ease-in-out 
+            hover:shadow-[0_0_40px_#50fd9a,0_0_80px_rgba(80,253,154,0.2),0_0_120px_rgba(80,253,154,0.1)] 
+            hover:translate-y-[-10px] 
+            cursor-pointer 
+            active:translate-y-[4px]
+            active:scale-[0.97]
+            active:shadow-[inset_0_0_20px_rgba(80,253,154,0.3)]"
+          >
             <div className="absolute inset-0 flex items-center justify-center">
               <Image
                 src="/images/mainCPGv2.webp"
                 alt="Expansion Project main band photo"
-                className="rounded-full object-cover hero-image"
+                className="rounded-full object-cover hero-image 
+                transition-all duration-700 ease-in-out 
+                hover:scale-105
+                active:scale-95
+                active:shadow-inner"
                 width={250}
                 height={250}
                 sizes="(max-width: 1024px) 250px, 350px"
