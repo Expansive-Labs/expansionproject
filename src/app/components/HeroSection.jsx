@@ -126,16 +126,17 @@ const HeroSection = () => {
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
           <div
-            className="rounded-full bg-[#181818] w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] relative overflow-hidden 
+            className="rounded-full w-[280px] h-[280px] lg:w-[400px] lg:h-[400px] relative overflow-hidden 
             transition-all duration-700 ease-in-out 
-            hover:shadow-[0_0_40px_#50fd9a,0_0_80px_rgba(80,253,154,0.2),0_0_120px_rgba(80,253,154,0.1)] 
+            bg-transparent
+            hover:shadow-[0_0_25px_#50fd9a,0_0_50px_rgba(80,253,154,0.15)] 
             hover:translate-y-[-10px] 
             cursor-pointer 
             active:translate-y-[4px]
             active:scale-[0.97]
-            active:shadow-[inset_0_0_20px_rgba(80,253,154,0.3)]"
+            active:shadow-[inset_0_0_15px_rgba(80,253,154,0.3)]"
           >
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center bg-transparent">
               <Image
                 src="/images/mainCPGv2.webp"
                 alt="Expansion Project main band photo"
@@ -144,9 +145,9 @@ const HeroSection = () => {
                 hover:scale-105
                 active:scale-95
                 active:shadow-inner"
-                width={250}
-                height={250}
-                sizes="(max-width: 1024px) 250px, 350px"
+                width={230}
+                height={230}
+                sizes="(max-width: 1024px) 230px, 330px"
               />
             </div>
           </div>
