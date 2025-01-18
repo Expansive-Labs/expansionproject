@@ -44,7 +44,7 @@ export async function POST(req, res) {
             </p>
           </div>
           <p style={{ fontFamily: "Arial, sans-serif" }}>
-            We'll be in touch ASAP. In the meantime.. Enjoy our music and stay up to date with us on social media.
+            We will get back to you ASAP! In the meantime.. Enjoy our music and stay up to date with us on social media.
           </p>
           <ul style={{ fontFamily: "Arial, sans-serif" }}>
             <li>
