@@ -52,7 +52,7 @@ export async function POST(req, res) {
                 href="https://distrokid.com/hyperfollow/expansionproject1/phenomenal-thought-2"
                 style={{ color: "#387178" }}
               >
-                Stream NEW album: PHENOMENAL THOUGHT
+                Stream PHENOMENAL THOUGHT 🎵
               </a>
             </li>
             <li>
@@ -60,7 +60,7 @@ export async function POST(req, res) {
                 href="https://distrokid.com/hyperfollow/expansionproject1/conscious-tortoise-2"
                 style={{ color: "#387178" }}
               >
-                Stream OG album: CONSIOUS TORTOISE
+                Stream CONSIOUS TORTOISE 🎵
               </a>
             </li>
             <li>
@@ -96,7 +96,7 @@ export async function POST(req, res) {
               </a>
             </li>
           </ul>
-          <p style={{ fontFamily: "Arial, sans-serif" }}>Rock on!</p>
+          <p style={{ fontFamily: "Arial, sans-serif" }}>Groove on!!!</p>
           <p
             style={{
               fontFamily: "Arial, sans-serif, italic",
