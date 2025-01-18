@@ -19,7 +19,7 @@ export async function POST(req, res) {
             Thank you for contacting Expansion Project!
           </h1>
           <p style={{ fontFamily: "Arial, sans-serif" }}>
-            We&apos;ve received your message and appreciate you reaching out.
+            We have received your message and appreciate you reaching out.
             Here&apos;s a summary of what you sent:
           </p>
           <div
@@ -44,7 +44,7 @@ export async function POST(req, res) {
             </p>
           </div>
           <p style={{ fontFamily: "Arial, sans-serif" }}>
-            In the meantime, enjoy our music and stay updated on social media!
+            We'll be in touch ASAP. In the meantime.. Enjoy our music and stay up to date with us on social media.
           </p>
           <ul style={{ fontFamily: "Arial, sans-serif" }}>
             <li>
@@ -52,7 +52,15 @@ export async function POST(req, res) {
                 href="https://distrokid.com/hyperfollow/expansionproject1/phenomenal-thought-2"
                 style={{ color: "#387178" }}
               >
-                Stream our latest album: PHENOMENAL THOUGHT
+                Stream NEW album: PHENOMENAL THOUGHT
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://distrokid.com/hyperfollow/expansionproject1/conscious-tortoise-2"
+                style={{ color: "#387178" }}
+              >
+                Stream OG album: CONSIOUS TORTOISE
               </a>
             </li>
             <li>
