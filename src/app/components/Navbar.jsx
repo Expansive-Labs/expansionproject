@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const navLinks = [
   {
-    title: "About Us",
+    title: "About EXP",
     path: "#about",
   },
   {

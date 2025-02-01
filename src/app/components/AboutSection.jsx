@@ -91,7 +91,7 @@ const AboutSection = () => {
             className="text-4xl text-center font-bold determination-mono-font mb-4 text-[#50fd9a]"
             style={sectionStyle}
           >
-            About Us
+            About EXP
           </h2>
           <p className="text-base text-center text-[#bababa] lg:text-lg determination-mono-font">
             Philadelphia based fusion trio. Anthony Tilotta on bass, Matthew
