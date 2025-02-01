@@ -13,6 +13,10 @@ const navLinks = [
     path: "#about",
   },
   {
+    title: "Shows",
+    path: "#shows",
+  },
+  {
     title: "Music",
     path: "#music",
   },
@@ -79,7 +83,7 @@ const Navbar = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <div 
+                <div
                   className="flex items-center"
                   onMouseEnter={() => setHoveredLink(link.title)}
                   onMouseLeave={() => setHoveredLink(null)}
@@ -93,7 +97,9 @@ const Navbar = () => {
                   {link.showArrow && (
                     <svg
                       className={`w-5 h-5 ml-1 transition-colors duration-300 ${
-                        hoveredLink === link.title ? 'text-green-400' : 'text-[#7c7c78]'
+                        hoveredLink === link.title
+                          ? "text-green-400"
+                          : "text-[#7c7c78]"
                       }`}
                       fill="none"
                       strokeLinecap="round"

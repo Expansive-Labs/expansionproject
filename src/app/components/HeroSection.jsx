@@ -14,6 +14,13 @@ const HeroSection = () => {
     }, 200);
   };
 
+  const handleShowsClick = (e) => {
+    e.preventDefault();
+    setTimeout(() => {
+      document.querySelector("#shows").scrollIntoView({ behavior: "smooth" });
+    }, 200);
+  };
+
   const handleMusicIconClick = (e, url) => {
     e.preventDefault();
     setTimeout(() => {

@@ -13,8 +13,12 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2 centered-text determination-mono-font">
         <li style={{ color: "#50fd9a", fontSize: 16 }}>VeloJawn - Philly</li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>Silk City Diner - Philly</li>
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>Into The Pines Music Festival</li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>
+          Silk City Diner - Philly
+        </li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>
+          Into The Pines Music Festival
+        </li>
       </ul>
     ),
   },
@@ -100,7 +104,10 @@ const AboutSection = () => {
             boundaries of music &infin;
           </p>
 
-          <p className="text-center text-4xl font-bold text-[#50fd9a] mt-8 mb-4 determination-mono-font">
+          <p
+            className="text-center text-4xl font-bold text-[#50fd9a] mt-8 mb-4 determination-mono-font"
+            id="shows"
+          >
             Shows
           </p>
 
