@@ -58,7 +58,7 @@ const AboutSection = () => {
     marginBottom: "2em",
   };
 
-  // Add useEffect to load Bandsintown script
+  // Update useEffect to load Bandsintown script
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://widgetv3.bandsintown.com/main.min.js";
@@ -91,10 +91,10 @@ const AboutSection = () => {
             className="text-4xl text-center font-bold determination-mono-font mb-4 text-[#50fd9a]"
             style={sectionStyle}
           >
-            About EXP
+            Expansion Project
           </h2>
           <p className="text-base text-center text-[#bababa] lg:text-lg determination-mono-font">
-            Philadelphia based fusion trio. Anthony Tilotta on bass, Matthew
+            Philadelphia based fusion trio Anthony Tilotta on bass, Matthew
             Silva on piano, and Zamere Williams on drums blend elements of funk,
             jazz and rock into an innovative sound that&apos;s as expansive as
             it is deeply rooted in musical tradition. Their sound draws
@@ -133,21 +133,91 @@ const AboutSection = () => {
               {TAB_DATA.find((t) => t.id === tab).content}
             </div>
 
-            <div className="w-full">
+            <div className="w-full flex flex-col items-center">
               <a
                 className="bit-widget-initializer"
                 data-artist-name="id_15563537"
+                data-events-to-display=""
                 data-background-color="rgba(18,18,18,1)"
-                data-separator-color="rgba(80,253,154,0.5)"
-                data-text-color="rgba(186,186,186,1)"
-                data-font="determination-mono-font"
-                data-display-local-dates="true"
-                data-display-past-dates="true"
-                data-date-color="rgba(80,253,154,1)"
-                data-language="en"
+                data-separator-color="rgba(0,0,0,1)"
+                data-text-color="rgba(192,192,192,1)"
+                data-font="American Typewriter"
+                data-font-size="14px"
+                data-auto-style="true"
+                data-button-label-capitalization="uppercase"
+                data-header-capitalization="uppercase"
+                data-location-capitalization="uppercase"
+                data-venue-capitalization="uppercase"
+                data-local-dates-position="tab"
+                data-display-details="false"
+                data-display-lineup="false"
+                data-display-start-time="false"
+                data-social-share-icon="true"
                 data-display-limit="all"
-                style={{ display: "block", margin: "0 auto" }}
-              ></a>
+                data-date-format="MMM. D, YYYY"
+                data-date-orientation="horizontal"
+                data-date-border-color="#4A4A4A"
+                data-date-border-width="1px"
+                data-date-capitalization="capitalize"
+                data-date-border-radius="10px"
+                data-event-ticket-cta-size="medium"
+                data-event-ticket-text="BUY TICKETS"
+                data-event-ticket-icon="false"
+                data-event-ticket-cta-text-color="rgba(255,255,255,1)"
+                data-event-ticket-cta-bg-color="rgba(74,74,74,1)"
+                data-event-ticket-cta-border-color="rgba(74,74,74,1)"
+                data-event-ticket-cta-border-width="0px"
+                data-event-ticket-cta-border-radius="2px"
+                data-sold-out-button-text-color="rgba(255,255,255,1)"
+                data-sold-out-button-background-color="rgba(74,74,74,1)"
+                data-sold-out-button-border-color="rgba(74,74,74,1)"
+                data-sold-out-button-clickable="true"
+                data-event-rsvp-position="left"
+                data-event-rsvp-cta-size="medium"
+                data-event-rsvp-only-show-icon="false"
+                data-event-rsvp-text="RSVP"
+                data-event-rsvp-icon="false"
+                data-event-rsvp-cta-text-color="rgba(74,74,74,1)"
+                data-event-rsvp-cta-bg-color="rgba(255,255,255,1)"
+                data-event-rsvp-cta-border-color="rgba(74,74,74,1)"
+                data-event-rsvp-cta-border-width="1px"
+                data-event-rsvp-cta-border-radius="2px"
+                data-follow-section-position="top"
+                data-follow-section-alignment="center"
+                data-follow-section-header-text="Get updates on new shows, new music, and more"
+                data-follow-section-cta-size="medium"
+                data-follow-section-cta-text="FOLLOW"
+                data-follow-section-cta-icon="false"
+                data-follow-section-cta-text-color="rgba(81,251,154,1)"
+                data-follow-section-cta-bg-color="rgba(18,18,18,1)"
+                data-follow-section-cta-hover-text-color="rgba(192,192,192,1)"
+                data-follow-section-cta-hover-bg-color="rgba(18,18,18,1)"
+                data-follow-section-cta-transition-duration="0.3s"
+                data-play-my-city-position="bottom"
+                data-play-my-city-alignment="center"
+                data-play-my-city-header-text="Don't see a show near you?"
+                data-play-my-city-cta-size="medium"
+                data-play-my-city-cta-text="REQUEST A SHOW"
+                data-play-my-city-cta-icon="false"
+                data-play-my-city-cta-text-color="rgba(81,251,154,1)"
+                data-play-my-city-cta-bg-color="rgba(18,18,18,1)"
+                data-play-my-city-cta-hover-text-color="rgba(192,192,192,1)"
+                data-play-my-city-cta-hover-bg-color="rgba(18,18,18,1)"
+                data-play-my-city-cta-transition-duration="0.3s"
+                data-language="en"
+                data-layout-breakpoint="900"
+                data-bit-logo-position="bottom"
+                data-bit-logo-alignment="center"
+                data-bit-logo-color="rgba(192,192,192,1)"
+                style={{
+                  display: "block",
+                  margin: "0 auto",
+                  fontSize: "14px",
+                  textAlign: "center",
+                  width: "100%",
+                  "--bit-button-hover-transition": "all 0.3s ease-in-out",
+                }}
+              />
             </div>
           </div>
         </div>
