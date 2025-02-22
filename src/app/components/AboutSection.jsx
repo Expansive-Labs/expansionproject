@@ -12,12 +12,14 @@ const TAB_DATA = [
     id: "upcoming",
     content: (
       <ul className="list-disc pl-2 centered-text determination-mono-font">
-        <li style={{ color: "#50fd9a", fontSize: 16 }}>VeloJawn - Philly</li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>
-          Silk City Diner - Philly
+          VeloJawn - Philly, 3.7
         </li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>
-          Into The Pines Music Festival
+          Silk City Diner - Philly, 5.26
+        </li>
+        <li style={{ color: "#50fd9a", fontSize: 16 }}>
+          Into The Pines Music Festival, NJ 8.22
         </li>
       </ul>
     ),

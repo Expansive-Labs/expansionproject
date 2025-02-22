@@ -21,22 +21,27 @@ export async function GET(request) {
       const fileContents = await fs.readFile(filePath, 'utf8');
       const { data, content } = matter(fileContents);
 
+      // Extract the numeric prefix from the filename
+      const numericPrefix = parseInt(filename.split('-')[0]);
+
       return {
         id: filename.replace(/\.md$/, ''),
+        numericPrefix, // Add this to help with sorting
         ...data,
         content,
         likes: 0,
       };
     }));
 
-    console.log('Processed posts:', posts);
+    // Sort posts by numeric prefix in descending order (highest/newest first)
+    const sortedPosts = posts.sort((a, b) => b.numericPrefix - a.numericPrefix);
 
     const url = new URL(request.url);
     const id = url.searchParams.get('id');
     console.log('Requested ID:', id);
 
     if (id) {
-      const post = posts.find(p => p.id === id);
+      const post = sortedPosts.find(p => p.id === id);
       if (post) {
         console.log('Found post:', post);
         return NextResponse.json(post);
@@ -46,7 +51,9 @@ export async function GET(request) {
       }
     }
 
-    return NextResponse.json(posts);
+    // Remove the numericPrefix from the response
+    const cleanedPosts = sortedPosts.map(({ numericPrefix, ...post }) => post);
+    return NextResponse.json(cleanedPosts);
   } catch (error) {
     console.error('Error in API route:', error);
     return NextResponse.json({ error: error.message }, { status: 500 });
