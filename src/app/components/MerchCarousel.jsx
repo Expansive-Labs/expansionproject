@@ -63,11 +63,11 @@ const images = [
     linkUrl: "https://expansion-project-merch.printify.me/product/5289177",
     caption: "The Mug | 11oz",
   },
-  {
+/*   {
     imageUrl: "/images/merchThumbnails/mug_qr.webp",
     linkUrl: "https://expansion-project-merch.printify.me/product/5289177",
     caption: "The Mug | 11oz",
-  },
+  }, */
   {
     imageUrl: "/images/merchThumbnails/mug_logo.webp",
     linkUrl: "https://expansion-project-merch.printify.me/product/5289177",
@@ -79,7 +79,7 @@ const images = [
     linkUrl: "https://expansion-project-merch.printify.me/product/5289674",
     caption: "Moon Tapestry",
   },
-  {
+/*   {
     imageUrl: "/images/merchThumbnails/tapestry_bluewall.webp",
     linkUrl: "https://expansion-project-merch.printify.me/product/5289674",
     caption: "Moon Tapestry",
@@ -88,7 +88,7 @@ const images = [
     imageUrl: "/images/merchThumbnails/tapestry_wall.webp",
     linkUrl: "https://expansion-project-merch.printify.me/product/5289674",
     caption: "Moon Tapestry",
-  },
+  }, */
 ];
 
 const MerchCarousel = () => {
