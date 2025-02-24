@@ -67,11 +67,11 @@ const HeroSection = () => {
             fusion_trio /// philadelphia_pa
             <div className="mt-4 flex justify-center sm:justify-start">
               <a
-                href="https://open.spotify.com/artist/4qBVPcT7Wo61vUkymokvyx?si=86dLWpyUQhyqEnlgoniqHw&nd=1&dlsi=7f3de69325eb463b"
+                href="https://open.spotify.com/track/73Xm8coj4RVoCfdmI319Vp?si=6ae4afda041b4535"
                 onClick={(e) =>
                   handleMusicIconClick(
                     e,
-                    "https://open.spotify.com/artist/4qBVPcT7Wo61vUkymokvyx?si=86dLWpyUQhyqEnlgoniqHw&nd=1&dlsi=7f3de69325eb463b"
+                    "https://open.spotify.com/track/73Xm8coj4RVoCfdmI319Vp?si=6ae4afda041b4535"
                   )
                 }
                 className="mx-2 music-icon-button transition-all duration-300 ease-in-out hover:translate-y-[-5px] active:translate-y-[4px] active:scale-95"
