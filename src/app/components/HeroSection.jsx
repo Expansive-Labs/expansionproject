@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-/// LANDING PAGE VIEW ///
+/// MAIN LANDING PAGE ///
 
 const HeroSection = () => {
   const handleContactClick = (e) => {

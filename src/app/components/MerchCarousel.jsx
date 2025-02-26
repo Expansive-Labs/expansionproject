@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 
 /// MERCH CAROUSEL ///
-
 const images = [
   // Sweatshirt
   {
@@ -20,19 +19,6 @@ const images = [
       "https://expansion-project-merch.printify.me/product/4518889/expansion-project-premium-hoodie",
     caption: "Premium Sweatshirt (Black)",
   },
-  // {
-  //   imageUrl: "/images/merchThumbnails/sweatM.webp",
-  //   linkUrl:
-  //     "https://expansion-project-merch.printify.me/product/4518889/expansion-project-premium-hoodie",
-  //   caption: "Premium Sweatshirt (Grey)",
-  // },
-  // {
-  //   imageUrl: "/images/merchThumbnails/sweatF.webp",
-  //   linkUrl:
-  //     "https://expansion-project-merch.printify.me/product/4518889/expansion-project-premium-hoodie",
-  //   caption: "Premium Sweatshirt (Pink)",
-  // },
-  // T-Shirt
   {
     imageUrl: "/images/merchThumbnails/classicTFRONT.webp",
     linkUrl:
@@ -45,29 +31,11 @@ const images = [
       "https://expansion-project-merch.printify.me/product/4518887/expansion-project-classic-t-shirt",
     caption: "Classic T-Shirt (Grey)",
   },
-  // {
-  //   imageUrl: "/images/merchThumbnails/classicM.webp",
-  //   linkUrl:
-  //     "https://expansion-project-merch.printify.me/product/4518887/expansion-project-classic-t-shirt",
-  //   caption: "Classic T-Shirt (Grey)",
-  // },
-  // {
-  //   imageUrl: "/images/merchThumbnails/classicF.webp",
-  //   linkUrl:
-  //     "https://expansion-project-merch.printify.me/product/4518887/expansion-project-classic-t-shirt",
-  //   caption: "Classic T-Shirt (Grey)",
-  // },
-  // Mug
   {
     imageUrl: "/images/merchThumbnails/mug_front.webp",
     linkUrl: "https://expansion-project-merch.printify.me/product/5289177",
     caption: "The Mug | 11oz",
   },
-/*   {
-    imageUrl: "/images/merchThumbnails/mug_qr.webp",
-    linkUrl: "https://expansion-project-merch.printify.me/product/5289177",
-    caption: "The Mug | 11oz",
-  }, */
   {
     imageUrl: "/images/merchThumbnails/mug_logo.webp",
     linkUrl: "https://expansion-project-merch.printify.me/product/5289177",
@@ -79,16 +47,6 @@ const images = [
     linkUrl: "https://expansion-project-merch.printify.me/product/5289674",
     caption: "Moon Tapestry",
   },
-/*   {
-    imageUrl: "/images/merchThumbnails/tapestry_bluewall.webp",
-    linkUrl: "https://expansion-project-merch.printify.me/product/5289674",
-    caption: "Moon Tapestry",
-  },
-  {
-    imageUrl: "/images/merchThumbnails/tapestry_wall.webp",
-    linkUrl: "https://expansion-project-merch.printify.me/product/5289674",
-    caption: "Moon Tapestry",
-  }, */
 ];
 
 const MerchCarousel = () => {
