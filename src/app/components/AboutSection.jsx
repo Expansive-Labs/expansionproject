@@ -9,13 +9,13 @@ const TAB_DATA = [
   {
     title: "Upcoming",
     id: "upcoming",
-    content: (
+    content: (      
       <ul className="list-disc pl-2 centered-text determination-mono-font">
         <li style={{ color: "#50fd9a", fontSize: 16 }}>
-          Silk City Diner - Philly, 4.26        </li>
+          Porch Fest - Philly
+        </li> 
         <li style={{ color: "#50fd9a", fontSize: 16 }}>
-          The Gem - Spring City, PA 7.25
-        </li>
+          The Gem - Spring City, PA 7.25        </li>
         <li style={{ color: "#50fd9a", fontSize: 16 }}>
           Into The Pines Music Festival, NJ 8.22
         </li>
@@ -106,9 +106,9 @@ const AboutSection = () => {
 
           <p
             className="text-center text-4xl font-bold text-[#50fd9a] mt-8 mb-4 determination-mono-font"
-            id="shows"
+            id="tour"
           >
-            Shows
+            Tour
           </p>
 
           <div className="flex flex-row justify-center mb-4 tab-buttons-container">
