@@ -17,7 +17,7 @@ const HeroSection = () => {
   const handleShowsClick = (e) => {
     e.preventDefault();
     setTimeout(() => {
-      document.querySelector("#shows").scrollIntoView({ behavior: "smooth" });
+      document.querySelector("#tour").scrollIntoView({ behavior: "smooth" });
     }, 200);
   };
 

@@ -13,12 +13,12 @@ const navLinks = [
     path: "#about",
   },
   {
-    title: "Shows",
-    path: "#shows",
-  },
-  {
     title: "Music",
     path: "#music",
+  },
+  {
+    title: "Tour",
+    path: "#tour",
   },
   {
     title: "Videos",
