@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import FacebookIcon from "../../../public/facebook-icon-sq.svg";
 import InstagramIcon from "../../../public/instagram-icon-w2.svg";

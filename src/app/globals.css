@@ -5,13 +5,18 @@
 /* global.css */
 @font-face {
   font-family: "Kallisto Lined";
-  src: url("../../public/fonts/Kallisto-Lined.otf") format("opentype");
+  src: url("/fonts/Kallisto-Lined.otf") format("opentype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Determination Mono";
-  src: url("/public/fonts/DeterminationMonoWebRegular-Z5oq.ttf")
-    format("truetype");
+  src: url("/fonts/DeterminationMonoWebRegular-Z5oq.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
 
 html {

@@ -97,9 +97,12 @@ const MerchCarousel = () => {
         >
           <Image
             src={images[currentImage].imageUrl}
-            alt="Merch Image"
+            alt={images[currentImage].caption}
             className="object-cover w-full h-full rounded-2xl"
-            layout="fill"
+            fill
+            sizes="(max-width: 768px) 100vw, 512px"
+            priority={currentImage === 0}
+            loading={currentImage === 0 ? "eager" : "lazy"}
           />
           <div
             className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-center py-2"
@@ -111,17 +114,19 @@ const MerchCarousel = () => {
         </a>
         <button
           onClick={handlePrevious}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 text-black px-4 py-4 rounded-full"
-          style={{ backgroundColor: "#c0c0c0" }}
+          className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-[#c0c0c0] text-black px-3 py-3 sm:px-4 sm:py-4 rounded-full shadow-lg hover:bg-[#d4d4d4] transition-colors duration-200 text-sm sm:text-base"
+          aria-label="Previous image"
         >
-          Previous
+          <span className="hidden sm:inline">Previous</span>
+          <span className="sm:hidden">‹</span>
         </button>
         <button
           onClick={handleNext}
-          className="absolute top-1/2 right-1 transform -translate-y-1/2 text-black px-6 py-4 rounded-full"
-          style={{ backgroundColor: "#c0c0c0" }}
+          className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[#c0c0c0] text-black px-3 py-3 sm:px-6 sm:py-4 rounded-full shadow-lg hover:bg-[#d4d4d4] transition-colors duration-200 text-sm sm:text-base"
+          aria-label="Next image"
         >
-          Next
+          <span className="hidden sm:inline">Next</span>
+          <span className="sm:hidden">›</span>
         </button>
       </div>
     </section>
