@@ -36,7 +36,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-12 sm:col-span-8 place-self-center text-center sm:text-left justify-self-start"
+          className="col-span-12 sm:col-span-8 place-self-center text-center sm:text-left sm:justify-self-start"
         >
           <motion.h1
             initial={{ opacity: 0, scale: 0.5 }}
@@ -111,7 +111,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div>
+          <div className="text-center sm:text-left">
             <a
               href="#contact"
               onClick={handleContactClick}

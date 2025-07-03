@@ -12,7 +12,7 @@ const Footer = ({ count }) => {
           <div className="text-center md:text-left">
             <h3 className="text-[#50fd9a] mb-4 font-bold kallisto-lined-font">Expansion Project</h3>
             <p className="text-sm text-[#717171] mb-2">Philadelphia Jazz Fusion Trio</p>
-            <p className="text-sm text-[#717171]">Funk • Jazz • Progressive • Live Music</p>
+            <p className="text-sm text-[#717171]">Funk • Jazz • Progressive • Rock • Band • Music • Live Music</p>
             <p className="text-sm text-[#717171] mt-2">Philadelphia, PA</p>
           </div>
           
