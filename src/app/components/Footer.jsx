@@ -31,9 +31,9 @@ const Footer = ({ count }) => {
           <div className="text-center md:text-right">
             <h3 className="text-[#50fd9a] mb-4 font-bold kallisto-lined-font">Listen Now</h3>
             <nav className="flex flex-col space-y-2">
-              <a href="https://open.spotify.com/artist/expansion-project" target="_blank" rel="noopener noreferrer" className="text-sm text-[#717171] hover:text-[#50fd9a] transition-colors">Spotify</a>
+              <a href="https://open.spotify.com/track/1tcowxHN97dVXOnBXCRTqD?si=62dc4255abcc4e9c" target="_blank" rel="noopener noreferrer" className="text-sm text-[#717171] hover:text-[#50fd9a] transition-colors">Spotify</a>
               <a href="https://music.apple.com/us/artist/expansion-project/1353151967" target="_blank" rel="noopener noreferrer" className="text-sm text-[#717171] hover:text-[#50fd9a] transition-colors">Apple Music</a>
-              <a href="https://www.youtube.com/expansionproject" target="_blank" rel="noopener noreferrer" className="text-sm text-[#717171] hover:text-[#50fd9a] transition-colors">YouTube</a>
+              <a href="https://youtu.be/CADFoemU5Jo?si=nYUN67vgXTfek4Ps" target="_blank" rel="noopener noreferrer" className="text-sm text-[#717171] hover:text-[#50fd9a] transition-colors">YouTube</a>
               <a href="https://www.bandsintown.com/a/15563537-expansion-project" target="_blank" rel="noopener noreferrer" className="text-sm text-[#717171] hover:text-[#50fd9a] transition-colors">Bandsintown</a>
             </nav>
           </div>

@@ -96,13 +96,7 @@ const AboutSection = () => {
             Expansion Project
           </h2>
           <p className="text-base text-center text-[#bababa] lg:text-lg determination-mono-font">
-            Expansion Project is a Philadelphia-based fusion trio pushing the boundaries of modern jazz-funk music. 
-            Anthony Tilotta (bass), Matthew Silva (keyboards), and Zamere Williams (drums) create innovative 
-            groove-based music that appeals to fans of the Yussef Dayes Experience, Snarky Puppy and Moses Yoofee Trio. Their unique 
-            blend of funk, jazz, progressive rock, and jam band elements delivers high-energy live performances 
-            and genre-defying studio recordings. Experience the future of fusion funk with Philadelphia&apos;s most 
-            exciting power trio, bringing virtuosic musicianship and improvisational mastery to venues across the 
-            the East Coast.
+          Expansion Project is a Philadelphia-based jazz-funk fusion trio blending groove-heavy rhythms with virtuosic improvisation. Featuring Anthony Tilotta (bass), Matthew Silva (keys), and Zamere Williams (drums), they channel influences like Yussef Dayes Experience, Snarky Puppy and Moses Yoofee Trio. Known for high-energy live shows and genre-blurring studio work, they’re redefining modern fusion across the East Coast.
           </p>
 
           <p
