@@ -200,7 +200,7 @@ const EmailSection = () => {
           </button>
           {emailSubmitted && (
             <div className="mt-4 p-4 bg-[#50fd9a] bg-opacity-20 rounded-lg">
-              <p className="text-[#50fd9a] text-lg font-semibold determination-mono-font">
+              <p className="text-[#50fd9a] text-lg font-semibold kallisto-lined-font">
                 Thank you for contacting Expansion Project!
               </p>
               <p className="text-[#ADB7BE] text-sm mt-2 determination-mono-font">

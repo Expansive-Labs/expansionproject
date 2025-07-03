@@ -1,0 +1,254 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+📝 Product Requirements Document (PRD)
+Project: Expansion Project – Band Website
+ Repo: expansionproject
+ Last Updated: July 2, 2025
+
+🎯 1. Vision & Goals
+Develop a modular, SEO-optimized website for the Expansion Project band, leveraging Next.js + TailwindCSS with interactive modules supported by the cursor architecture.
+Priorities:
+Modular feature system for speed and scalability
+
+
+High SEO performance for organic traffic growth
+
+
+Aesthetic, responsive UI for fans on all devices
+
+
+Streamlined developer workflow for feature rollouts
+
+
+
+👥 2. User Personas
+Fans – Discover music, shows, merch, and updates
+
+
+Band/Admins – Post tour dates, content, and news easily
+
+
+Dev Team – Implement new features rapidly via cursor modules
+
+
+
+🧩 3. Features & Requirements
+3.1 Stack Overview
+Tool/Lib
+Role
+Next.js 13
+SSR, routing, static builds
+TailwindCSS 3
+Utility-first responsive styling
+Framer Motion
+Animations + page transitions
+SWR
+Client-side caching/data fetching
+Firebase + Admin SDK
+Content + newsletter backend
+Gray-Matter
+Markdown blog + content parsing
+
+
+3.2 Feature Modules (via cursor)
+Each lives in cursor/modules/{feature}
+Exports:
+
+
+init(rootEl)
+
+
+render()
+
+
+Optional cleanup()
+
+
+Modules are dynamically imported and mounted based on route/page match. Example modules:
+hero: Dynamic text, CTA, animation
+
+
+player: YouTube/SoundCloud embed
+
+
+tour: CMS-fed dates, venues, ticket links
+
+
+merch: Firebase-inventory-linked merch grid
+
+
+newsletter: Form + resend API
+
+
+gallery: Carousel/photo grid
+
+
+seo: Dynamic metadata, JSON-LD, OpenGraph
+
+
+
+3.3 SEO-Optimized Content ✅
+Homepage H1:
+Expansion Project – Indie Rock Band | New Music, Tour Dates & Merch
+
+Title Tag:
+Expansion Project – Indie Rock Band | Tour, Music, Merch
+
+Meta Description:
+Explore Expansion Project’s latest indie rock music, upcoming tour dates, merch & more.
+
+Target Keywords:
+indie rock band
+
+
+Expansion Project music
+
+
+indie concert tickets
+
+
+Philadelphia band tour dates
+
+
+band merch online
+
+
+live band shows near me
+
+
+SEO Enhancements:
+/pages/_app.tsx wraps in meta + SEO component
+
+
+Dynamic metadata per route via next/head
+
+
+Schema: MusicGroup, Event, Product using JSON-LD
+
+
+Sitemap + robots.txt generated via next-sitemap
+
+
+Alt text, ARIA roles, social OG tags
+
+
+
+3.4 Data & CMS
+Tour dates, merch data from Firebase or markdown (gray-matter)
+
+
+SWR (/lib/useData.ts) abstracts fetch and cache
+
+
+Example: useData("/api/tour") → { data, error, isLoading }
+
+
+
+3.5 Styling & Theming
+Tailwind + custom theme tokens in /styles/theme.css
+
+
+Light/dark mode via next-themes
+
+
+Animation: Framer Motion (used for transitions + hero effects)
+
+
+Carousel: react-responsive-carousel for gallery
+
+
+Type animations: react-type-animation for hero messaging
+
+
+
+3.6 Build & Performance
+Static generation preferred for SEO-critical pages
+
+
+Firebase Admin SDK for secure server-side API routes
+
+
+Speed Insights via @vercel/speed-insights
+
+
+Bundle splitting & lazy-loading via Next.js dynamic imports
+
+
+Performance budget: ≤15 KB per cursor module
+
+
+
+🧪 4. Testing & QA
+Jest + Testing Library for logic and modules
+
+
+next lint and eslint-config-next for code standards
+
+
+Lighthouse checks: target ≥90 for Performance, Accessibility, SEO
+
+
+
+📋 5. Repo Rules (README.md or CONTRIBUTING.md)
+cursor Dev Standards
+All modules in cursor/modules/{name}
+
+
+Use useData, fetchJSON, render, on, and cleanup patterns
+
+
+Write at least one test per module
+
+
+Style only with Tailwind + theme tokens
+
+
+Animate with Framer Motion where appropriate
+
+
+Add metadata (title, desc, keywords) per page
+
+
+Add JSON-LD schema for events, products, music group
+
+
+Dynamic imports for all cursor modules
+
+
+Alt text for all images, accessible nav patterns
+
+
+CI/CD must pass lint, test, and build before merging
+
+
+
+🚀 6. Milestones
+Phase
+Description
+ETA
+Setup
+Tailwind, Firebase, theme, cursor scaffold
+Week 1
+Data Hooks
+SWR-based fetching layer + mock APIs
+Week 2
+Modules: v1
+hero, player, tour
+Week 3
+SEO Integration
+Head manager, sitemap, JSON-LD
+Week 4
+Remaining Modules
+gallery, merch, newsletter, blog parser
+Week 5
+QA + Performance
+Lighthouse, analytics, CI setup
+Week 6
+Release
+Production deploy via Vercel
+Week 7
+
+

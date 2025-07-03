@@ -73,7 +73,7 @@ const MerchCarousel = () => {
   // Merch Window
   return (
     <section id="merch" className="flex flex-col items-center">
-      <h2 className="text-4xl font-bold text-[#50fd9a] mt-12 mb-8 md:mb-12 determination-mono-font">
+      <h2 className="text-4xl font-bold text-[#50fd9a] mt-12 mb-8 md:mb-12 kallisto-lined-font">
         Merch
       </h2>
       <h1

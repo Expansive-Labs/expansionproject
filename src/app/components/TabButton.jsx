@@ -5,23 +5,25 @@ import { motion } from "framer-motion";
 
 const variants = {
   default: { width: 0 },
-  active: { width: "calc(100% - 0.75rem" },
+  active: { width: "100%" },
 };
 
 const TabButton = ({ active, selectTab, children }) => {
-  const buttonClasses = active ? "text-black" : "text-[#808080]";
+  const buttonClasses = active
+    ? "tab-button tab-button-active"
+    : "tab-button tab-button-inactive";
 
   return (
-    <button onClick={selectTab}>
-      <p className={`mr-4 font-semibold hover:text-black ${buttonClasses}`}>
+    <div className="flex flex-col items-center">
+      <button onClick={selectTab} className={buttonClasses}>
         {children}
-      </p>
+      </button>
       <motion.div
         animate={active ? "active" : "default"}
         variants={variants}
-        className="h-1 bg-[#50fd9a] mt-2 mr-3"
+        className="h-1 bg-[#50fd9a] mt-1"
       ></motion.div>
-    </button>
+    </div>
   );
 };
 
