@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
@@ -35,13 +36,13 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+          className="col-span-12 sm:col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
           <motion.h1
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-[#f6f3ed] mb-4 text-2xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold text-center sm:text-left"
+            className="text-[#f6f3ed] mb-4 text-3xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold text-center sm:text-left"
           >
             <br></br>
             <span className="text-transparent bg-clip-text bg-gradient-to-r to-gray-400 from-gray-300">

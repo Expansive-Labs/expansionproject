@@ -126,20 +126,26 @@ export default function RootLayout({ children }) {
         <meta name="geo.placename" content="Philadelphia" />
         <meta name="geo.position" content="39.9526;-75.1652" />
         <meta name="ICBM" content="39.9526, -75.1652" />
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalytics}`}
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${googleAnalytics}');
-            `,
-          }}
-        />
+        {googleAnalytics && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalytics}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${googleAnalytics}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

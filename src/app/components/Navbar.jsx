@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./NavLink";
@@ -47,7 +48,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed mx-auto border-b border-[#33353F] top-0 left-0 right-0 z-20 bg-[#121212] bg-opacity-100 determination-mono-font">
-      <div className="flex container items-center justify-between mx-auto px-2 py-2 gap-2">
+      <div className="flex container items-center justify-between mx-auto px-4 sm:px-6 lg:px-8 py-3 gap-2">
         {/* Left side: Logo */}
         <Link href={"/"} className="flex-shrink-0">
           <Image

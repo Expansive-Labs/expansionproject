@@ -1,5 +1,3 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import AboutSection from "./components/AboutSection";
@@ -9,22 +7,21 @@ import Footer from "./components/Footer";
 import AchievementsSection from "./components/AchievementsSection";
 import BackToTopButton from "./components/BackToTopButton";
 import MerchCarousel from "./components/MerchCarousel";
-import { ParallaxProvider } from "react-scroll-parallax";
-import { getCounter } from "./services/counter.service";
+import ClientParallaxProvider from "./components/ClientParallaxProvider";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212] dark:bg-[#121212]">
       <Navbar />
-      <div className="container mt-24 mx-auto px-12 py-4 dark:text-[#f6f3ed]">
-        <ParallaxProvider>
+      <div className="container mt-24 mx-auto px-4 sm:px-6 lg:px-12 py-4 dark:text-[#f6f3ed]">
+        <ClientParallaxProvider>
           <HeroSection />
           <AchievementsSection />
           <AboutSection />
           <ProjectsSection />
           <MerchCarousel />
           <EmailSection />
-        </ParallaxProvider>
+        </ClientParallaxProvider>
       </div>
       <Footer/>
       <BackToTopButton />
