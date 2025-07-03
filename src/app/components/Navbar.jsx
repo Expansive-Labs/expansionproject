@@ -11,7 +11,7 @@ import AudioPlayer from "./AudioPlayer";
 
 const navLinks = [
   {
-    title: "About EXP",
+    title: "About",
     path: "#about",
   },
   {
