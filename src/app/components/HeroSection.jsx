@@ -150,6 +150,7 @@ const HeroSection = () => {
             active:shadow-[inset_0_0_15px_rgba(80,253,154,0.3)]"
           >
             <div className="absolute inset-0 flex items-center justify-center bg-transparent">
+              {/* Make image fill the container for perfect glow alignment */}
               <Image
                 src="/images/mainCPGv2.webp"
                 alt="Expansion Project main band photo"
@@ -158,9 +159,8 @@ const HeroSection = () => {
                 hover:scale-105
                 active:scale-95
                 active:shadow-inner"
-                width={230}
-                height={230}
-                sizes="(max-width: 1024px) 230px, 330px"
+                fill
+                sizes="(max-width: 1024px) 100vw, 400px"
               />
             </div>
           </div>

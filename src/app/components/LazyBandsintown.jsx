@@ -41,7 +41,7 @@ export default function LazyBandsintown() {
           data-events-to-display=""
           data-background-color="rgba(10,10,10,1)"
           data-separator-color="rgba(80,253,154,0.15)"
-          data-text-color="rgba(246,243,237,1)"
+          data-text-color="rgb(158, 122, 51)"
           data-font="monospace"
           data-font-size="14px"
           data-auto-style="false"
