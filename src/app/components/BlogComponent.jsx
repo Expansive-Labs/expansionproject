@@ -122,13 +122,12 @@ const BlogComponent = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-silver via-blue-400 to-blue-800 opacity-50"></div>
           <div className="relative z-10">
             <h1
-              className="text-4xl sm:text-5xl md:text-6xl font-bold px-4"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold px-4 kallisto-lined-font"
               style={{
-                fontFamily: "Kallisto Lined",
                 display: "inline-block",
               }}
             >
-              expansive music
+              expansion project blog
             </h1>
           </div>
         </div>

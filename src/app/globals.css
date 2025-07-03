@@ -30,6 +30,10 @@ html {
   font-family: "Determination Mono", monospace;
 }
 
+.kallisto-lined-font {
+  font-family: "Kallisto Lined", serif;
+}
+
 .markdown-background {
   background-color: #121212;
   color: white; /* Optional: to ensure text is readable */
@@ -316,5 +320,271 @@ html {
   50% {
     transform: scale(1.1);
     opacity: 0.8;
+  }
+}
+
+/* Bandsintown Widget Custom Styling */
+.bit-widget-initializer {
+  font-family: "MS Sans Serif", "Determination Mono", monospace !important;
+}
+
+.bit-widget {
+  font-family: "MS Sans Serif", "Determination Mono", monospace !important;
+  background-color: rgba(10, 10, 10, 1) !important;
+}
+
+/* Force dark background on all widget sections */
+.bit-widget [data-bit-widget-section] {
+  background-color: rgba(10, 10, 10, 1) !important;
+}
+
+.bit-widget .bit-follow-section,
+.bit-widget .bit-play-my-city-section,
+.bit-widget .bit-event-list {
+  background-color: rgba(10, 10, 10, 1) !important;
+}
+
+/* Text color overrides */
+.bit-widget * {
+  color: rgba(246, 243, 237, 1) !important;
+}
+
+.bit-widget h1,
+.bit-widget h2,
+.bit-widget h3,
+.bit-widget h4,
+.bit-widget h5,
+.bit-widget h6,
+.bit-widget p,
+.bit-widget span:not(button span) {
+  color: rgba(246, 243, 237, 1) !important;
+}
+
+/* Center Bandsintown logo */
+.bit-widget .bit-logo {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.bit-widget .bit-logo-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.bit-widget [data-bit-logo] {
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+/* More specific logo centering */
+.bit-widget > div:last-child {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.bit-widget a[href*="bandsintown"] {
+  display: flex !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+}
+
+.bit-widget .bit-event-list-item {
+  border-radius: 0px !important;
+  margin-bottom: 0.5rem !important;
+  background: rgba(16, 16, 16, 0.9) !important;
+  border: 1px solid rgba(80, 253, 154, 0.2) !important;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #1a1a1a !important;
+}
+
+.bit-widget .bit-event-list-item:hover {
+  background: rgba(20, 20, 20, 0.95) !important;
+  border-color: rgba(80, 253, 154, 0.4) !important;
+}
+
+/* Tab button improvements */
+.tab-button {
+  position: relative;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  font-family: "Determination Mono", monospace;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  box-shadow: inset -1px -1px #808080, inset 1px 1px #ffffff;
+  color: #000000;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.tab-button:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+  box-shadow: inset 1px 1px #808080, inset -1px -1px #ffffff;
+  padding: 0.6rem 1.4rem 0.4rem 1.6rem;
+}
+
+.tab-button-active {
+  background-color: #d4d4d4;
+  border-color: #808080 #ffffff #ffffff #808080;
+  box-shadow: inset 1px 1px #808080, inset -1px -1px #ffffff;
+}
+
+.tab-button-inactive {
+  background-color: #c0c0c0;
+}
+
+.tab-button-inactive:hover {
+  background-color: #d4d4d4;
+}
+
+/* Center all button containers */
+.bit-widget .bit-follow-section,
+.bit-widget .bit-play-my-city-section {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  gap: 8px !important; /* Consistent spacing between buttons */
+}
+
+/* Event actions (RSVP and Buy Tickets) side by side */
+.bit-widget .bit-event-actions {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: row !important; /* Side by side */
+  width: 100% !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+.bit-widget .bit-event-actions > * {
+  margin: 0 !important;
+  display: block !important;
+  flex: 0 0 auto !important;
+  min-width: 120px !important;
+  max-width: 200px !important;
+}
+
+.bit-widget button {
+  background: #1a1a1a !important; /* Dark background */
+  border: 1px solid #2a2a2a !important; /* Cleaner single border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important; /* Soft shadow for depth */
+  padding: 10px 20px !important; /* Slightly larger padding */
+  font-family: "MS Sans Serif", "Determination Mono", monospace !important;
+  transition: all 0.2s ease !important;
+  color: #f6f3ed !important; /* Light text on dark background */
+  display: block !important;
+  margin: 0 auto !important;
+  min-width: 200px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  /* Anti-aliasing for smoother edges on desktop */
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+  /* Subtle rounding to prevent jagged edges */
+  border-radius: 3px !important;
+  /* Better rendering on high DPI screens */
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+}
+
+.bit-widget button,
+.bit-widget button *,
+.bit-widget button span,
+.bit-widget button div {
+  color: #f6f3ed !important; /* Light text */
+}
+
+.bit-widget button:hover {
+  background: #252525 !important; /* Slightly lighter on hover */
+  color: #ffffff !important;
+  border-color: #3a3a3a !important; /* Lighter border on hover */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25) !important; /* Slightly larger shadow */
+}
+
+.bit-widget button:hover * {
+  color: #ffffff !important;
+}
+
+.bit-widget button:active {
+  background: #151515 !important;
+  border-color: #1a1a1a !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important; /* Reduced shadow when pressed */
+  transform: translateY(1px) translateZ(0) !important;
+}
+
+/* Follow button special styling - darker green with light text */
+.bit-widget button[data-bit-follow-button] {
+  background: #0d4d2a !important; /* Dark green */
+  color: #50fd9a !important; /* Light green text */
+  border: 1px solid #1a6635 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.bit-widget button[data-bit-follow-button] * {
+  color: #50fd9a !important;
+}
+
+.bit-widget button[data-bit-follow-button]:hover {
+  background: #156638 !important; /* Slightly lighter dark green */
+  color: #60fdaa !important;
+  border-color: #237043 !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35) !important;
+}
+
+.bit-widget button[data-bit-follow-button]:active {
+  background: #0a3d20 !important;
+  border-color: #0d4d2a !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Desktop-specific optimizations for better rendering */
+@media (min-width: 768px) {
+  .bit-widget button {
+    /* Use outline instead of border for crisper edges on desktop */
+    border: none !important;
+    outline: 1px solid #2a2a2a !important;
+    outline-offset: -1px !important;
+    /* Ensure consistent rendering */
+    -webkit-backface-visibility: hidden !important;
+    -moz-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    /* Force GPU acceleration for smoother rendering */
+    will-change: transform !important;
+  }
+  
+  .bit-widget button:hover {
+    outline-color: #3a3a3a !important;
+  }
+  
+  .bit-widget button:active {
+    outline-color: #1a1a1a !important;
+  }
+  
+  .bit-widget button[data-bit-follow-button] {
+    outline-color: #1a6635 !important;
+  }
+  
+  .bit-widget button[data-bit-follow-button]:hover {
+    outline-color: #237043 !important;
+  }
+  
+  .bit-widget button[data-bit-follow-button]:active {
+    outline-color: #0d4d2a !important;
   }
 }

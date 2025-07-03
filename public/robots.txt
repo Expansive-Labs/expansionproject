@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.expansionprojectmusic.com/sitemap.xml
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Optimize crawl rate
+Crawl-delay: 1
+
+# Disallow admin or private paths if any exist
+Disallow: /api/
+Disallow: /.next/
+Disallow: /node_modules/ 
