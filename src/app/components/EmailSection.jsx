@@ -13,13 +13,22 @@ import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [isCaptchaChecked, setIsCaptchaChecked] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Check if captcha is verified
+    if (!isCaptchaChecked) {
+      alert("Please verify that you are not a robot before sending.");
+      return;
+    }
+
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
+      captchaVerified: isCaptchaChecked,
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
@@ -36,12 +45,21 @@ const EmailSection = () => {
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+    try {
+      const response = await fetch(endpoint, options);
+      const resData = await response.json();
 
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+      if (response.status === 200) {
+        console.log("Message sent.");
+        setEmailSubmitted(true);
+        setIsCaptchaChecked(false); // Reset captcha after successful submission
+      } else {
+        console.error("Error sending message:", resData);
+        alert(`Failed to send message: ${resData.error || "Unknown error"}`);
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("An error occurred while sending your message. Please try again.");
     }
   };
 
@@ -190,6 +208,23 @@ const EmailSection = () => {
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-[#50fd9a] text-xl rounded-lg block w-full p-4"
               placeholder="Let's talk about..."
             />
+          </div>
+          <div className="mb-6">
+            <div className="flex items-center p-4 bg-[#18191E] border border-[#33353F] rounded-lg">
+              <input
+                type="checkbox"
+                id="captcha"
+                checked={isCaptchaChecked}
+                onChange={(e) => setIsCaptchaChecked(e.target.checked)}
+                className="w-5 h-5 text-[#50fd9a] bg-[#18191E] border-[#33353F] rounded focus:ring-[#50fd9a] focus:ring-2 cursor-pointer"
+              />
+              <label
+                htmlFor="captcha"
+                className="ml-3 text-[#f6f3ed] text-sm font-medium cursor-pointer"
+              >
+                I&apos;m not a robot
+              </label>
+            </div>
           </div>
           <button
             type="submit"

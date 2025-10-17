@@ -10,9 +10,15 @@ export async function POST(req, res) {
   if (!resendApiKey) {
     return NextResponse.json({ error: "Email service not configured" }, { status: 500 });
   }
-  
+
   const resend = new Resend(resendApiKey);
-  const { email, subject, message } = await req.json();
+  const { email, subject, message, captchaVerified } = await req.json();
+
+  // Validate captcha
+  if (!captchaVerified) {
+    return NextResponse.json({ error: "Captcha verification required" }, { status: 400 });
+  }
+
   console.log(email, subject, message);
   try {
     const data = await resend.emails.send({
