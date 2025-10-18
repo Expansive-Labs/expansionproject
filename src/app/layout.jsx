@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 const googleAnalytics = process.env.GOOGLE_ANALYTICS;
@@ -111,6 +112,26 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href={metadata.icon} type="image/webp" />
+        <link
+          rel="preload"
+          href="/fonts/Kallisto-Lined.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/DeterminationMonoWebRegular-Z5oq.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/images/mainCPGv2.webp"
+          as="image"
+          type="image/webp"
+        />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords.join(", ")} />
@@ -233,6 +254,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

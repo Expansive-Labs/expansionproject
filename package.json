@@ -10,10 +10,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-sitemap": "node scripts/generate-sitemap.js"
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "build:analyze": "ANALYZE=true next build",
+    "postbuild": "npm run generate-sitemap"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.0.9",
     "98.css": "^0.1.20",
     "autoprefixer": "10.4.15",

@@ -5,20 +5,20 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-/// MAIN LANDING PAGE ///
+/// OPTIMIZED MAIN LANDING PAGE - Reduced animation complexity for faster FCP ///
 
-const HeroSection = () => {
+const OptimizedHeroSection = () => {
   const handleContactClick = (e) => {
     e.preventDefault();
     setTimeout(() => {
-      document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+      document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
     }, 200);
   };
 
   const handleShowsClick = (e) => {
     e.preventDefault();
     setTimeout(() => {
-      document.querySelector("#tour").scrollIntoView({ behavior: "smooth" });
+      document.querySelector("#tour")?.scrollIntoView({ behavior: "smooth" });
     }, 200);
   };
 
@@ -29,19 +29,27 @@ const HeroSection = () => {
     }, 400);
   };
 
+  // Reduced animation duration for faster perceived performance
+  const fastVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1 }
+  };
+
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          initial="hidden"
+          animate="visible"
+          variants={fastVariants}
+          transition={{ duration: 0.3 }}
           className="col-span-12 sm:col-span-8 place-self-center text-center sm:text-left sm:justify-self-start"
         >
           <motion.h1
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            initial="hidden"
+            animate="visible"
+            variants={fastVariants}
+            transition={{ duration: 0.3, delay: 0.1 }}
             className="text-[#f6f3ed] mb-4 text-3xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold text-center sm:text-left"
           >
             <br></br>
@@ -119,38 +127,27 @@ const HeroSection = () => {
             >
               <span className="relative z-10">Contact Us</span>
             </a>
-
-            {/* <a
-              href="/pdfs/Expansion_Project_EPK.pdf"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#50fd9a] to-secondary-900 hover:bg-slate-800 text-[#f6f3ed] mt-3 transition duration-500 ease-in-out"
-              download="Expansion Project EPK"
-              target="_blank"
-            >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 determination-mono-font transition duration-500 ease-in-out">
-                Download EPK
-              </span>
-            </a> */}
           </div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          initial="hidden"
+          animate="visible"
+          variants={fastVariants}
+          transition={{ duration: 0.3, delay: 0.15 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
           <div
-            className="rounded-full w-[280px] h-[280px] lg:w-[400px] lg:h-[400px] relative overflow-hidden 
-            transition-all duration-700 ease-in-out 
+            className="rounded-full w-[280px] h-[280px] lg:w-[400px] lg:h-[400px] relative overflow-hidden
+            transition-all duration-700 ease-in-out
             bg-transparent
-            hover:shadow-[0_0_25px_#50fd9a,0_0_50px_rgba(80,253,154,0.15)] 
-            hover:translate-y-[-10px] 
-            cursor-pointer 
+            hover:shadow-[0_0_25px_#50fd9a,0_0_50px_rgba(80,253,154,0.15)]
+            hover:translate-y-[-10px]
+            cursor-pointer
             active:translate-y-[4px]
             active:scale-[0.97]
             active:shadow-[inset_0_0_15px_rgba(80,253,154,0.3)]"
           >
             <div className="absolute inset-0 flex items-center justify-center bg-transparent">
-              {/* Make image fill the container for perfect glow alignment */}
               <Image
                 src="/images/mainCPGv2.webp"
                 alt="Expansion Project main band photo"
@@ -173,4 +170,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default OptimizedHeroSection;
