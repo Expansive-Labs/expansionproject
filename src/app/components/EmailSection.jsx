@@ -275,9 +275,6 @@ const EmailSection = () => {
                   placeholder="?"
                 />
               </div>
-              <p className="text-[#ADB7BE] text-xs mt-2">
-                Solve the simple math problem to send your message
-              </p>
             </div>
           </div>
           <button
