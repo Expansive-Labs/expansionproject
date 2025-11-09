@@ -5,6 +5,44 @@ const resendApiKey = process.env.RESEND_API_KEY;
 const fromEmail = process.env.FROM_EMAIL;
 const bandEmail = process.env.BAND_EMAIL;
 
+function validateCaptcha(captchaToken, captchaAnswer) {
+  if (!captchaToken || !captchaAnswer) {
+    return false;
+  }
+
+  try {
+    // Parse the token: "num1-operator-num2-timestamp"
+    const parts = captchaToken.split("-");
+    if (parts.length !== 4) return false;
+
+    const num1 = parseInt(parts[0]);
+    const operator = parts[1];
+    const num2 = parseInt(parts[2]);
+    const timestamp = parseInt(parts[3]);
+
+    // Check if token is not too old (max 10 minutes)
+    const tokenAge = Date.now() - timestamp;
+    if (tokenAge > 600000) {
+      return false;
+    }
+
+    let correctAnswer;
+    if (operator === "+") {
+      correctAnswer = num1 + num2;
+    } else if (operator === "-") {
+      correctAnswer = num1 - num2;
+    } else if (operator === "×") {
+      correctAnswer = num1 * num2;
+    } else {
+      return false;
+    }
+
+    return parseInt(captchaAnswer) === correctAnswer;
+  } catch (e) {
+    return false;
+  }
+}
+
 export async function POST(req, res) {
   // Initialize Resend only when the API is called, not during build
   if (!resendApiKey) {
@@ -12,11 +50,11 @@ export async function POST(req, res) {
   }
 
   const resend = new Resend(resendApiKey);
-  const { email, subject, message, captchaVerified } = await req.json();
+  const { email, subject, message, captchaToken, captchaAnswer } = await req.json();
 
   // Validate captcha
-  if (!captchaVerified) {
-    return NextResponse.json({ error: "Captcha verification required" }, { status: 400 });
+  if (!validateCaptcha(captchaToken, captchaAnswer)) {
+    return NextResponse.json({ error: "Captcha verification failed. Please solve the math problem correctly." }, { status: 400 });
   }
 
   console.log(email, subject, message);

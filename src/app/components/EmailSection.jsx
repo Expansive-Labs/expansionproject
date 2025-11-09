@@ -13,14 +13,62 @@ import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
-  const [isCaptchaChecked, setIsCaptchaChecked] = useState(false);
+  const [captchaAnswer, setCaptchaAnswer] = useState("");
+  const [captchaQuestion, setCaptchaQuestion] = useState({ num1: 0, num2: 0, operator: "+" });
+  const [captchaToken, setCaptchaToken] = useState("");
+
+  // Generate a new captcha question on component mount and after each submission
+  React.useEffect(() => {
+    generateCaptcha();
+  }, []);
+
+  const generateCaptcha = () => {
+    const operators = ["+", "-", "×"];
+    const operator = operators[Math.floor(Math.random() * operators.length)];
+    let num1, num2;
+
+    // Generate numbers based on operator to keep answers reasonable
+    if (operator === "+") {
+      num1 = Math.floor(Math.random() * 20) + 1; // 1-20
+      num2 = Math.floor(Math.random() * 20) + 1; // 1-20
+    } else if (operator === "-") {
+      num1 = Math.floor(Math.random() * 30) + 10; // 10-39
+      num2 = Math.floor(Math.random() * num1) + 1; // 1 to num1 (ensures positive result)
+    } else { // multiplication
+      num1 = Math.floor(Math.random() * 12) + 1; // 1-12
+      num2 = Math.floor(Math.random() * 12) + 1; // 1-12
+    }
+
+    setCaptchaQuestion({ num1, num2, operator });
+    setCaptchaAnswer("");
+
+    // Generate a unique token for this captcha instance
+    const token = `${num1}-${operator}-${num2}-${Date.now()}`;
+    setCaptchaToken(token);
+  };
+
+  const verifyCaptcha = () => {
+    const { num1, num2, operator } = captchaQuestion;
+    let correctAnswer;
+
+    if (operator === "+") {
+      correctAnswer = num1 + num2;
+    } else if (operator === "-") {
+      correctAnswer = num1 - num2;
+    } else { // multiplication
+      correctAnswer = num1 * num2;
+    }
+
+    return parseInt(captchaAnswer) === correctAnswer;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Check if captcha is verified
-    if (!isCaptchaChecked) {
-      alert("Please verify that you are not a robot before sending.");
+    if (!verifyCaptcha()) {
+      alert("Please solve the math problem correctly to verify you're not a robot.");
+      generateCaptcha(); // Generate new captcha on failed attempt
       return;
     }
 
@@ -28,7 +76,8 @@ const EmailSection = () => {
       email: e.target.email.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
-      captchaVerified: isCaptchaChecked,
+      captchaToken: captchaToken,
+      captchaAnswer: captchaAnswer,
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
@@ -52,10 +101,13 @@ const EmailSection = () => {
       if (response.status === 200) {
         console.log("Message sent.");
         setEmailSubmitted(true);
-        setIsCaptchaChecked(false); // Reset captcha after successful submission
+        generateCaptcha(); // Generate new captcha after successful submission
       } else {
         console.error("Error sending message:", resData);
         alert(`Failed to send message: ${resData.error || "Unknown error"}`);
+        if (resData.error && resData.error.includes("Captcha")) {
+          generateCaptcha(); // Generate new captcha on captcha-related errors
+        }
       }
     } catch (error) {
       console.error("Error sending message:", error);
@@ -210,20 +262,41 @@ const EmailSection = () => {
             />
           </div>
           <div className="mb-6">
-            <div className="flex items-center p-4 bg-[#18191E] border border-[#33353F] rounded-lg">
-              <input
-                type="checkbox"
-                id="captcha"
-                checked={isCaptchaChecked}
-                onChange={(e) => setIsCaptchaChecked(e.target.checked)}
-                className="w-5 h-5 text-[#50fd9a] bg-[#18191E] border-[#33353F] rounded focus:ring-[#50fd9a] focus:ring-2 cursor-pointer"
-              />
-              <label
-                htmlFor="captcha"
-                className="ml-3 text-[#f6f3ed] text-sm font-medium cursor-pointer"
-              >
-                I&apos;m not a robot
-              </label>
+            <label
+              htmlFor="captcha"
+              className="text-[#f6f3ed] block text-sm mb-2 font-medium"
+            >
+              Verify you&apos;re human
+            </label>
+            <div className="p-4 bg-[#18191E] border border-[#33353F] rounded-lg">
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-3">
+                  <span className="text-[#f6f3ed] text-lg font-semibold">
+                    {captchaQuestion.num1} {captchaQuestion.operator} {captchaQuestion.num2} =
+                  </span>
+                  <input
+                    type="number"
+                    id="captcha"
+                    value={captchaAnswer}
+                    onChange={(e) => setCaptchaAnswer(e.target.value)}
+                    required
+                    className="bg-white border border-[#50fd9a] text-lg font-bold rounded-lg p-2 w-20 focus:ring-[#50fd9a] focus:ring-2"
+                    style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
+                    placeholder="?"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={generateCaptcha}
+                  className="text-[#50fd9a] hover:text-[#38d57c] text-sm underline"
+                  title="Generate new question"
+                >
+                  New question
+                </button>
+              </div>
+              <p className="text-[#ADB7BE] text-xs mt-2">
+                Solve the simple math problem to send your message
+              </p>
             </div>
           </div>
           <button
