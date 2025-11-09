@@ -23,21 +23,10 @@ const EmailSection = () => {
   }, []);
 
   const generateCaptcha = () => {
-    const operators = ["+", "-", "×"];
-    const operator = operators[Math.floor(Math.random() * operators.length)];
-    let num1, num2;
-
-    // Generate numbers based on operator to keep answers reasonable
-    if (operator === "+") {
-      num1 = Math.floor(Math.random() * 20) + 1; // 1-20
-      num2 = Math.floor(Math.random() * 20) + 1; // 1-20
-    } else if (operator === "-") {
-      num1 = Math.floor(Math.random() * 30) + 10; // 10-39
-      num2 = Math.floor(Math.random() * num1) + 1; // 1 to num1 (ensures positive result)
-    } else { // multiplication
-      num1 = Math.floor(Math.random() * 12) + 1; // 1-12
-      num2 = Math.floor(Math.random() * 12) + 1; // 1-12
-    }
+    // Hard-coded captcha: 3 + 0 = 3
+    const num1 = 3;
+    const num2 = 0;
+    const operator = "+";
 
     setCaptchaQuestion({ num1, num2, operator });
     setCaptchaAnswer("");
