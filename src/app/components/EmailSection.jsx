@@ -216,7 +216,7 @@ const EmailSection = () => {
               type="email"
               id="email"
               required
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#82878d] text-lg font-bold rounded-lg block w-full p-2.5"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#D3D3D3] text-lg font-bold rounded-lg block w-full p-2.5"
               style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
               placeholder="youremail@example.com"
             />
@@ -233,7 +233,7 @@ const EmailSection = () => {
               type="text"
               id="subject"
               required
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#82878d] text-lg font-bold rounded-lg block w-full p-2.5"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#D3D3D3] text-lg font-bold rounded-lg block w-full p-2.5"
               style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
               placeholder="Just saying hello!"
             />
