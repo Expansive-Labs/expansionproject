@@ -260,30 +260,20 @@ const EmailSection = () => {
               Verify you&apos;re human
             </label>
             <div className="p-4 bg-[#18191E] border border-[#33353F] rounded-lg">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <span className="text-[#f6f3ed] text-lg font-semibold">
-                    {captchaQuestion.num1} {captchaQuestion.operator} {captchaQuestion.num2} =
-                  </span>
-                  <input
-                    type="number"
-                    id="captcha"
-                    value={captchaAnswer}
-                    onChange={(e) => setCaptchaAnswer(e.target.value)}
-                    required
-                    className="bg-white border border-[#50fd9a] text-lg font-bold rounded-lg p-2 w-20 focus:ring-[#50fd9a] focus:ring-2"
-                    style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
-                    placeholder="?"
-                  />
-                </div>
-                <button
-                  type="button"
-                  onClick={generateCaptcha}
-                  className="text-[#50fd9a] hover:text-[#38d57c] text-sm underline"
-                  title="Generate new question"
-                >
-                  New question
-                </button>
+              <div className="flex items-center gap-3">
+                <span className="text-[#f6f3ed] text-lg font-semibold">
+                  {captchaQuestion.num1} {captchaQuestion.operator} {captchaQuestion.num2} =
+                </span>
+                <input
+                  type="number"
+                  id="captcha"
+                  value={captchaAnswer}
+                  onChange={(e) => setCaptchaAnswer(e.target.value)}
+                  required
+                  className="bg-white border border-[#50fd9a] text-lg font-bold rounded-lg p-2 w-20 focus:ring-[#50fd9a] focus:ring-2"
+                  style={{ color: '#000000', WebkitTextFillColor: '#000000' }}
+                  placeholder="?"
+                />
               </div>
               <p className="text-[#ADB7BE] text-xs mt-2">
                 Solve the simple math problem to send your message
