@@ -139,15 +139,15 @@ const HeroSection = () => {
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
           <div
-            className="rounded-full w-[280px] h-[280px] lg:w-[400px] lg:h-[400px] relative overflow-hidden 
-            transition-all duration-700 ease-in-out 
+            className="rounded-full w-[280px] h-[280px] lg:w-[400px] lg:h-[400px] relative overflow-hidden
+            transition-all duration-700 ease-in-out
             bg-transparent
-            hover:shadow-[0_0_25px_#50fd9a,0_0_50px_rgba(80,253,154,0.15)] 
-            hover:translate-y-[-10px] 
-            cursor-pointer 
+            hover:shadow-[0_0_25px_#f5f5f0,0_0_50px_rgba(245,245,240,0.15)]
+            hover:translate-y-[-10px]
+            cursor-pointer
             active:translate-y-[4px]
             active:scale-[0.97]
-            active:shadow-[inset_0_0_15px_rgba(80,253,154,0.3)]"
+            active:shadow-[inset_0_0_15px_rgba(245,245,240,0.3)]"
           >
             <div className="absolute inset-0 flex items-center justify-center bg-transparent">
               {/* Make image fill the container for perfect glow alignment */}

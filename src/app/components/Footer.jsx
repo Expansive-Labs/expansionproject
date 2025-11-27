@@ -73,7 +73,7 @@ const Footer = ({ count }) => {
             Visitor count:{" "}
             <span className="text-[#50fd9a]">{<ViewCounter />}</span>
           </p>
-          <p className="text-slate-600">© 2025 Expansion Project. All rights reserved.</p>
+          <p className="text-slate-600">© 2026 Expansion Project. All rights reserved.</p>
         </div>
       </div>
     </footer>
